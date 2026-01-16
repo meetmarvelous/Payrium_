@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Swap</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "primary-hover": "#0b4dc9",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e293b",
+              "input-bg-light": "#f0f2f5",
+              "input-bg-dark": "#2d3748",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom Styles for hiding scrollbar in inputs */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="w-full bg-surface-light dark:bg-surface-dark border-b border-[#f0f1f5] dark:border-gray-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#111318] dark:text-white">Payrium</h1>
+</div>
+<!-- Connect Button -->
+<button class="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors shadow-sm">
+                    Connect Wallet
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center p-4 sm:p-6">
+<!-- Swap Card -->
+<div class="w-full max-w-[480px] bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-2 relative">
+<!-- Card Header -->
+<div class="flex items-center justify-between px-4 py-4">
+<h2 class="text-xl font-bold text-[#111318] dark:text-white">Swap</h2>
+<button class="p-2 text-gray-500 hover:text-[#111318] dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 relative px-2 pb-2">
+<!-- "From" Module -->
+<div class="bg-input-bg-light dark:bg-input-bg-dark rounded-xl p-4 transition-all hover:ring-1 hover:ring-gray-300 dark:hover:ring-gray-600">
+<div class="flex justify-between mb-3">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">You pay</label>
+<div class="flex items-center gap-2">
+<span class="text-xs text-gray-500 dark:text-gray-400">Balance: 2.45 ETH</span>
+<button class="text-xs font-bold text-primary hover:text-primary-hover uppercase tracking-wide">Max</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-full bg-transparent border-none text-4xl font-bold text-[#111318] dark:text-white focus:ring-0 p-0 placeholder-gray-300 dark:placeholder-gray-600 leading-none h-10" placeholder="0" type="number"/>
+<button class="flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-full pl-2 pr-3 py-1.5 shadow-sm transition-all shrink-0">
+<img alt="ETH Icon" class="w-6 h-6 rounded-full" data-alt="Ethereum logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSVfn9O4xfxgwnZQmwra0Pyqih2nI-BgVXKENrZE4pBjThqI3gKMyCnLoR_Y8dXS7bcY6HwuGDHUHQbLGvZXCLHxiHUqORqLxpKiZwc0nPs4qdKKqqb_kI0aQnQbLCBtyIZPFqR3Kw31qvNPE5XeP0ToLGPOtLz_2VSyd2XzR0-_28hSHsYQLq2PQIxbf4Wezz_yv3Rvg9RKGx6YK87HlaFGvj-MxEx5ARQKnz_dX4vVq9bKf-XWWBf3grwWDvMbCfuMsPMPTsK2ts"/>
+<span class="font-bold text-base text-[#111318] dark:text-white">ETH</span>
+<span class="material-symbols-outlined text-gray-400 !text-xl">expand_more</span>
+</button>
+</div>
+<div class="mt-2 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                        $0.00
+                    </div>
+</div>
+<!-- Swap Direction Button -->
+<div class="relative h-2 z-10">
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+<button class="group flex items-center justify-center bg-input-bg-light dark:bg-input-bg-dark border-4 border-surface-light dark:border-surface-dark rounded-xl w-10 h-10 shadow-sm hover:scale-110 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-primary !text-xl group-hover:rotate-180 transition-transform duration-300">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- "To" Module -->
+<div class="bg-input-bg-light dark:bg-input-bg-dark rounded-xl p-4 transition-all hover:ring-1 hover:ring-gray-300 dark:hover:ring-gray-600">
+<div class="flex justify-between mb-3">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">You receive</label>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-full bg-transparent border-none text-4xl font-bold text-gray-500 dark:text-gray-400 focus:ring-0 p-0 placeholder-gray-300 dark:placeholder-gray-600 leading-none h-10 cursor-default" placeholder="0" readonly="" type="number"/>
+<button class="flex items-center gap-2 bg-primary text-white hover:bg-primary-hover border border-transparent rounded-full pl-2 pr-3 py-1.5 shadow-sm transition-all shrink-0">
+<!-- Placeholder generic token icon for selection state or pre-selected -->
+<div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold">?</div>
+<span class="font-bold text-base">Select</span>
+<span class="material-symbols-outlined text-white/80 !text-xl">expand_more</span>
+</button>
+</div>
+<div class="mt-2 text-sm text-gray-500 dark:text-gray-400 font-medium opacity-0">
+                        Placeholder <!-- Keeps layout height consistent -->
+</div>
+</div>
+<!-- Info Accordion / Price -->
+<div class="mt-4 px-2 space-y-3">
+<button class="w-full flex items-center justify-between text-sm font-medium text-primary hover:text-primary-hover transition-colors group">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined !text-lg">info</span>
+<span>1 ETH ≈ 1,850.45 USDC</span>
+</div>
+<span class="material-symbols-outlined !text-lg text-gray-400 group-hover:text-primary transition-colors">expand_more</span>
+</button>
+<div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 px-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined !text-sm">local_gas_station</span>
+<span>Network Cost</span>
+</div>
+<span class="font-semibold">~$2.50</span>
+</div>
+</div>
+<!-- Main Action Button -->
+<div class="mt-6">
+<button class="w-full bg-primary hover:bg-primary-hover active:scale-[0.98] text-white text-lg font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                        Review Swap
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Optional: Footer Links or Disclaimer for extra context (minimal) -->
+<footer class="py-6 text-center">
+<p class="text-xs text-gray-400 dark:text-gray-600">Powered by Payrium Protocol</p>
+</footer>
+</body></html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Create Wallet</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["Roboto Mono", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Import Inter and Roboto Mono manually since tailwind config above assumes they are loaded */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto+Mono:wght@500&display=swap');
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#2a3441] bg-white dark:bg-[#1a2332] px-6 lg:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] dark:text-white">Payrium</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-medium text-gray-500 hover:text-primary dark:text-gray-400">Help Center</button>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="flex flex-1 justify-center py-8 px-4 sm:px-6">
+<div class="flex flex-col w-full max-w-[1024px] gap-8">
+<!-- Main Grid: Left Content (Card) & Right Sidebar (Info) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Central Card Container -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
+<!-- Progress Stepper -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<p class="text-sm font-semibold text-primary uppercase tracking-wide">Step 2 of 3</p>
+<span class="text-sm text-gray-500 dark:text-gray-400">Secure Wallet</span>
+</div>
+<div class="h-1.5 w-full bg-gray-200 rounded-full dark:bg-gray-700 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 66%"></div>
+</div>
+</div>
+<!-- Card -->
+<div class="bg-white dark:bg-[#1a2332] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 sm:p-8 flex flex-col gap-8">
+<!-- Headings -->
+<div class="flex flex-col gap-3 text-center sm:text-left">
+<h1 class="text-3xl sm:text-4xl font-black text-[#111318] dark:text-white tracking-tight">Back up your wallet</h1>
+<p class="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-xl">
+                                    Write down the following 12 words in the correct order and keep them somewhere safe. You will need them to recover your wallet.
+                                </p>
+</div>
+<!-- Warning Banner -->
+<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800/30 rounded-lg p-4 flex gap-4 items-start">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500 shrink-0">warning</span>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-bold text-amber-900 dark:text-amber-100">Security Warning</p>
+<p class="text-sm text-amber-800/80 dark:text-amber-200/70">Do not share these words with anyone. Payrium support will never ask for them.</p>
+</div>
+</div>
+<!-- Secret Phrase Grid -->
+<div class="relative group/blur">
+<!-- Blur Overlay Toggle (Visual cue only for design) -->
+<div class="absolute -top-10 right-0 flex items-center gap-2 mb-2">
+<button class="text-xs font-medium text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Show
+                                     </button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<!-- Word 1 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">1</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">witch</p>
+</div>
+<!-- Word 2 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">2</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">collapse</p>
+</div>
+<!-- Word 3 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">3</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">practice</p>
+</div>
+<!-- Word 4 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">4</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">feed</p>
+</div>
+<!-- Word 5 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">5</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">shame</p>
+</div>
+<!-- Word 6 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">6</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">open</p>
+</div>
+<!-- Word 7 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">7</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">despair</p>
+</div>
+<!-- Word 8 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">8</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">creek</p>
+</div>
+<!-- Word 9 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">9</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">road</p>
+</div>
+<!-- Word 10 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">10</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">again</p>
+</div>
+<!-- Word 11 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">11</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">ice</p>
+</div>
+<!-- Word 12 -->
+<div class="flex h-10 items-center gap-3 rounded-lg bg-[#f0f1f5] dark:bg-[#252f40] px-4 border border-transparent hover:border-primary/20 transition-colors">
+<span class="text-gray-400 text-xs font-bold w-4 select-none">12</span>
+<p class="text-[#111318] dark:text-white font-mono font-medium text-sm">least</p>
+</div>
+</div>
+<div class="mt-4 flex justify-center">
+<button class="text-sm font-medium text-primary hover:text-primary/80 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">content_copy</span> Copy to clipboard
+                                    </button>
+</div>
+</div>
+<hr class="border-gray-100 dark:border-gray-800"/>
+<!-- Bottom Actions -->
+<div class="flex flex-col gap-6">
+<label class="flex items-start gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="peer size-5 appearance-none rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 checked:bg-primary checked:border-primary focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer mt-0.5" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[16px] opacity-0 peer-checked:opacity-100 mt-0.5 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-gray-700 dark:text-gray-300 font-medium select-none group-hover:text-gray-900 dark:group-hover:text-white">I have written down my Secret Recovery Phrase and stored it in a safe place.</span>
+</label>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    Next Step
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Sidebar / Info Column -->
+<div class="hidden lg:flex lg:col-span-5 xl:col-span-4 flex-col gap-6 pt-8">
+<!-- Info Card 1 -->
+<div class="p-6 bg-white dark:bg-[#1a2332] rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="size-10 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">lock</span>
+</div>
+<h3 class="text-lg font-bold text-[#111318] dark:text-white mb-2">Why is this important?</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                                Your Secret Recovery Phrase is the <span class="font-bold text-gray-700 dark:text-gray-300">only way</span> to recover your wallet if you lose your device or forget your password. We don't store it, so we can't help you recover it.
+                            </p>
+</div>
+<!-- Info Card 2 -->
+<div class="p-6 bg-white dark:bg-[#1a2332] rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="size-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-green-600 dark:text-green-500">edit_note</span>
+</div>
+<h3 class="text-lg font-bold text-[#111318] dark:text-white mb-2">How should I save it?</h3>
+<ul class="flex flex-col gap-3">
+<li class="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-green-500 text-[18px] shrink-0">check_circle</span>
+<span>Write it down on a piece of paper.</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-green-500 text-[18px] shrink-0">check_circle</span>
+<span>Store it in a fireproof safe or safety deposit box.</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-red-500 text-[18px] shrink-0">cancel</span>
+<span>Do not take a screenshot or photo.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Import Wallet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2060df",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "surface-dark": "#1c222e",
+                        "border-dark": "#2e3646",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: #cbd5e1;border-radius: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;}
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col antialiased selection:bg-primary/20 selection:text-slate-900 dark:selection:bg-primary/30 dark:selection:text-white">
+<header class="w-full border-b border-gray-200 dark:border-border-dark px-6 py-4 flex items-center justify-between sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2 17L12 22L22 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2 12L12 17L22 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Payrium</h1>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined text-[20px]">close</span>
+<span>Cancel</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-4 py-8 sm:px-6">
+<div class="w-full max-w-[560px] flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-sm font-medium text-slate-500 dark:text-slate-400">
+<span>Step 2 of 3</span>
+<span>Import Phrase</span>
+</div>
+<div class="h-1.5 w-full bg-gray-200 dark:bg-surface-dark rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 rounded-full relative">
+<div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white/20 to-transparent"></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-border-dark p-6 sm:p-10 shadow-xl shadow-slate-200/50 dark:shadow-black/20">
+<div class="text-center mb-8">
+<div class="inline-flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined">vpn_key</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">Import your wallet</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                        Enter your 12 or 24-word Secret Recovery Phrase to restore your Payrium account.
+                    </p>
+</div>
+<div class="space-y-6">
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="recovery-phrase">
+                                Secret Recovery Phrase
+                            </label>
+<button class="group flex items-center gap-1.5 text-xs font-medium text-primary hover:text-blue-400 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">visibility_off</span>
+<span>Hide words</span>
+</button>
+</div>
+<div class="relative group">
+<textarea class="w-full min-h-[160px] bg-gray-50 dark:bg-[#151a24] border border-gray-300 dark:border-border-dark rounded-xl p-4 text-base text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:ring-2 focus:ring-primary focus:border-transparent resize-none leading-relaxed transition-all shadow-sm" id="recovery-phrase" placeholder="e.g. army van defense carry jealous true garbage claim echo media make crunch"></textarea>
+<div class="absolute bottom-3 right-3">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-200 dark:bg-surface-dark hover:bg-gray-300 dark:hover:bg-[#252d3d] text-xs font-medium text-slate-700 dark:text-slate-300 transition-colors border border-transparent dark:border-border-dark">
+<span class="material-symbols-outlined text-[14px]">content_paste</span>
+                                    Paste
+                                </button>
+</div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-500 flex items-start gap-1.5 px-1">
+<span class="material-symbols-outlined text-[14px] mt-0.5 shrink-0">info</span>
+<span>Typically 12 (sometimes 24) words separated by single spaces.</span>
+</p>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+<span class="material-symbols-outlined text-emerald-500 text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="text-sm">
+<p class="font-medium text-emerald-700 dark:text-emerald-400">Secure Environment</p>
+<p class="text-emerald-600/80 dark:text-emerald-400/70 mt-0.5 text-xs leading-relaxed">
+                                Your phrase is encrypted locally on your device. Payrium never stores or transmits your secret phrase.
+                            </p>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white font-semibold text-base py-3.5 px-6 rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none mt-2">
+<span>Import Wallet</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="text-center">
+<a class="inline-flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+<span>What is a Secret Recovery Phrase?</span>
+</a>
+</div>
+</div>
+</main>
+
+</body></html>

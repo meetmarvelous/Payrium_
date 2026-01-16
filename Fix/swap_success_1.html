@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Swap Success</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#0d59f2",
+                "background-light": "#f5f6f8",
+                "background-dark": "#101622",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-200">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Side Navigation (Desktop) -->
+<aside class="hidden md:flex flex-col w-64 bg-white dark:bg-[#1a2233] border-r border-slate-200 dark:border-slate-800 h-full">
+<div class="p-6">
+<div class="flex gap-3 items-center mb-8">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 bg-primary/10 flex items-center justify-center text-primary" data-alt="Payrium App Logo abstract blue shape">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-base font-bold leading-normal dark:text-white">Payrium</h1>
+<p class="text-[#606e8a] dark:text-slate-400 text-xs font-normal">Wallet Connected</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#606e8a] dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:text-primary transition-colors">home</span>
+<p class="text-sm font-medium leading-normal">Home</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#606e8a] dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:text-primary transition-colors">pie_chart</span>
+<p class="text-sm font-medium leading-normal">Portfolio</p>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] font-variation-settings-'FILL' 1">swap_horiz</span>
+<p class="text-sm font-medium leading-normal">Swap</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#606e8a] dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:text-primary transition-colors">how_to_vote</span>
+<p class="text-sm font-medium leading-normal">Governance</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#606e8a] dark:text-slate-300 cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-y-auto relative">
+<!-- Mobile Header (Visible only on small screens) -->
+<div class="md:hidden flex items-center justify-between p-4 bg-white dark:bg-[#1a2233] border-b border-slate-200 dark:border-slate-800">
+<div class="flex gap-2 items-center">
+<div class="bg-primary/10 p-1 rounded-full text-primary">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+<span class="font-bold text-lg dark:text-white">Payrium</span>
+</div>
+<span class="material-symbols-outlined text-2xl text-slate-600 dark:text-slate-300">menu</span>
+</div>
+<div class="flex flex-1 items-center justify-center p-4 sm:p-8">
+<!-- Success Card Container -->
+<div class="w-full max-w-[420px] bg-white dark:bg-[#1e2736] rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 overflow-hidden flex flex-col">
+<!-- Header Section -->
+<div class="pt-8 pb-4 px-6 flex flex-col items-center text-center">
+<div class="mb-5 relative">
+<!-- Background glow for icon -->
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl transform scale-150"></div>
+<div class="relative bg-primary text-white rounded-full p-4 flex items-center justify-center shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-4xl">check</span>
+</div>
+</div>
+<h1 class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight mb-2">Swap Successful</h1>
+<p class="text-[#606e8a] dark:text-slate-400 text-sm">Transaction #8x92...3fA completed</p>
+</div>
+<!-- Swap Details Flow -->
+<div class="px-6 py-2 flex flex-col gap-1">
+<!-- From Token -->
+<div class="flex items-center justify-between bg-slate-50 dark:bg-[#151b26] p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm ring-2 ring-white dark:ring-[#1e2736]" data-alt="Solana SOL token logo gradient purple green" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcXu-6Knxh_5pauVKWy1u0ebJIRh2-4wWJ0ZbzGXwYNUQXVMDMf76PgQ5yixpyMNVdcLAEW64HVdi7g6_VBg2cotEgiUSHxcSFNOVxY82AQ4NAQS2ONyU8gzar5H6V7la0_MgRmi4uvx9WbmC0Jp8ypEpUN8bAvx_dX9Dc_NkdsKs6mfjDnBXuxTGllSIQBRl6yWsrjn0YIhXYCrNZgOBgMSqhDXgZrhyCiR3LtDx7kFpigNqKraAiNwRE0j0VXrqzlKK65isAnHs2");'>
+</div>
+<div class="flex flex-col">
+<span class="text-[#606e8a] dark:text-slate-400 text-xs font-medium uppercase">You Swapped</span>
+<span class="text-[#111318] dark:text-white text-base font-bold">SOL</span>
+</div>
+</div>
+<span class="text-[#111318] dark:text-white text-lg font-bold tabular-nums">10.5</span>
+</div>
+<!-- Connector Arrow -->
+<div class="flex justify-center -my-3 z-10 relative">
+<div class="bg-white dark:bg-[#1e2736] p-1.5 rounded-full border border-slate-100 dark:border-slate-700 shadow-sm">
+<span class="material-symbols-outlined text-[#606e8a] dark:text-slate-400 text-xl block">arrow_downward</span>
+</div>
+</div>
+<!-- To Token -->
+<div class="flex items-center justify-between bg-slate-50 dark:bg-[#151b26] p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm ring-2 ring-white dark:ring-[#1e2736]" data-alt="Payrium PYR token logo abstract blue geometric" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGArvrQxJRQnJcajY3a0_Nh9GCxej5vwQlI0wSVg7yAANK-ZjOXExVV5534g3D95L6mQGspyqExqOxJp6311CEm3z6ngSzFcY-w4bNEucxAGQxDM8VExVU3JHqVRX7cPEyI88mArH0htHKMr6G8rmrgBcd4p9PrNnwv9QM-36ML6EhjNHljnqe_hPMRK56uN4xNbo7XyoYoNLpXgR7aJ_VapA83Lyim9XWgCfxCw_5Cj5p60RuM9rlBPlEA3TL-a6JoqnUQMkNAlAE");'>
+</div>
+<div class="flex flex-col">
+<span class="text-[#606e8a] dark:text-slate-400 text-xs font-medium uppercase">You Received</span>
+<span class="text-[#111318] dark:text-white text-base font-bold">PYR</span>
+</div>
+</div>
+<span class="text-primary text-lg font-bold tabular-nums">+850.00</span>
+</div>
+</div>
+<!-- Metadata Accordion/Box -->
+<div class="px-6 py-4">
+<div class="bg-background-light dark:bg-[#151b26] rounded-lg p-3 flex flex-col gap-2">
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#606e8a] dark:text-slate-500">Rate</span>
+<span class="text-[#111318] dark:text-slate-300 font-medium tabular-nums">1 SOL ≈ 80.95 PYR</span>
+</div>
+<div class="w-full h-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-1">
+<span class="text-[#606e8a] dark:text-slate-500">Network Fee</span>
+<span class="material-symbols-outlined text-[14px] text-slate-400 cursor-help">info</span>
+</div>
+<span class="text-[#111318] dark:text-slate-300 font-medium tabular-nums">0.00005 SOL</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="p-6 pt-2 flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md shadow-blue-500/20 active:scale-[0.98]">
+                            Done
+                        </button>
+<a class="flex items-center justify-center gap-2 text-sm font-medium text-[#606e8a] dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors py-2" href="#">
+<span>View on Solana Explorer</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

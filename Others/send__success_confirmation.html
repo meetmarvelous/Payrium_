@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Transaction Success</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a202c",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem", 
+              "lg": "0.5rem", 
+              "xl": "0.75rem", 
+              "2xl": "1rem",
+              "full": "9999px"
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'glow': '0 0 15px rgba(13, 89, 242, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom adjustments for cleaner scrollbars if needed */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col text-[#111318] dark:text-white transition-colors duration-200">
+<!-- Top Navigation -->
+<header class="w-full bg-surface-light dark:bg-surface-dark border-b border-[#f0f1f5] dark:border-gray-800 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary flex items-center justify-center">
+<!-- Abstract Logo Shape -->
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4ZM24 9C15.7157 9 9 15.7157 9 24C9 32.2843 15.7157 39 24 39C32.2843 39 39 32.2843 39 24C39 15.7157 32.2843 9 24 9Z" fill="currentColor" fill-opacity="0.2" fill-rule="evenodd"></path>
+<path d="M24 14L14 20L24 26L34 20L24 14Z" fill="currentColor"></path>
+<path d="M14 23L24 29L34 23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Payrium</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-9 rounded-full bg-gray-200 dark:bg-gray-700 bg-center bg-cover border-2 border-white dark:border-gray-600 shadow-sm" data-alt="User profile avatar showing abstract gradient" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8dnj_DjlghqeK3nSHAIGiYNwfYHcn4kaNusrDqjlziE6hRCwgIFMOE7s3jEClXETLy1XtSjWSVOh0R2am0BdIUEdyJM_wPevWzXQTe6FttYfmqPTTlslaxktt_nVE8Ra5A4fGjXaUYc6dfhfoxKqxRcHSDVvZmtiVRNk0n01Swb95QpInavsB3rdKXzTuAxzZ-mpmA_c6HweyhcY9xVEgt9u-UvOUq2d6lVnCO8ZI7qPCegZb8yrWxyt0_rFNVQk5XA1BSpMJPx2o');">
+</div>
+</div>
+</header>
+<!-- Main Content: Centered Card Layout -->
+<main class="flex-1 flex items-center justify-center p-4 md:p-6">
+<div class="w-full max-w-[440px] bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft border border-[#f0f1f5] dark:border-gray-800 overflow-hidden flex flex-col relative">
+<!-- Decorative background gradient top -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-primary to-purple-500"></div>
+<!-- Hero Section -->
+<div class="pt-10 pb-2 px-8 flex flex-col items-center text-center">
+<!-- Success Icon with Pulse Effect -->
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-primary/20 rounded-full scale-150 animate-pulse"></div>
+<div class="relative size-16 bg-primary rounded-full flex items-center justify-center shadow-glow">
+<span class="material-symbols-outlined text-white text-[32px] font-bold">check</span>
+</div>
+</div>
+<h2 class="text-[#111318] dark:text-white tracking-tight text-[28px] font-bold leading-tight px-4 pb-2">Success!</h2>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Your funds are on the way.</p>
+<!-- Amount Display -->
+<div class="mt-8 mb-4 w-full">
+<h1 class="text-[#111318] dark:text-white tracking-tighter text-[36px] font-bold leading-tight">- 1,500 USDC</h1>
+</div>
+</div>
+<!-- Recipient & Details Section -->
+<div class="px-6 pb-8">
+<!-- Recipient Pill -->
+<div class="flex justify-center mb-8">
+<div class="inline-flex items-center gap-3 bg-background-light dark:bg-gray-800 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700">
+<div class="size-6 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 shadow-sm" data-alt="Recipient abstract avatar icon"></div>
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Sent to <span class="text-[#111318] dark:text-white font-bold">Alice</span> (0x12...89)</span>
+</div>
+</div>
+<!-- Transaction Details Card -->
+<div class="bg-background-light dark:bg-gray-800/60 rounded-xl p-5 space-y-3.5 border border-transparent dark:border-gray-700/50">
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-500 dark:text-gray-400 font-medium">Network Fee</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-gray-400">local_gas_station</span>
+<span class="text-[#111318] dark:text-white font-semibold">$1.20</span>
+</div>
+</div>
+<div class="w-full h-px bg-gray-200 dark:bg-gray-700/50"></div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-500 dark:text-gray-400 font-medium">Date</span>
+<span class="text-[#111318] dark:text-white font-semibold">Oct 24, 2023 at 10:42 AM</span>
+</div>
+<div class="w-full h-px bg-gray-200 dark:bg-gray-700/50"></div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-500 dark:text-gray-400 font-medium">Transaction ID</span>
+<button class="flex items-center gap-2 group hover:bg-white dark:hover:bg-gray-700 p-1 pl-2 -mr-1 rounded transition-all cursor-pointer">
+<span class="text-[#111318] dark:text-white font-semibold font-mono text-xs tracking-wide">0x7f...3a9c</span>
+<span class="material-symbols-outlined text-[16px] text-gray-400 group-hover:text-primary transition-colors">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-8 flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-semibold h-12 px-4 rounded-xl transition-all shadow-lg shadow-blue-500/20 active:scale-[0.98] flex items-center justify-center">
+                        Return to Dashboard
+                    </button>
+<a class="w-full bg-transparent hover:bg-background-light dark:hover:bg-gray-800 text-primary hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium h-12 px-4 rounded-xl transition-colors flex items-center justify-center gap-2" href="#">
+<span>View on Explorer</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Subtle footer note -->
+<div class="absolute bottom-6 text-center w-full px-4">
+<p class="text-xs text-gray-400 dark:text-gray-600">Payrium © 2023. Secure &amp; Encrypted.</p>
+</div>
+</main>
+</body></html>

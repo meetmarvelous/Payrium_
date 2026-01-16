@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Swap Preview</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-hover": "#0b4ecf",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a2234",
+                        "text-main-light": "#111318",
+                        "text-main-dark": "#ffffff",
+                        "text-sub-light": "#606e8a",
+                        "text-sub-dark": "#94a3b8",
+                        "border-light": "#f0f1f5",
+                        "border-dark": "#2d3748",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-main-light dark:text-text-main-dark transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<header class="w-full bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark sticky top-0 z-50">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Payrium</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Wallet</a>
+<a class="text-primary text-sm font-medium" href="#">Swap</a>
+<a class="text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-full p-2 text-text-sub-light dark:text-text-sub-dark hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-9 ring-2 ring-border-light dark:ring-border-dark cursor-pointer" data-alt="User profile avatar showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCObvcJrJmVOucahA04m390doM6C68LHKZo8xVgI7lg7ulpacV-1S80f9lkYUr_M3APGW67vM31udHiGBNiQmK_ZgMtI7HdwNHIHipYi-z8YQMY5l5kXbHYYkK0G7NCdX2YC-D88z82EIoqOAbrvX2LttS9gTv4d7OONpPJRgt8-yy1kfxYI_f5FI_RIiGslly-Q0J4Jm37SdSMZecRYISzqkb2eyZ-suGYRZgDLJxXCEV1SW2IGeYyDGOl8WIKdJIa_MR_660tWcDY");'></div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex justify-center items-start pt-8 pb-12 px-4">
+<!-- Center Card Container -->
+<div class="w-full max-w-[480px] flex flex-col gap-6">
+<!-- Breadcrumb / Back Navigation -->
+<button class="flex items-center gap-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary transition-colors w-fit group">
+<span class="material-symbols-outlined text-xl group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="text-sm font-medium">Back to Swap</span>
+</button>
+<!-- Card -->
+<div class="bg-card-light dark:bg-card-dark rounded-2xl shadow-soft border border-border-light dark:border-border-dark overflow-hidden">
+<!-- Card Header -->
+<div class="p-6 pb-2">
+<h1 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Review Swap</h1>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm mt-1">Please review your transaction details below.</p>
+</div>
+<!-- Swap Visual Block -->
+<div class="px-6 py-4 flex flex-col gap-1 relative">
+<!-- From Asset -->
+<div class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark rounded-xl border border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 p-1 shadow-sm flex items-center justify-center overflow-hidden border border-gray-100 dark:border-gray-700">
+<img alt="Ethereum logo" class="w-full h-full object-contain" data-alt="Ethereum Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdVcIuzvevdFQL4VXGNbqO1YkvRdoWVNlF-UMLCcXd6H9TDzsfIrqJdrA6epgk3q9eILTuciIJqVvaB7U7gAcaAbaxGDSXHyCesw8Uclwq3KN2RcV0NcfKXqEUNylL1T1C5KJC-4SXIwTd91v0MNoT1NlAd8AkBWekLs_7GtUFPN3IXUb6TENVy3XJ6ktQrjgi3mkg2mTW48vFteK1IasgkufTQCt5Cu2Tqe-d31xTTRRCKCymNbNLid9FI_O6FWc4SQP7qcXL4l5o"/>
+</div>
+<div>
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark font-medium">Selling</p>
+<p class="text-lg font-bold text-text-main-light dark:text-text-main-dark">1.5 ETH</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark">~$3,600.00</p>
+</div>
+</div>
+<!-- Swap Arrow Icon -->
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-full p-2 shadow-sm text-primary">
+<span class="material-symbols-outlined block">arrow_downward</span>
+</div>
+</div>
+<!-- To Asset -->
+<div class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark rounded-xl border border-primary/20 ring-1 ring-primary/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 p-1 shadow-sm flex items-center justify-center overflow-hidden border border-gray-100 dark:border-gray-700">
+<img alt="USDC logo" class="w-full h-full object-contain" data-alt="USDC Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMhXq-W1gdq_ZkGzQ0kFnz4o7V36gnRM5KIIYkpreIwcB1Tgeu0S6fXVljiylig_wWcWOskQZoEd74Zy7lDvhYSEgL0LGathKne0QB_CFdbqWVq8vjpCbIjY6hWyvwoamWh7QGahEwqxZA8uig3PuqJpySkOp_YMSCBPntcx3D-MLaVxhKhcSK6XJaPmPwrXZhAPdryTO_jm8_mVtM8F0D927j-s44ZXx-VJvolsYEmgaqcMLn2Hvffx5xMFYRi0lRhPh-fcsoKrHb"/>
+</div>
+<div>
+<p class="text-sm text-primary font-medium">Buying</p>
+<p class="text-lg font-bold text-text-main-light dark:text-text-main-dark">3,600 USDC</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark">~$3,600.00</p>
+</div>
+</div>
+</div>
+<!-- Info List -->
+<div class="px-6 py-2">
+<div class="bg-background-light dark:bg-background-dark rounded-xl p-4 flex flex-col gap-3 border border-border-light dark:border-border-dark">
+<!-- Provider -->
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-1 text-text-sub-light dark:text-text-sub-dark">
+<span>Provider</span>
+<span class="material-symbols-outlined text-[16px] cursor-help opacity-70">info</span>
+</div>
+<div class="flex items-center gap-2 font-medium text-text-main-light dark:text-text-main-dark">
+<img alt="Uniswap Logo" class="w-4 h-4" data-alt="Uniswap small logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5yvY7xBktv3oh3Bd76d9yKlUcV1n6NzKcF_D6hmpx9tDnbV59C2OrLZ-ojdNEjSoUs-fhU3kXpX19ve20IpntRM-RP-g8EKAVkRSahTghmt2Wu3tI2LAF8y6w2aktPqnmpzXY4wEkx5m4mQVtnkFIScuC0gIy-XazYf973fMhzEesE_EtvfNbaY7hxe_We1L8wzr1ngR8UXGNWulACg_PytngHJuY34-EHLog8zrbfk9BUfKlcA4Zz2-tXFIKGjVyhvp_pqypkGHA"/>
+<span>Uniswap V3</span>
+</div>
+</div>
+<!-- Rate -->
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-sub-light dark:text-text-sub-dark">Rate</span>
+<span class="font-medium text-text-main-light dark:text-text-main-dark">1 ETH ≈ 2,400 USDC</span>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-border-light dark:bg-border-dark my-1"></div>
+<!-- Network Cost -->
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-1 text-text-sub-light dark:text-text-sub-dark">
+<span>Network Cost</span>
+<span class="material-symbols-outlined text-[16px] cursor-help opacity-70">local_gas_station</span>
+</div>
+<span class="font-medium text-text-main-light dark:text-text-main-dark">~$4.50 <span class="text-text-sub-light dark:text-text-sub-dark font-normal">(0.002 ETH)</span></span>
+</div>
+<!-- Slippage -->
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-sub-light dark:text-text-sub-dark">Slippage Tolerance</span>
+<span class="font-medium text-green-600 dark:text-green-400">0.5%</span> <!-- Green implies safe/good -->
+</div>
+<!-- Minimum Received -->
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-sub-light dark:text-text-sub-dark">Minimum Received</span>
+<span class="font-medium text-text-main-light dark:text-text-main-dark">3,582 USDC</span>
+</div>
+</div>
+</div>
+<!-- Quote Timer -->
+<div class="px-6 pt-2 pb-0 flex justify-center">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px] animate-pulse">timer</span>
+<span>Quote updates in 15s</span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="p-6">
+<button class="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-4 px-6 rounded-xl shadow-lg shadow-primary/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group">
+<span>Confirm Swap</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-lg">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-text-sub-light dark:text-text-sub-dark mt-4">
+                        By confirming, you agree to Payrium's <a class="text-primary hover:underline" href="#">Terms of Service</a>.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

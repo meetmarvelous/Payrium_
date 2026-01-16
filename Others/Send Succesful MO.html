@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payrium - Transaction Sent</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN with forms & container-queries plugins) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0d59f2",
+            "background-light": "#f5f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Small helpers to make the mobile card behave predictably */
+    html, body { height: 100%; }
+    /* Ensure the inner scroll area uses native smooth scrolling on mobile */
+    .card-scroll { -webkit-overflow-scrolling: touch; }
+    /* subtle focus outlines for accessibility */
+    .focus-ring:focus { outline: 3px solid rgba(13,89,242,0.12); outline-offset: 2px; }
+    /* reusable ripple-ish pulse is already covered by Tailwind classes; keep animations lightweight */
+    @keyframes blob {
+      0% { transform: translate(0px,0px) scale(1); }
+      33% { transform: translate(30px,-50px) scale(1.06); }
+      66% { transform: translate(-20px,20px) scale(0.96); }
+      100% { transform: translate(0px,0px) scale(1); }
+    }
+    .animate-blob { animation: blob 8s infinite; }
+  </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-200">
+  <!-- Centering wrapper: keeps the UI centered on large screens while filling the viewport on mobile -->
+  <div class="relative min-h-screen w-full flex items-center justify-center p-4">
+    <!-- Mobile Card:
+         - On small viewports we make it full height (h-screen) so header + content + footer are visible and footer sticks to bottom.
+         - On larger screens it acts as a centered card with a comfortable max width.
+    -->
+    <div class="relative w-full max-w-[420px] bg-white dark:bg-[#1A2333] rounded-2xl shadow-xl overflow-hidden flex flex-col h-screen sm:h-auto sm:min-h-[680px] border border-[#f0f1f5] dark:border-white/5">
+      <!-- Header -->
+      <header class="flex items-center justify-between px-5 py-4 sm:py-5">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 text-primary">
+            <!-- brand icon -->
+            <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"/>
+              <path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263Z" fill="currentColor" fill-rule="evenodd"/>
+            </svg>
+          </div>
+          <h1 class="text-lg font-bold leading-tight tracking-[-0.015em]">Payrium</h1>
+        </div>
+
+        <button aria-label="Close" class="focus-ring rounded-full p-2 bg-[#f0f1f5] dark:bg-white/10 text-[#111318] dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </header>
+
+      <!-- Scrollable content area:
+           - Use flex-1 + overflow-y-auto so content scrolls and footer stays visible at bottom of the card.
+           - card-scroll helper adds smooth mobile scrolling.
+      -->
+      <div class="flex-1 overflow-y-auto card-scroll px-5 pb-6">
+        <!-- Hero -->
+        <section class="flex flex-col items-center justify-center pt-6 pb-4">
+          <div class="relative flex items-center justify-center mb-4">
+            <div class="absolute w-24 h-24 bg-primary/5 rounded-full animate-pulse"></div>
+            <div class="absolute w-16 h-16 bg-primary/10 rounded-full"></div>
+            <div class="relative w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30">
+              <span class="material-symbols-outlined text-[28px]">check</span>
+            </div>
+          </div>
+
+          <h2 class="text-center text-[22px] sm:text-[28px] font-bold leading-tight">Transaction Sent!</h2>
+          <p class="text-center text-sm text-[#606e8a] dark:text-gray-400 mt-1">You successfully sent</p>
+        </section>
+
+        <!-- Amount -->
+        <section class="flex flex-col items-center pb-6">
+          <p class="text-center text-[34px] sm:text-[40px] font-bold leading-tight">- 12.5 SOL</p>
+          <p class="text-center text-base text-[#606e8a] dark:text-gray-400 mt-1">≈ $150.00 USD</p>
+        </section>
+
+        <!-- Details Card -->
+        <section class="bg-[#f5f6f8] dark:bg-white/5 rounded-xl p-4 w-full flex flex-col gap-3 border border-transparent dark:border-white/5">
+          <!-- To -->
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-[#606e8a] dark:text-gray-400">To</span>
+            <div class="flex items-center gap-2.5">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 shadow-sm" aria-hidden="true"></div>
+              <div class="flex flex-col items-end">
+                <span class="text-sm font-semibold text-[#111318] dark:text-white">Alice.sol</span>
+                <span class="text-xs text-[#606e8a] dark:text-gray-500">4k3...9xL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-px bg-gray-200 dark:bg-white/10 w-full"></div>
+
+          <!-- Date -->
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-[#606e8a] dark:text-gray-400">Date</span>
+            <span class="text-sm text-[#111318] dark:text-white">Oct 24, 2023, 10:42 AM</span>
+          </div>
+
+          <!-- Network Fee -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-1">
+              <span class="text-sm text-[#606e8a] dark:text-gray-400">Network Fee</span>
+              <span class="material-symbols-outlined text-[14px] text-gray-400" title="Gas fees on Solana are minimal">info</span>
+            </div>
+            <span class="text-sm text-[#111318] dark:text-white">&lt; $0.01</span>
+          </div>
+
+          <!-- Reference -->
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-[#606e8a] dark:text-gray-400">Ref ID</span>
+            <div class="flex items-center gap-1.5 cursor-pointer group" role="button" tabindex="0" aria-label="Copy transaction reference">
+              <span class="text-sm font-mono text-[#111318] dark:text-white">#829...21a</span>
+              <span class="material-symbols-outlined text-[14px] text-primary group-hover:text-primary/80">content_copy</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Optional extra space to ensure last content isn't hidden behind sticky footer on small screens -->
+        <div class="h-4 sm:h-6" aria-hidden="true"></div>
+      </div>
+
+      <!-- Footer (sticky to bottom of the card). On mobile the card is h-screen so footer remains visible. -->
+      <footer class="px-5 py-4 bg-white dark:bg-[#1A2333] border-t border-[#f0f1f5] dark:border-white/5 flex flex-col gap-3">
+        <a href="#" class="group flex w-full items-center justify-center rounded-lg h-12 bg-white dark:bg-transparent border border-[#e5e7eb] dark:border-white/20 text-primary hover:bg-gray-50 transition-colors gap-3 focus-ring">
+          <span class="text-sm font-bold">View on Explorer</span>
+          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+        </a>
+
+        <button class="flex w-full items-center justify-center rounded-lg h-12 bg-primary text-white hover:bg-primary/90 transition-colors gap-2 px-4 shadow-lg shadow-primary/20 focus-ring" type="button">
+          <span class="text-sm font-bold">Done</span>
+        </button>
+      </footer>
+    </div>
+
+    <!-- Decorative background blobs (low-impact, pointer-events-none) -->
+    <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30 dark:opacity-10 pointer-events-none hidden sm:block">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+      <div class="absolute top-0 -left-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style="animation-delay:2s"></div>
+      <div class="absolute -bottom-32 left-20 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style="animation-delay:4s"></div>
+    </div>
+  </div>
+</body>
+</html> 

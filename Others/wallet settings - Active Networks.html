@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wallet Settings - Payrium</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-dark": "#0b4ecf",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e2433",
+                        "border-light": "#f0f1f5",
+                        "border-dark": "#2a3245",
+                        "text-primary-light": "#111318",
+                        "text-primary-dark": "#f0f1f5",
+                        "text-secondary-light": "#6b7280",
+                        "text-secondary-dark": "#9ca3af",
+                        "danger": "#ef4444",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark transition-colors duration-200">
+<div class="relative flex min-h-screen flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+<!-- Main Container: mimicking mobile app width on desktop -->
+<main class="w-full max-w-[480px] bg-surface-light dark:bg-surface-dark shadow-xl rounded-2xl overflow-hidden border border-border-light dark:border-border-dark flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 border-b border-border-light dark:border-border-dark sticky top-0 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur z-10">
+<button class="flex items-center justify-center p-2 -ml-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-secondary-light dark:text-text-secondary-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Wallet Settings</h1>
+<button class="flex items-center justify-center p-2 -mr-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-secondary-light dark:text-text-secondary-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto">
+<!-- Networks Section -->
+<section class="mt-2">
+<div class="px-6 pb-2 pt-6">
+<h2 class="text-sm font-bold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark">Active Networks</h2>
+</div>
+<div class="flex flex-col">
+<!-- Network Item: Ethereum -->
+<div class="group flex items-center justify-between px-6 py-4 hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors cursor-pointer border-b border-border-light/50 dark:border-border-dark/50 last:border-0">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark shadow-sm">
+<span class="material-symbols-outlined text-primary">token</span> <!-- Placeholder for ETH logo -->
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-sm">Ethereum Mainnet</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Connected</span>
+</div>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:bg-gray-700 dark:border-gray-600"></div>
+</label>
+</div>
+<!-- Network Item: Polygon -->
+<div class="group flex items-center justify-between px-6 py-4 hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors cursor-pointer border-b border-border-light/50 dark:border-border-dark/50 last:border-0">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark shadow-sm">
+<span class="material-symbols-outlined text-purple-600">hexagon</span> <!-- Placeholder for Polygon logo -->
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-sm">Polygon</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Connected</span>
+</div>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:bg-gray-700 dark:border-gray-600"></div>
+</label>
+</div>
+<!-- Network Item: Arbitrum (Inactive) -->
+<div class="group flex items-center justify-between px-6 py-4 hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors cursor-pointer border-b border-border-light/50 dark:border-border-dark/50 last:border-0">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark shadow-sm opacity-60 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-blue-400">layers</span> <!-- Placeholder for Arbitrum logo -->
+</div>
+<div class="flex flex-col opacity-60 group-hover:opacity-100 transition-opacity">
+<span class="font-semibold text-sm">Arbitrum One</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Available</span>
+</div>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:bg-gray-700 dark:border-gray-600"></div>
+</label>
+</div>
+<!-- Add Network Button -->
+<div class="group flex items-center justify-between px-6 py-4 hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors cursor-pointer text-primary">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-xl">add</span>
+</div>
+<span class="font-semibold text-sm">Add Network</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</section>
+<hr class="border-t border-border-light dark:border-border-dark mx-6 my-2"/>
+<!-- Security Section -->
+<section>
+<div class="px-6 pb-2 pt-4">
+<h2 class="text-sm font-bold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark">Wallet Data &amp; Security</h2>
+</div>
+<div class="flex flex-col">
+<!-- Recovery Phrase -->
+<button class="group w-full flex items-center justify-between px-6 py-4 hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors text-left border-b border-border-light/50 dark:border-border-dark/50 last:border-0">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-xl">key</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-sm">Recovery Phrase</span>
+<span class="inline-flex items-center rounded-md bg-orange-50 dark:bg-orange-900/30 px-2 py-0.5 text-xs font-medium text-orange-700 dark:text-orange-300 ring-1 ring-inset ring-orange-600/20">Sensitive</span>
+</div>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-0.5">The master key to your funds</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<!-- Export Private Key -->
+<button class="group w-full flex items-center justify-between px-6 py-4 hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors text-left border-b border-border-light/50 dark:border-border-dark/50 last:border-0">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400">
+<span class="material-symbols-outlined text-xl">vpn_key</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-sm">Export Private Key</span>
+<span class="inline-flex items-center rounded-md bg-yellow-50 dark:bg-yellow-900/30 px-2 py-0.5 text-xs font-medium text-yellow-800 dark:text-yellow-300 ring-1 ring-inset ring-yellow-600/20">High Risk</span>
+</div>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-0.5">Key for this specific account</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</section>
+<hr class="border-t border-border-light dark:border-border-dark mx-6 my-2"/>
+<!-- Device Security -->
+<section>
+<div class="px-6 pb-2 pt-4">
+<h2 class="text-sm font-bold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark">Device Security</h2>
+</div>
+<div class="px-6 py-4 flex items-center justify-between hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined text-xl">timer</span>
+</div>
+<span class="font-semibold text-sm">Auto-lock Timer</span>
+</div>
+<select class="bg-transparent border-none text-sm font-medium text-primary focus:ring-0 cursor-pointer text-right pr-8" style="background-image: none;">
+<option>5 min</option>
+<option>15 min</option>
+<option>30 min</option>
+<option>Never</option>
+</select>
+<span class="material-symbols-outlined absolute right-10 pointer-events-none text-primary text-sm">expand_more</span>
+</div>
+</section>
+<hr class="border-t border-border-light dark:border-border-dark mx-6 my-2"/>
+<!-- Danger Zone -->
+<section class="mb-8">
+<div class="px-6 pb-2 pt-4">
+<h2 class="text-sm font-bold uppercase tracking-wider text-danger/80">Danger Zone</h2>
+</div>
+<button class="w-full flex items-center justify-between px-6 py-4 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors text-left group">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 text-danger">
+<span class="material-symbols-outlined text-xl">delete_forever</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-sm text-danger">Reset Wallet</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-0.5">Removes all accounts and data</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-danger group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</section>
+</div>
+<!-- Footer Version -->
+<div class="p-6 text-center border-t border-border-light dark:border-border-dark bg-background-light/50 dark:bg-background-dark/50">
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Payrium v2.4.0 (Build 3091)</p>
+</div>
+</main>
+<!-- Optional Backdrop Visuals for Presentation -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 bg-background-light dark:bg-background-dark overflow-hidden pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Payrium UI — Index</title>
+  <meta name="description" content="Index of Payrium UI screens and components." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030712;
+      --card-bg: rgba(30, 41, 59, 0.4);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-bg: rgba(30, 41, 59, 0.6);
+      --card-hover-border: rgba(255, 255, 255, 0.15);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-primary: #8b5cf6;
+      --accent-secondary: #3b82f6;
+      --glass: blur(12px);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.15), transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.15), transparent 40%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      z-index: 1;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      padding: 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: var(--glass);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-content {
+      flex: 1;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 6px 0 0;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-control {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      padding: 10px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn-control:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      background: var(--card-hover-bg);
+      border-color: var(--card-hover-border);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      flex-shrink: 0;
+    }
+
+    .card-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      overflow: hidden;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #f1f5f9;
+    }
+
+    .card-path {
+      font-size: 13px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: 'SF Mono', 'Roboto Mono', monospace;
+      opacity: 0.7;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-left: 12px;
+      z-index: 2;
+      /* Ensure buttons are clickable */
+    }
+
+    .action-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+    }
+
+    .action-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .status-msg {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .placeholder {
+      padding: 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-size: 14px;
+      text-align: center;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      transition: border-color 0.2s;
+    }
+
+    footer a:hover {
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        padding: 20px;
+      }
+
+      .controls {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .card-info {
+        gap: 12px;
+      }
+
+      .card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <img src="https://github.com/meetmarvelous.png" alt="meetmarvelous avatar" />
+      </div>
+      <div class="header-content">
+        <h1>Payrium UI</h1>
+        <p>A collection of interface screens and components for the Payrium wallet application.</p>
+      </div>
+      <div class="controls">
+        <button class="btn-control" id="sortAlphaBtn" title="Sort Alphabetically">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 10l5 5 5-5" />
+            <path d="M4 6h7" />
+            <path d="M4 12h7" />
+            <path d="M4 18h7" />
+          </svg>
+          Name
+        </button>
+        <button class="btn-control" id="sortTimeBtn" title="Sort by Time">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          Time
+        </button>
+        <button class="btn-control" id="refreshBtn" title="Refresh list">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 4v6h-6" />
+            <path d="M1 20v-6h6" />
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+          </svg>
+          Refresh
+        </button>
+      </div>
+    </header>
+
+    <div id="linksArea">
+      <div class="status-msg" id="status">Scanning repository...</div>
+      <div class="grid" id="links"></div>
+      <div id="fallback" style="display:none; margin-top:20px;">
+        <div class="placeholder">
+          Could not fetch repository file list. If your site is private or the API is blocked, add manual links in the
+          script.
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Built automatically from <a href="https://github.com/meetmarvelous/Payrium_UI" target="_blank">repository
+        contents</a>
+    </footer>
+  </div>
+
+  <script>
+    /* Configuration */
+    // Manual list of files in the 'old' directory
+    const fileList = [
+      { path: "a1.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "a2.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "a3.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "a3i.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "a4.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "a5.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "aa2.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "aa3.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "aa4.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "aa5.html", lastModified: "2026-01-02T21:24:55" },
+      { path: "about_payrium_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "create_wallet__confirm_phrase.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "create_wallet__display_phrase.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "create_wallet__recovery_info.html", lastModified: "2026-01-02T23:12:33" },
+      { path: "dao_governance_preview_1.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "dao_governance_preview_2.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "get_started.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "import_wallet__input_phrase_1.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "import_wallet__input_phrase_2.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "import_wallet__options.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "import_wallet__success.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "onboarding__community_governed.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "onboarding__easy_payments.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "onboarding__multi-network_wallet.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "payrium_splash_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "portfolio_home_screen_1.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "portfolio_home_screen_2.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "pum_token_info_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "receive_token_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "security_settings.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "send__enter_recipient_address.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "send__review_transaction.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "send__select_token_&_amount.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "send__success_confirmation.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "settings_home.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "swap__preview_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "swap__setup_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "swap__success_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "token_detail_screen.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "wallet_created_success.html", lastModified: "2025-12-31T20:55:33" },
+      { path: "wallet_settings.html", lastModified: "2025-12-31T20:55:33" }
+    ];
+
+    const linksEl = document.getElementById('links');
+    const statusEl = document.getElementById('status');
+    const fallbackEl = document.getElementById('fallback');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const sortAlphaBtn = document.getElementById('sortAlphaBtn');
+    const sortTimeBtn = document.getElementById('sortTimeBtn');
+
+    let currentSort = 'alpha'; // 'alpha' or 'time'
+    let sortDirection = 'asc'; // 'asc' or 'desc'
+
+    refreshBtn.addEventListener('click', () => init());
+    sortAlphaBtn.addEventListener('click', () => toggleSort('alpha'));
+    sortTimeBtn.addEventListener('click', () => toggleSort('time'));
+
+    function toggleSort(type) {
+      if (currentSort === type) {
+        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+      } else {
+        currentSort = type;
+        sortDirection = 'asc'; // Default to asc for new sort type
+        if (type === 'time') sortDirection = 'desc'; // Default to newest first for time
+      }
+      render();
+    }
+
+    function niceNameFromPath(path) {
+      const parts = path.split('/');
+      const name = parts[parts.length - 1].replace(/[-_]/g, ' ').replace(/\.html$/i, '');
+      return name.charAt(0).toUpperCase() + name.slice(1);
+    }
+
+    function formatDate(isoString) {
+      if (!isoString) return '';
+      const date = new Date(isoString);
+      return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function createLinkCard(item) {
+      // Use relative path for local navigation
+      const hostedUrl = item.path;
+
+      const a = document.createElement('a');
+      a.className = 'card';
+      a.href = hostedUrl;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+
+      // Card Content
+      const info = document.createElement('div');
+      info.className = 'card-info';
+
+      const icon = document.createElement('div');
+      icon.className = 'card-icon';
+      icon.textContent = (niceNameFromPath(item.path)[0] || 'P').toUpperCase();
+
+      const text = document.createElement('div');
+      text.className = 'card-text';
+
+      const title = document.createElement('div');
+      title.className = 'card-title';
+      title.textContent = item.title || niceNameFromPath(item.path);
+
+      const pathEl = document.createElement('div');
+      pathEl.className = 'card-path';
+      pathEl.innerHTML = `${item.path} <span style="opacity:0.5; margin-left:8px;">${formatDate(item.lastModified)}</span>`;
+
+      text.appendChild(title);
+      text.appendChild(pathEl);
+      info.appendChild(icon);
+      info.appendChild(text);
+
+      // Actions
+      const actions = document.createElement('div');
+      actions.className = 'card-actions';
+
+      // Copy Link Button
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'action-btn';
+      copyBtn.title = 'Copy Link';
+      copyBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+      copyBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        // Construct absolute URL for copying
+        const absoluteUrl = new URL(hostedUrl, window.location.href).href;
+        navigator.clipboard?.writeText(absoluteUrl).then(() => {
+          const original = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+          setTimeout(() => { copyBtn.innerHTML = original; }, 1500);
+        }).catch(() => alert('Failed to copy URL'));
+      });
+
+      // Open Page Button
+      const openBtn = document.createElement('button');
+      openBtn.className = 'action-btn';
+      openBtn.title = 'Open Page';
+      openBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.open(hostedUrl, '_blank', 'noopener');
+      });
+
+      actions.appendChild(copyBtn);
+      actions.appendChild(openBtn);
+
+      a.appendChild(info);
+      a.appendChild(actions);
+
+      return a;
+    }
+
+    function render() {
+      linksEl.innerHTML = '';
+
+      let files = [...fileList]; // Copy array
+
+      // Sort
+      files.sort((a, b) => {
+        if (currentSort === 'alpha') {
+          return sortDirection === 'asc'
+            ? a.path.localeCompare(b.path)
+            : b.path.localeCompare(a.path);
+        } else {
+          const timeA = new Date(a.lastModified || 0).getTime();
+          const timeB = new Date(b.lastModified || 0).getTime();
+          return sortDirection === 'asc'
+            ? timeA - timeB
+            : timeB - timeA;
+        }
+      });
+
+      if (files.length === 0) {
+        statusEl.textContent = 'No HTML pages found.';
+        fallbackEl.style.display = 'block';
+        return;
+      }
+
+      statusEl.textContent = `Found ${files.length} pages. Sorted by ${currentSort} (${sortDirection}).`;
+      files.forEach(item => {
+        linksEl.appendChild(createLinkCard(item));
+      });
+    }
+
+    function init() {
+      statusEl.textContent = 'Loading files...';
+      fallbackEl.style.display = 'none';
+      render();
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

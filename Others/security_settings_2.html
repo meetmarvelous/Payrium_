@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Security Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-hover": "#0b4ecf",
+                        "background-light": "#f0f2f5",
+                        "surface-light": "#ffffff",
+                        "text-main": "#0f172a",
+                        "text-secondary": "#64748b",
+                        "border-light": "#e2e8f0",
+                        "success": "#10b981",
+                        "warning": "#f59e0b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display text-text-main min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[400px] bg-surface-light rounded-3xl shadow-soft overflow-hidden h-[850px] flex flex-col relative border border-white/50 ring-1 ring-black/5">
+<header class="flex items-center justify-between px-5 py-4 bg-surface-light sticky top-0 z-20 border-b border-border-light/40 backdrop-blur-md bg-white/90">
+<button class="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors text-text-main">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-[17px] font-bold text-text-main tracking-tight">Security</h1>
+<div class="w-10 flex justify-end">
+<button class="p-2 -mr-2 rounded-full hover:bg-gray-100 transition-colors text-text-main opacity-0 pointer-events-none">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto no-scrollbar pb-6">
+<div class="flex flex-col items-center justify-center pt-8 pb-6 px-6">
+<div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center mb-4 text-primary relative">
+<div class="absolute inset-0 rounded-full bg-primary/5 animate-pulse"></div>
+<span class="material-symbols-outlined text-[40px] filled">shield_lock</span>
+</div>
+<h2 class="text-xl font-bold text-text-main mb-1">Protect your Assets</h2>
+<p class="text-sm text-center text-text-secondary max-w-[260px] leading-relaxed">
+                    Manage your PIN, biometrics, and recovery keys for your Payrium wallet.
+                </p>
+</div>
+<div class="mt-2">
+<h3 class="px-6 pb-3 pt-2 text-xs font-bold text-text-secondary uppercase tracking-widest">Access</h3>
+<div class="flex flex-col px-4 gap-2">
+<button class="flex items-center justify-between w-full p-4 bg-white border border-border-light rounded-2xl hover:border-primary/30 active:scale-[0.99] transition-all group shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">pin</span>
+</div>
+<div class="text-left">
+<p class="text-[15px] font-semibold text-text-main">Change App PIN</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<div class="flex items-center justify-between w-full p-4 bg-white border border-border-light rounded-2xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined">fingerprint</span>
+</div>
+<div class="text-left">
+<p class="text-[15px] font-semibold text-text-main">Biometrics</p>
+<p class="text-xs text-text-secondary mt-0.5">FaceID / TouchID Login</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary hover:bg-gray-300 peer-checked:hover:bg-primary-hover transition-colors"></div>
+</label>
+</div>
+<button class="flex items-center justify-between w-full p-4 bg-white border border-border-light rounded-2xl hover:border-primary/30 active:scale-[0.99] transition-all group shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<div class="text-left">
+<p class="text-[15px] font-semibold text-text-main">Auto-Lock</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm text-text-secondary font-medium">Immediately</span>
+<span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</button>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="px-6 pb-3 pt-2 text-xs font-bold text-text-secondary uppercase tracking-widest">Wallet Backup</h3>
+<div class="flex flex-col px-4 gap-2">
+<div class="mb-2 p-3.5 rounded-2xl bg-orange-50 border border-orange-100 flex gap-3 items-start">
+<span class="material-symbols-outlined text-orange-500 text-xl shrink-0 mt-0.5">warning</span>
+<p class="text-xs text-orange-800 leading-relaxed font-medium">
+                            Never share your recovery phrase. Payrium support will <span class="underline decoration-orange-300">never</span> ask for it.
+                        </p>
+</div>
+<button class="flex items-center justify-between w-full p-4 bg-white border border-border-light rounded-2xl hover:border-primary/30 active:scale-[0.99] transition-all group shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div class="text-left">
+<p class="text-[15px] font-semibold text-text-main">Recovery Phrase</p>
+<p class="text-xs text-text-secondary mt-0.5">View 12-word secret phrase</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 bg-white border border-border-light rounded-2xl hover:border-primary/30 active:scale-[0.99] transition-all group shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined">vpn_key</span>
+</div>
+<div class="text-left">
+<p class="text-[15px] font-semibold text-text-main">Export Private Key</p>
+<p class="text-xs text-text-secondary mt-0.5">Solana (SOL) Network</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="mt-8 mb-4 px-6 py-6 text-center border-t border-dashed border-gray-200 mx-6">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-semibold mb-3 border border-emerald-100">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+                    Payrium Shield Active
+                </div>
+<p class="text-[11px] text-gray-400 font-medium">Payrium v2.4.0 (309)</p>
+</div>
+</div>
+<nav class="bg-white border-t border-gray-100 px-6 py-3 flex justify-between items-end pb-5 pt-3 relative z-10">
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-gray-400 group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-gray-400 group-hover:text-primary transition-colors">history</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Activity</span>
+</button>
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-gray-400 group-hover:text-primary transition-colors">diversity_3</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">DAO</span>
+</button>
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-primary fill-current transition-colors">settings</span>
+<span class="text-[10px] font-bold text-primary transition-colors">Settings</span>
+</button>
+</nav>
+<div class="absolute inset-0 pointer-events-none z-[-1] opacity-0"></div>
+</div>
+<div class="fixed top-0 left-0 w-full h-full -z-50 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-purple-100/40 rounded-full blur-[120px]"></div>
+</div>
+
+</body></html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Review Transaction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#2a3441] bg-white dark:bg-[#1a202c] px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] dark:text-white">Payrium</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal text-primary dark:text-primary font-semibold" href="#">Wallet</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#">Activity</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#">Settings</a>
+</nav>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-gray-200 dark:border-gray-700" data-alt="User profile picture placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBALDvbkDPw5w85AIMmKJ0aNNl_aqQwgS9J2v1rahA8q7OE9OASNXkfMOsCeBRg22C1G12zVp0tkYWzjUBeOMYO9ZVjiv2MCRI8xkD16hQNvfR-UQ6LW7Fvv_pG1SgIcwUP2hWeK3wGq94u14PF1QeJx5_EBPaeG40wydrcF_7Y1yYwzHRWf7Ipzt2hi48E82HDk7Yy9La11MYxKpJ9ztG5cTHGmnDUZH-lrivQbFiizihFqtMlGmmUmRZQRv3EIPd0T5sRET0Rfj2O");'></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex justify-center py-10 px-4 md:px-0">
+<div class="w-full max-w-[560px] flex flex-col gap-6">
+<!-- Page Heading -->
+<div class="text-center md:text-left flex flex-col gap-2 px-2">
+<div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+<a class="md:hidden flex items-center justify-center text-gray-500 hover:text-gray-800" href="#">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</a>
+<h1 class="text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] text-[#111318] dark:text-white">Review Transaction</h1>
+</div>
+<p class="text-[#606e8a] dark:text-gray-400 text-base font-normal leading-normal text-center md:text-left">Please review the details below before confirming.</p>
+</div>
+<!-- Transaction Card -->
+<div class="bg-white dark:bg-[#1a202c] rounded-xl shadow-sm border border-[#e5e7eb] dark:border-[#2a3441] overflow-hidden">
+<!-- Amount Hero Section -->
+<div class="flex flex-col items-center justify-center p-8 pb-4 border-b border-dashed border-[#e5e7eb] dark:border-[#2a3441]">
+<div class="bg-center bg-no-repeat bg-contain rounded-full size-16 mb-4 shadow-sm" data-alt="USDC Coin Icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqWVNtYujxjnqL_5bcoEbYoW7a7TKHdZ2nwTds02yCl3xXbN5SF_GYBTc03WpKxV0ercjOrDrTtxCXF5acMrAgEzJTf4u1_sbWQwoWtCVaXnyXB0tH85NjailxkaybELZDe-nbNAAjXFyLqJRLb6oyugvRTmmOfR8cqs1SNCwBAXBks0ttGHhFDWR22rb7_5ztnQSBl7yofyVh8RW8UUR62FOJSiuhT-dru-blGR0-we01WDFhQWRpz382p8cAivjFl3s78v43fuAz");'></div>
+<div class="flex flex-col items-center">
+<p class="text-[#111318] dark:text-white text-4xl font-bold leading-tight tracking-[-0.015em] text-center">1,500 USDC</p>
+<p class="text-[#606e8a] dark:text-gray-400 text-lg font-normal leading-normal text-center mt-1">≈ $1,500.00 USD</p>
+</div>
+<div class="mt-6 flex items-center gap-2 px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-full text-xs font-medium border border-green-100 dark:border-green-800">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                        Secure Transaction
+                    </div>
+</div>
+<!-- Transaction Details List -->
+<div class="flex flex-col divide-y divide-[#f0f1f5] dark:divide-[#2a3441]">
+<!-- Recipient -->
+<div class="flex items-center gap-4 px-6 py-4 justify-between hover:bg-gray-50 dark:hover:bg-[#202836] transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary size-10">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#606e8a] dark:text-gray-400 text-xs font-medium uppercase tracking-wider mb-0.5">Recipient</p>
+<div class="flex items-center gap-1.5">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">alex.eth</p>
+<span class="text-[#606e8a] dark:text-gray-500 text-sm font-normal">(0x71C...9A2)</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+</div>
+<!-- Network -->
+<div class="flex items-center gap-4 px-6 py-4 justify-between hover:bg-gray-50 dark:hover:bg-[#202836] transition-colors">
+<div class="flex items-center gap-4">
+<div class="shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 size-10">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#606e8a] dark:text-gray-400 text-xs font-medium uppercase tracking-wider mb-0.5">Network</p>
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal">Ethereum Mainnet</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center">
+<span class="material-symbols-outlined text-gray-400 text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Gas Fee -->
+<div class="flex items-center gap-4 px-6 py-4 justify-between hover:bg-gray-50 dark:hover:bg-[#202836] transition-colors relative group/tooltip">
+<div class="flex items-center gap-4">
+<div class="shrink-0 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 size-10">
+<span class="material-symbols-outlined">local_gas_station</span>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex items-center gap-1">
+<p class="text-[#606e8a] dark:text-gray-400 text-xs font-medium uppercase tracking-wider mb-0.5">Network Fee</p>
+<span class="material-symbols-outlined text-[14px] text-gray-400 cursor-help">help</span>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal">0.002 ETH</p>
+<span class="text-[#606e8a] dark:text-gray-500 text-sm font-normal">($3.50)</span>
+</div>
+</div>
+</div>
+<div class="shrink-0">
+<div class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs text-gray-600 dark:text-gray-300 font-medium">~15 sec</div>
+</div>
+</div>
+</div>
+<!-- Total Summary Footer -->
+<div class="bg-gray-50 dark:bg-[#202836] px-6 py-5 border-t border-[#e5e7eb] dark:border-[#2a3441] flex justify-between items-center">
+<span class="text-[#606e8a] dark:text-gray-400 font-medium">Total Amount</span>
+<div class="text-right">
+<span class="block text-xl font-bold text-[#111318] dark:text-white">$1,503.50</span>
+<span class="block text-xs text-[#606e8a] dark:text-gray-500">Includes network fees</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 mt-2">
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-lg shadow-lg shadow-blue-500/20 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2">
+                    Confirm &amp; Send
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 text-[#606e8a] dark:text-gray-300 font-semibold py-3 px-6 rounded-lg text-base transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700">
+                    Edit Details
+                </button>
+</div>
+</div>
+</main>
+</body></html>

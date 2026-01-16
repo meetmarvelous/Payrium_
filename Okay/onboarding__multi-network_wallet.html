@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium Onboarding - Step 2</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-white md:bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-200 h-screen flex flex-col overflow-hidden">
+<header class="flex-none w-full flex items-center justify-between border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-[#101622] px-6 py-4 z-50">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Payrium</h2>
+</div>
+<div class="flex items-center">
+<a class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white text-sm font-medium transition-colors" href="#">Skip</a>
+</div>
+</header>
+<main class="flex flex-1 flex-col md:items-center md:justify-center p-0 md:p-8 overflow-hidden">
+<div class="flex w-full h-full md:h-[600px] max-w-5xl flex-col overflow-hidden bg-white dark:bg-[#151c2a] md:rounded-3xl shadow-none md:shadow-xl md:shadow-slate-200/50 dark:shadow-none md:flex-row">
+<div class="relative flex h-[42%] md:h-full w-full flex-col items-center justify-center bg-slate-50 dark:bg-[#1a2333] p-8 md:w-1/2 md:p-12 overflow-hidden group border-b border-slate-100 md:border-b-0 md:border-r dark:border-slate-800">
+<div class="absolute inset-0 opacity-30 dark:opacity-20 bg-[radial-gradient(#0d59f2_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div aria-label="Illustration of a centralized wallet hub connecting different blockchain networks" class="relative z-10 h-48 w-48 md:h-80 md:w-80 transition-transform duration-700 ease-out group-hover:scale-105" role="img">
+<div class="h-full w-full bg-contain bg-center bg-no-repeat" data-alt="3D illustration of floating cryptocurrency coins connecting to a central digital wallet hub" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdbsn7SvbXzE1gqHRQ3z1p08gj2PnEK4h9Gb9cupBfDIPk02viiDTgSTAsI3SH3a9pTWydr1YkiIFDDOF-kDkAsn1uszl2pU9PK6Nn_-Blu6Ggv8vDrXqH63MDPQLcHRcWyIxPUGUYYtrKcIsz9rlOt5kVecN0JThEs9bZV-OolB0U3pqkPVRAPsd_4DlI89bhRAwtDxsZ4Tgk0tx7rdGK9s3-sMKg0l44xv-8U0gRlHKGlHakGFubYjvJbYwi4gGduRoqgm4coJjb');">
+</div>
+</div>
+<div class="absolute bottom-10 left-10 h-16 w-16 animate-bounce rounded-full bg-blue-400/20 blur-xl"></div>
+<div class="absolute top-10 right-10 h-24 w-24 rounded-full bg-primary/10 blur-2xl"></div>
+</div>
+<div class="flex h-[58%] md:h-full w-full flex-col justify-between p-6 md:w-1/2 md:p-16 bg-white dark:bg-[#151c2a]">
+<div class="w-full">
+<div class="mb-6 flex w-full items-center gap-2">
+<div class="h-1.5 flex-1 rounded-full bg-primary/20">
+<div class="h-full w-full rounded-full bg-primary opacity-30"></div>
+</div>
+<div class="h-1.5 flex-1 rounded-full bg-primary/20">
+<div class="h-full w-full rounded-full bg-primary shadow-[0_0_10px_rgba(13,89,242,0.5)]"></div>
+</div>
+<div class="h-1.5 flex-1 rounded-full bg-slate-100 dark:bg-slate-700"></div>
+</div>
+<div class="mb-2">
+<span class="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                            Step 2 of 3
+                        </span>
+</div>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<h1 class="mb-3 md:mb-4 text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">
+                        One wallet for multiple networks
+                    </h1>
+<p class="text-sm md:text-base lg:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                        Manage your Bitcoin, Ethereum, and Solana assets in one secure place without switching apps. Stop juggling multiple apps and enjoy a unified experience.
+                    </p>
+</div>
+<div class="mt-4 flex flex-row gap-4 md:mt-8 pt-4">
+<button class="group flex h-12 md:h-14 w-auto items-center justify-center gap-2 rounded-xl bg-slate-100 px-6 font-bold text-slate-900 transition-all hover:bg-slate-200 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="hidden sm:inline">Back</span>
+</button>
+<button class="group flex h-12 md:h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-6 font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-blue-600 hover:shadow-primary/40 active:scale-95">
+<span>Next Step</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="hidden md:flex mt-8 items-center gap-2 opacity-50">
+<button class="h-2 w-2 rounded-full bg-slate-400 hover:bg-primary transition-colors"></button>
+<button class="h-2 w-2 rounded-full bg-primary scale-125"></button>
+<button class="h-2 w-2 rounded-full bg-slate-400 hover:bg-primary transition-colors"></button>
+</div>
+</main>
+
+</body></html>

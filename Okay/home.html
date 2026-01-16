@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Payrium Splash Screen</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d59f2",
+            "background-light": "#f5f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body
+  class="bg-white font-display text-slate-900 antialiased h-screen w-full overflow-hidden flex flex-col items-center justify-center relative selection:bg-primary/20">
+  <div
+    class="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full bg-blue-50 blur-3xl opacity-60 pointer-events-none">
+  </div>
+  <div
+    class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-50 blur-3xl opacity-60 pointer-events-none">
+  </div>
+  <main class="relative z-10 flex flex-col items-center justify-center w-full max-w-[390px] px-8 text-center">
+    <div class="relative mb-10 group cursor-default">
+      <div
+        class="absolute inset-0 bg-primary/30 blur-2xl rounded-full scale-95 group-hover:scale-110 transition-transform duration-1000">
+      </div>
+      <div
+        class="relative flex h-36 w-36 items-center justify-center rounded-[2rem] bg-gradient-to-br from-primary to-blue-600 text-white shadow-2xl shadow-primary/25 ring-4 ring-white transition-transform duration-500 hover:rotate-3 hover:scale-105">
+        <span class="material-symbols-outlined text-[72px]">account_balance_wallet</span>
+      </div>
+    </div>
+    <div class="flex flex-col items-center space-y-5 animate-pulse-slow">
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+        Payrium
+      </h1>
+      <div class="h-1.5 w-12 rounded-full bg-slate-100"></div>
+      <p class="text-lg font-medium text-slate-500 leading-relaxed max-w-[260px]">
+        Simple Web3 payments.<br />
+        Multi-chain.<br />
+        Community owned.
+      </p>
+    </div>
+  </main>
+  <div class="absolute bottom-12 flex flex-col items-center gap-4">
+    <div class="flex gap-2.5">
+      <div class="h-2.5 w-2.5 rounded-full bg-primary animate-[bounce_1s_infinite_0ms]"></div>
+      <div class="h-2.5 w-2.5 rounded-full bg-primary/60 animate-[bounce_1s_infinite_200ms]"></div>
+      <div class="h-2.5 w-2.5 rounded-full bg-primary/30 animate-[bounce_1s_infinite_400ms]"></div>
+    </div>
+    <div class="flex items-center gap-2 text-[10px] font-bold tracking-widest text-slate-300 uppercase mt-2">
+      <span class="material-symbols-outlined text-sm">lock</span>
+      Secure Environment
+    </div>
+  </div>
+
+</body>
+
+</html>

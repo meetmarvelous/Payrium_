@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wallet Settings - Payrium</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "primary-dark": "#0b4ecf",
+              "background": "#f8f9fc", 
+              "surface": "#ffffff",
+              "text-main": "#1e293b",
+              "text-sub": "#64748b",
+              "border-light": "#e2e8f0",
+              "solana-purple": "#9945FF",
+              "solana-green": "#14F195",
+            },
+            fontFamily: {
+              "sans": ["Inter", "sans-serif"]
+            },
+            boxShadow: {
+              "soft": "0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 1px 4px -1px rgba(0, 0, 0, 0.02)",
+              "mobile": "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen w-full flex items-center justify-center p-0 md:p-8">
+<div class="w-full h-screen md:h-[844px] md:w-[390px] bg-background md:rounded-[2rem] md:shadow-mobile overflow-hidden flex flex-col relative border-x border-gray-200 md:border-0 text-text-main">
+<header class="bg-surface px-4 py-3 flex items-center justify-between sticky top-0 z-20 border-b border-border-light/60 backdrop-blur-md bg-opacity-90">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-50 transition-colors -ml-2">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-[17px] font-bold">Wallet Settings</h1>
+<div class="w-8"></div> 
+</header>
+<main class="flex-1 overflow-y-auto no-scrollbar p-5 space-y-8">
+<div class="mt-2">
+<h2 class="text-2xl font-bold tracking-tight">Manage Wallet</h2>
+<p class="text-text-sub text-sm mt-1 leading-relaxed">View network details, export keys, and configure security preferences.</p>
+</div>
+<section>
+<div class="flex items-center justify-between mb-3 px-1">
+<h3 class="text-xs font-bold uppercase tracking-wider text-text-sub">Active Network</h3>
+</div>
+<div class="bg-surface rounded-2xl p-4 shadow-soft border border-border-light flex items-center justify-between relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-11 h-11 rounded-full bg-black flex items-center justify-center relative overflow-hidden shrink-0 shadow-sm">
+<div class="absolute inset-0 bg-gradient-to-tr from-[#9945FF] to-[#14F195]"></div>
+<svg class="w-6 h-6 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M2.5 18.5v-2h19v2h-19zm0-7.5v-2h19v2h-19zm0-7.5v-2h19v2h-19z" style="transform: rotate(-15deg) scale(0.8);"></path></svg>
+</div>
+<div>
+<p class="font-bold text-[15px]">Solana</p>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.4)]"></span>
+<span class="text-xs text-text-sub font-medium">Mainnet Beta</span>
+</div>
+</div>
+</div>
+<button class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors relative z-10 px-2 py-1 rounded-md hover:bg-blue-50">
+                        Change
+                    </button>
+</div>
+</section>
+<section>
+<h3 class="text-xs font-bold uppercase tracking-wider text-text-sub mb-3 px-1">Security &amp; Keys</h3>
+<div class="bg-surface rounded-2xl shadow-soft border border-border-light overflow-hidden divide-y divide-border-light">
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors text-left group">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-blue-50 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+</div>
+<div>
+<p class="text-[14px] font-semibold">Show Recovery Phrase</p>
+<p class="text-[11px] text-text-sub">Backup your 12-word phrase</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-red-50/50 transition-colors text-left group">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">key</span>
+</div>
+<div>
+<p class="text-[14px] font-semibold text-text-main group-hover:text-red-600 transition-colors">Export Private Key</p>
+<p class="text-[11px] text-red-500/70 group-hover:text-red-500 transition-colors">Advanced users only</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[20px] group-hover:text-red-400 transition-colors">warning</span>
+</button>
+<div class="flex items-center justify-between p-4 bg-surface">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-gray-100 text-text-main flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div>
+<p class="text-[14px] font-semibold">Biometric Auth</p>
+<p class="text-[11px] text-text-sub">Use FaceID to sign transactions</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-xs font-bold uppercase tracking-wider text-text-sub mb-3 px-1">Preferences</h3>
+<div class="bg-surface rounded-2xl shadow-soft border border-border-light overflow-hidden divide-y divide-border-light">
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors text-left group">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<p class="text-[14px] font-semibold">Local Currency</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-text-sub">USD</span>
+<span class="material-symbols-outlined text-gray-300 text-[20px] group-hover:text-text-sub">chevron_right</span>
+</div>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors text-left group">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">contacts</span>
+</div>
+<p class="text-[14px] font-semibold">Address Book</p>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[20px] group-hover:text-text-sub">chevron_right</span>
+</button>
+</div>
+</section>
+<div class="py-8 flex flex-col items-center justify-center gap-3 opacity-80">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+<span class="material-symbols-outlined text-white text-[24px]">account_balance_wallet</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-medium text-text-sub">Payrium Wallet</p>
+<p class="text-[10px] text-gray-400 mt-0.5">Version 2.4.0 (Build 302)</p>
+</div>
+<div class="flex gap-4 mt-2">
+<a class="text-[11px] font-semibold text-primary hover:underline" href="#">Support</a>
+<a class="text-[11px] font-semibold text-primary hover:underline" href="#">Terms</a>
+<a class="text-[11px] font-semibold text-primary hover:underline" href="#">Privacy</a>
+</div>
+</div>
+<div class="h-6"></div>
+</main>
+<nav class="bg-surface border-t border-border-light h-[88px] px-6 pb-5 pt-2 flex items-center justify-around shrink-0 z-30 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.02)]">
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-gray-400 group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-gray-400 group-hover:text-primary transition-colors">history</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Activity</span>
+</button>
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-gray-400 group-hover:text-primary transition-colors">how_to_vote</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">DAO</span>
+</button>
+<button class="flex flex-col items-center gap-1 group w-14">
+<span class="material-symbols-outlined text-[26px] text-primary fill-1" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-bold text-primary">Settings</span>
+</button>
+</nav>
+</div>
+
+</body></html>

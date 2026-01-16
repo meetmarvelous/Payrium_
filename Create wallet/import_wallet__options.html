@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Import Wallet</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display min-h-screen flex flex-col antialiased selection:bg-primary/20 selection:text-primary">
+<!-- Top Navigation -->
+<header class="w-full bg-white dark:bg-[#1A2230] border-b border-[#f0f1f5] dark:border-gray-800 sticky top-0 z-10 transition-colors">
+<div class="max-w-[960px] mx-auto px-4 md:px-10 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="flex items-center justify-center size-8 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#111318] dark:text-white">Payrium</h1>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-start pt-8 pb-12 px-4 sm:px-6">
+<div class="w-full max-w-[520px] flex flex-col gap-8">
+<!-- Page Heading -->
+<div class="text-center flex flex-col gap-3 animate-[fadeIn_0.5s_ease-out]">
+<div class="mx-auto bg-primary/10 rounded-full size-12 flex items-center justify-center mb-1 text-primary">
+<span class="material-symbols-outlined text-[28px]">input</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-black leading-tight tracking-[-0.02em] text-[#111318] dark:text-white">
+                    Import Wallet
+                </h2>
+<p class="text-[#606e8a] dark:text-gray-400 text-base sm:text-lg font-normal leading-relaxed max-w-sm mx-auto">
+                    Select an import method to securely access your existing funds.
+                </p>
+</div>
+<!-- Options Container -->
+<div class="flex flex-col gap-4 w-full">
+<!-- Option 1: Recovery Phrase -->
+<button class="group relative flex items-center justify-between w-full p-1 bg-white dark:bg-[#1A2230] rounded-xl shadow-sm hover:shadow-lg hover:shadow-primary/5 border border-transparent hover:border-primary/30 transition-all duration-300 text-left overflow-hidden">
+<div class="flex flex-1 items-stretch gap-5 p-5">
+<!-- Icon Column -->
+<div class="flex-shrink-0 flex items-center justify-center">
+<div class="size-12 rounded-full bg-[#f0f1f5] dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-300 group-hover:text-primary text-[24px]">menu_book</span>
+</div>
+</div>
+<!-- Text Column -->
+<div class="flex flex-col justify-center gap-1">
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Recovery Phrase</h3>
+<p class="text-[#606e8a] dark:text-gray-400 text-sm font-normal leading-normal">
+                                Import using your 12 or 24-word secret seed phrase.
+                            </p>
+</div>
+</div>
+<!-- Arrow / Action -->
+<div class="hidden sm:flex items-center justify-center pr-6 pl-2 text-gray-300 dark:text-gray-600 group-hover:text-primary group-hover:translate-x-1 transition-all">
+<span class="material-symbols-outlined text-[28px]">chevron_right</span>
+</div>
+</button>
+<!-- Option 2: Private Key -->
+<button class="group relative flex items-center justify-between w-full p-1 bg-white dark:bg-[#1A2230] rounded-xl shadow-sm hover:shadow-lg hover:shadow-primary/5 border border-transparent hover:border-primary/30 transition-all duration-300 text-left overflow-hidden">
+<div class="flex flex-1 items-stretch gap-5 p-5">
+<!-- Icon Column -->
+<div class="flex-shrink-0 flex items-center justify-center">
+<div class="size-12 rounded-full bg-[#f0f1f5] dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-300 group-hover:text-primary text-[24px]">vpn_key</span>
+</div>
+</div>
+<!-- Text Column -->
+<div class="flex flex-col justify-center gap-1">
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Private Key</h3>
+<p class="text-[#606e8a] dark:text-gray-400 text-sm font-normal leading-normal">
+                                Import using your unique alphanumeric private key string.
+                            </p>
+</div>
+</div>
+<!-- Arrow / Action -->
+<div class="hidden sm:flex items-center justify-center pr-6 pl-2 text-gray-300 dark:text-gray-600 group-hover:text-primary group-hover:translate-x-1 transition-all">
+<span class="material-symbols-outlined text-[28px]">chevron_right</span>
+</div>
+</button>
+<!-- Decorative Illustration / Banner (Optional context visual) -->
+<div class="mt-4 w-full h-32 rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 z-0"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&amp;w=2532&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay dark:opacity-20" data-alt="Abstract 3D blockchain geometric shapes pattern background"></div>
+<div class="relative z-10 flex items-center justify-between px-6 h-full">
+<div class="flex flex-col gap-1 max-w-[70%]">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Security First</span>
+<p class="text-sm text-gray-600 dark:text-gray-300 font-medium">Never share your recovery phrase or private key with anyone, including Payrium support.</p>
+</div>
+<span class="material-symbols-outlined text-primary/40 text-[48px]">shield_lock</span>
+</div>
+</div>
+</div>
+<!-- Meta / Help Text -->
+<div class="flex flex-col items-center gap-4 mt-2">
+<a class="text-[#606e8a] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+<span class="underline decoration-transparent group-hover:decoration-primary transition-all">What's the difference between these methods?</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="py-6 text-center border-t border-transparent dark:border-gray-800">
+<p class="text-xs text-gray-400 dark:text-gray-600">
+            © 2024 Payrium. Secure &amp; Encrypted.
+        </p>
+</footer>
+</body></html>

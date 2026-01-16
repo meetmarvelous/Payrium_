@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium Splash Screen</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-white overflow-hidden selection:bg-primary/20">
+<div class="relative flex h-screen w-full flex-col items-center justify-center group/design-root">
+<!-- Background Decor: Abstract Gradients -->
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Main Content Wrapper -->
+<div class="layout-container z-10 flex flex-col items-center justify-center max-w-[480px] w-full px-6">
+<!-- Logo Component (Modified HeaderImage) -->
+<div class="flex justify-center mb-8">
+<div class="relative flex items-center justify-center w-28 h-28 bg-white dark:bg-[#1a2230] rounded-3xl shadow-xl shadow-primary/5 border border-white/50 dark:border-white/5">
+<!-- Using a div with background image to represent the brand mark as per HeaderImage component pattern -->
+<div class="w-16 h-16 bg-center bg-no-repeat bg-contain" data-alt="Abstract diamond shape logo representing value and blockchain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD82IXAe7M3v-U342iaf97FoqhDiw2q5zZvS81wUUHpBzEilrYI_iVS-Wdgjh0KLD6LkIn7YyonnHVRVBxFqviXtPv5ffcjbqQryhsI6X4NwIxopJiVnvEzs7jTK9HjGJ_ZAr-zTwU7Eqy_yjl8GRVZIZSNOxgmFqUmoImO89dTtscC2_Fy4t6p0CROnDbNqGWIqQtyCB7kM81bkJfAbzDMQLs-wcctYZ7tqyXAQs33fyO3X5_1lOpJQtBxbv10RE37WVd_m2bCD22K"); filter: hue-rotate(200deg) saturate(200%);'>
+</div>
+</div>
+</div>
+<!-- Headline Text -->
+<div class="flex flex-col w-full items-center mb-2">
+<h1 class="text-[#111318] dark:text-white tracking-tight text-[40px] font-bold leading-tight text-center">
+                    Payrium
+                </h1>
+</div>
+<!-- Body Text -->
+<div class="flex flex-col w-full items-center max-w-[320px] mb-12">
+<p class="text-[#637588] dark:text-[#94a3b8] text-lg font-normal leading-relaxed text-center">
+                    Simple Web3 payments. Multi-chain. Community owned.
+                </p>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 w-full max-w-[240px]">
+<!-- Status Text -->
+<div class="flex justify-center">
+<p class="text-[#637588] dark:text-[#64748b] text-sm font-medium leading-normal tracking-wide uppercase">Initializing</p>
+</div>
+<!-- Bar Track -->
+<div class="rounded-full bg-[#dbdfe6] dark:bg-[#2d3748] h-1.5 overflow-hidden w-full">
+<!-- Bar Fill -->
+<div class="h-full rounded-full bg-primary w-[30%]"></div>
+</div>
+</div>
+</div>
+<!-- Footer Version Info -->
+<div class="absolute bottom-8 w-full text-center">
+<p class="text-[#94a3b8] dark:text-[#475569] text-xs font-medium tracking-wider opacity-60">v1.0.2</p>
+</div>
+</div>
+</body></html>

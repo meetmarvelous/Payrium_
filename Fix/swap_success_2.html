@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Swap Success</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                    "primary": "#0d59f2",
+                    "background-light": "#f8fafc",
+                    "background-dark": "#101622",
+                    "success": "#10b981", 
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+                boxShadow: {
+                    'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    'glow': '0 0 20px rgba(13, 89, 242, 0.15)',
+                }
+            },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light text-[#111318] antialiased min-h-screen flex flex-col items-center justify-center p-4">
+<div class="mb-8 flex flex-col items-center gap-3 animate-fade-in">
+<div class="bg-center bg-no-repeat bg-cover rounded-xl h-12 w-12 bg-primary/10 flex items-center justify-center text-primary shadow-glow" data-alt="Payrium App Logo abstract blue shape">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900">Payrium</h1>
+</div>
+<main class="w-full max-w-[400px] bg-white rounded-3xl shadow-soft border border-slate-100 overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-50 to-transparent opacity-50 pointer-events-none"></div>
+<div class="pt-10 pb-6 px-6 flex flex-col items-center text-center relative z-10">
+<div class="mb-5 relative">
+<div class="absolute inset-0 bg-green-100 rounded-full blur-xl transform scale-150 animate-pulse"></div>
+<div class="relative bg-white text-green-500 rounded-full p-4 flex items-center justify-center shadow-lg shadow-green-100 border-4 border-green-50">
+<span class="material-symbols-outlined text-5xl font-variation-settings-'wght' 600">check</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 mb-2">Swap Complete!</h2>
+<p class="text-slate-500 text-sm leading-relaxed px-4">
+                Your transaction has been successfully processed on the Solana network.
+            </p>
+</div>
+<div class="px-6 pb-2">
+<div class="flex flex-col gap-1 relative">
+<div class="flex items-center justify-between bg-slate-50 p-4 rounded-2xl border border-slate-100">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm ring-2 ring-white" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcXu-6Knxh_5pauVKWy1u0ebJIRh2-4wWJ0ZbzGXwYNUQXVMDMf76PgQ5yixpyMNVdcLAEW64HVdi7g6_VBg2cotEgiUSHxcSFNOVxY82AQ4NAQS2ONyU8gzar5H6V7la0_MgRmi4uvx9WbmC0Jp8ypEpUN8bAvx_dX9Dc_NkdsKs6mfjDnBXuxTGllSIQBRl6yWsrjn0YIhXYCrNZgOBgMSqhDXgZrhyCiR3LtDx7kFpigNqKraAiNwRE0j0VXrqzlKK65isAnHs2");'></div>
+<div class="flex flex-col">
+<span class="text-slate-500 text-[11px] font-bold uppercase tracking-wider">Sent</span>
+<span class="text-slate-900 text-base font-bold">SOL</span>
+</div>
+</div>
+<span class="text-slate-900 text-lg font-bold tabular-nums">10.5</span>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="bg-white p-2 rounded-full border border-slate-100 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400 text-lg">arrow_downward</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-slate-50 p-4 rounded-2xl border border-slate-100">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shadow-sm ring-2 ring-white" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGArvrQxJRQnJcajY3a0_Nh9GCxej5vwQlI0wSVg7yAANK-ZjOXExVV5534g3D95L6mQGspyqExqOxJp6311CEm3z6ngSzFcY-w4bNEucxAGQxDM8VExVU3JHqVRX7cPEyI88mArH0htHKMr6G8rmrgBcd4p9PrNnwv9QM-36ML6EhjNHljnqe_hPMRK56uN4xNbo7XyoYoNLpXgR7aJ_VapA83Lyim9XWgCfxCw_5Cj5p60RuM9rlBPlEA3TL-a6JoqnUQMkNAlAE");'></div>
+<div class="flex flex-col">
+<span class="text-slate-500 text-[11px] font-bold uppercase tracking-wider">Received</span>
+<span class="text-slate-900 text-base font-bold">PYR</span>
+</div>
+</div>
+<span class="text-primary text-lg font-bold tabular-nums">+850.00</span>
+</div>
+</div>
+</div>
+<div class="px-6 py-4">
+<div class="flex flex-col gap-3 py-3 border-t border-slate-100">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Rate</span>
+<span class="text-slate-900 font-medium tabular-nums">1 SOL ≈ 80.95 PYR</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-1.5">
+<span class="text-slate-500">Network Fee</span>
+<span class="bg-slate-100 text-slate-500 text-[10px] px-1.5 py-0.5 rounded font-medium">SOLANA</span>
+</div>
+<span class="text-slate-900 font-medium tabular-nums">0.00005 SOL</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-2 flex flex-col gap-4">
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-2xl transition-all shadow-lg shadow-blue-500/20 active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Done</span>
+</button>
+<a class="group flex items-center justify-center gap-2 text-sm font-medium text-slate-500 hover:text-primary transition-colors py-1" href="#">
+<span>View on Solana Explorer</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
+</a>
+</div>
+</main>
+<div class="mt-8 text-center">
+<p class="text-slate-400 text-xs">Payrium Wallet • Solana Network</p>
+</div>
+
+</body></html>

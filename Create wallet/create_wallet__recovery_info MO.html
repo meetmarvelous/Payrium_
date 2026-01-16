@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Payrium - Secure Wallet</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#1A2230",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white flex items-center justify-center min-h-screen p-4 transition-colors duration-200">
+    <div
+        class="relative flex flex-col w-full max-w-[390px] h-[844px] bg-white dark:bg-card-dark rounded-3xl shadow-2xl overflow-hidden border border-[#dbdfe6] dark:border-[#2a3441]">
+        <header
+            class="flex items-center justify-between px-5 py-3 border-b border-[#f0f1f5] dark:border-[#2a3441] shrink-0">
+            <button
+                class="flex items-center justify-center text-[#111318] dark:text-white hover:text-primary transition-colors w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            </button>
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-primary rounded-md flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-white text-[16px]">account_balance_wallet</span>
+                </div>
+                <h2 class="text-base font-bold tracking-tight text-[#111318] dark:text-white">Payrium</h2>
+            </div>
+            <button
+                class="flex items-center justify-center text-[#111318] dark:text-white hover:text-primary transition-colors w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                <span class="material-symbols-outlined text-[20px]">help</span>
+            </button>
+        </header>
+        <div class="px-5 pt-4 pb-2 shrink-0">
+            <div class="flex justify-between items-center mb-1.5">
+                <span class="text-xs font-medium text-[#637588] dark:text-gray-400">Step 1 of 4</span>
+                <span class="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded">25%</span>
+            </div>
+            <div class="h-1 w-full bg-[#dbdfe6] dark:bg-[#2a3441] rounded-full overflow-hidden">
+                <div class="h-full bg-primary rounded-full transition-all duration-300" style="width: 25%;"></div>
+            </div>
+        </div>
+        <div class="flex-1 flex flex-col px-5 pt-2 pb-0 overflow-hidden">
+            <div class="w-full flex justify-center mb-4 shrink-0">
+                <div
+                    class="relative w-32 h-32 bg-primary/5 dark:bg-primary/10 rounded-full flex items-center justify-center overflow-hidden ring-4 ring-white dark:ring-card-dark shadow-sm">
+                    <div class="w-full h-full bg-center bg-no-repeat bg-cover opacity-90"
+                        data-alt="Abstract 3D blue shield and lock security illustration"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2TzA5Ws3y6vQXTswmg_gr9mjWxHklWDmtjAgnyFr5LtcRzzoPlyXHeqLvGYacBDg2R_6vJYuYnwDdo6jFrGAzgtiq58SIK5zQCq3SbVMOGmc0VsoVGx197ZwkiiXAHGBuvLGUYeLc4zgTcG6ZXTa6_4sRCQKKGLCgrABgYQwr_m4BwFQYExvwcw7e02KoCJbjDuKvkYf5H1n4PDPFh_lnsv9CLu4SkhpLHpsfv8L8Vl05E0U17r41OTUFh8aQORd-h60lO4Sr7wmZ");'>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mb-4 shrink-0">
+                <h1 class="text-xl font-bold tracking-tight text-[#111318] dark:text-white mb-2 leading-tight">
+                    Secure your Wallet
+                </h1>
+                <p class="text-[#637588] dark:text-gray-300 text-xs leading-5 px-2">
+                    Your Secret Recovery Phrase is the <span class="font-semibold text-primary">only way</span> to
+                    recover your Solana and USDC assets.
+                </p>
+            </div>
+            <div class="flex flex-col gap-2.5 overflow-y-auto scrollbar-hide pb-2">
+                <div
+                    class="flex items-center gap-3 p-3 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent dark:border-[#2a3441]">
+                    <div class="flex-shrink-0 text-primary bg-white dark:bg-card-dark p-1.5 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined filled text-[18px]">verified_user</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xs font-bold text-[#111318] dark:text-white mb-0.5">Payrium never asks for it
+                        </h3>
+                        <p class="text-[10px] text-[#637588] dark:text-gray-400 leading-tight">
+                            Never share with anyone, even support.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center gap-3 p-3 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent dark:border-[#2a3441]">
+                    <div class="flex-shrink-0 text-primary bg-white dark:bg-card-dark p-1.5 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-[18px]">lock</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xs font-bold text-[#111318] dark:text-white mb-0.5">Lost phrase = Lost funds
+                        </h3>
+                        <p class="text-[10px] text-[#637588] dark:text-gray-400 leading-tight">
+                            We cannot recover your phrase for you.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center gap-3 p-3 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent dark:border-[#2a3441]">
+                    <div class="flex-shrink-0 text-primary bg-white dark:bg-card-dark p-1.5 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-[18px]">edit_note</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xs font-bold text-[#111318] dark:text-white mb-0.5">Write it down offline</h3>
+                        <p class="text-[10px] text-[#637588] dark:text-gray-400 leading-tight">
+                            Write on paper &amp; store securely. No screenshots.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-5 pt-2 border-t border-[#f0f1f5] dark:border-[#2a3441] bg-white dark:bg-card-dark z-10 shrink-0">
+            <button
+                class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 px-4 bg-primary hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-white text-sm font-bold leading-normal tracking-[0.015em] mb-3">
+                <span class="truncate">I'm ready to view my phrase</span>
+            </button>
+            <button
+                class="w-full flex cursor-pointer items-center justify-center text-[#637588] dark:text-gray-400 hover:text-[#111318] dark:hover:text-white text-xs font-semibold transition-colors py-1">
+                Remind me later
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

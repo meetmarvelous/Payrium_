@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Receive Token Screen - Payrium</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white min-h-screen flex flex-col items-center justify-center p-4">
+<!-- Mobile-First Card Container -->
+<main class="w-full max-w-[400px] bg-white dark:bg-[#1C2333] rounded-2xl shadow-xl overflow-hidden flex flex-col border border-gray-100 dark:border-gray-800 relative group/design-root">
+<!-- Top Navigation Header -->
+<header class="flex items-center justify-between px-6 py-4 border-b border-solid border-gray-100 dark:border-gray-800 bg-white/50 dark:bg-[#1C2333]/50 backdrop-blur-md sticky top-0 z-10">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-[#111318] dark:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Receive</h2>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-[#111318] dark:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</header>
+<!-- Scrollable Content Area -->
+<div class="flex flex-col items-center px-6 py-8 gap-6 flex-1 bg-white dark:bg-[#1C2333]">
+<!-- Network Selector (Chips Component) -->
+<div class="flex justify-center w-full">
+<div class="inline-flex h-9 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-[#101622] pl-3 pr-4 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-[20px]">token</span>
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal">Solana Network</p>
+<span class="material-symbols-outlined text-gray-400 text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- QR Code Display (Images Component) -->
+<div class="w-full flex justify-center py-2">
+<div class="relative p-4 bg-white rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+<!-- QR Code Image Container -->
+<div class="size-64 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+<div class="w-full h-full bg-center bg-no-repeat bg-contain" data-alt="QR Code for Solana wallet address" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGw8OptxeSN2co_sYU3i0IM3BkkuvcXaaNM7PskAkCKxIcf6QbInJ4RGtPny-33AT8o-gBuknBHdDP9t1DaasuixZp1qemhGkpHR1xraLdGZAs_BOItOSHxTbGiXUipA59PAYFIto5nM9kWCKy-e68SViV0bI599sgLcuO_sVjcT8bBFjXtRyYdqYfgvB15felfppUikWdmjrq4tPGZI60JBFIk-2GbfUeXwQ8JLWGA8v2rMCc3bHbj7Pls1Ixakdu0d7koDlgH7u9");'>
+</div>
+</div>
+<!-- Center Logo Overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white p-1.5 rounded-full shadow-md border border-gray-100">
+<span class="material-symbols-outlined text-primary text-[28px]">account_balance_wallet</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Wallet Address (TitleText Component) -->
+<div class="flex flex-col items-center gap-1 w-full">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Wallet Address</span>
+<div class="flex items-center gap-2 px-3 py-1 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer group">
+<h1 class="text-[#111318] dark:text-white text-[22px] font-bold font-mono leading-tight tracking-tight text-center">
+                        8x22...9k2a
+                    </h1>
+</div>
+</div>
+<!-- Warning / Disclaimer -->
+<div class="w-full bg-blue-50 dark:bg-primary/10 rounded-xl p-4 flex gap-3 items-start border border-blue-100 dark:border-primary/20">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0">info</span>
+<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Send only <span class="font-bold text-gray-900 dark:text-white">Solana (SOL)</span> to this address. Sending any other coins may result in permanent loss.
+                </p>
+</div>
+<!-- Spacer -->
+<div class="flex-1"></div>
+<!-- Primary Action (SingleButton Component) -->
+<div class="w-full pt-2 pb-2">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 bg-primary text-white gap-2 px-5 text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-blue-500/25 hover:bg-blue-700 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[24px]">content_copy</span>
+<span class="truncate">Copy address</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Send SOL</title>
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0d59f2",
+                "background-light": "#f5f6f8",
+                "background-dark": "#101622",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom keypad tap highlight removal */
+        button {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 flex justify-center min-h-screen font-display selection:bg-primary/20">
+<!-- Mobile Container (Centered on Desktop) -->
+<div class="relative flex w-full max-w-[420px] flex-col bg-background-light dark:bg-background-dark shadow-2xl h-[100dvh] overflow-hidden sm:rounded-none md:rounded-3xl md:h-[95vh] md:my-auto border-0 md:border border-gray-200 dark:border-gray-800">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 z-10 shrink-0">
+<button class="p-2 -ml-2 rounded-full text-slate-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-base font-bold text-slate-900 dark:text-white">Send</h1>
+<button class="p-2 -mr-2 rounded-full text-slate-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[24px]">qr_code_scanner</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center relative overflow-y-auto no-scrollbar pt-4 pb-6">
+<!-- Token Selector -->
+<div class="flex justify-center mb-8 w-full">
+<button class="group flex items-center gap-3 pl-3 pr-4 py-2 bg-white dark:bg-slate-800/50 rounded-full shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700/50 transition-all duration-200">
+<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#9945FF] to-[#14F195] flex items-center justify-center shrink-0">
+<!-- Simulated Solana Icon -->
+<svg fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6L20 6" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M4 18L20 18" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M4 12L16 12" stroke="white" stroke-dasharray="0 24" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M8 12L20 12" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<span class="text-slate-900 dark:text-white font-bold text-sm tracking-wide">SOL</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px] group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+<!-- Amount Display (Hero) -->
+<div class="flex flex-col items-center justify-center w-full px-8 mb-4">
+<div class="relative flex items-center justify-center">
+<span class="text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight animate-pulse" style="animation-duration: 2s;">0</span>
+<span class="text-6xl font-extrabold text-slate-300 dark:text-slate-700">.00</span>
+</div>
+<!-- Fiat Equivalent -->
+<p class="mt-2 text-slate-500 dark:text-slate-400 font-medium text-sm">≈ $0.00 USD</p>
+</div>
+<!-- Balance Context Pills -->
+<div class="flex items-center gap-2 mt-4 mb-auto">
+<div class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/50 flex items-center gap-2">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Available: 12.45 SOL</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold transition-colors">
+                    Max
+                </button>
+</div>
+<!-- Spacer to push keypad down -->
+<div class="h-8"></div>
+<!-- Numeric Keypad -->
+<div class="w-full px-6 grid grid-cols-3 gap-y-4 gap-x-6 mb-6">
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">1</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">2</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">3</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">4</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">5</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">6</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">7</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">8</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">9</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">.</button>
+<button class="h-16 rounded-full text-2xl font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">0</button>
+<button class="h-16 rounded-full text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">backspace</span>
+</button>
+</div>
+<!-- Bottom Action -->
+<div class="w-full px-6 pb-2">
+<button class="w-full h-14 bg-primary hover:bg-blue-600 active:scale-[0.98] text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition-all duration-200 flex items-center justify-center gap-2">
+                    Review
+                </button>
+</div>
+</main>
+<!-- Decorative Blur for desktop mode (Simulating device underlay glow) -->
+<div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-3/4 h-20 bg-primary/20 blur-3xl pointer-events-none rounded-full hidden md:block"></div>
+</div>
+</body></html>

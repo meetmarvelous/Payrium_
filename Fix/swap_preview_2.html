@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Swap Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-dark": "#0b4ecf",
+                        "bg-page": "#f8f9fc",
+                        "card-bg": "#ffffff",
+                        "text-main": "#0f172a",
+                        "text-sub": "#64748b",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 15px rgba(13, 89, 242, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes slide-shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .shimmer-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: slide-shimmer 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-bg-page font-sans text-text-main h-screen flex flex-col items-center justify-center overflow-hidden">
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-100/50 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-100/50 rounded-full blur-[100px]"></div>
+</div>
+<div class="w-full h-full max-w-[420px] sm:h-[90vh] sm:rounded-[2.5rem] bg-white shadow-2xl flex flex-col relative z-10 border border-slate-100/50 sm:my-8 overflow-hidden">
+<div class="flex items-center justify-between px-6 pt-8 pb-4 bg-white z-20">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-50 transition-colors text-slate-600">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Review Swap</h1>
+<div class="w-10"></div> 
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar px-6 pb-32">
+<div class="flex justify-center mb-6">
+<p class="text-xs font-medium text-slate-400 uppercase tracking-widest">Payrium Secure Swap</p>
+</div>
+<div class="bg-white rounded-3xl border border-slate-100 shadow-soft mb-6 relative overflow-visible">
+<div class="p-5 bg-slate-50 rounded-t-3xl border-b border-slate-100">
+<div class="flex justify-between items-center mb-1">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">You Pay</span>
+<span class="text-xs text-slate-400">Balance: 24.5 SOL</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-900 overflow-hidden flex-shrink-0 border border-slate-200">
+<img alt="Solana" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5PEkfvkFmjd0nzp4Rju4M4T86Bsva2-Ktazhrdo8ZQ1qnqcQvNl3k4sSur0SgESjXMBLxnIy58jK2liQJ1s-L3tkaOywyGfFrpEsIOw9aMkt50z4ir9eiu2T6ezDAnvJd7UogpVLtiITLbUAg0BkmbvGTh-OvPpwpTL6OayBknMTrJr5TDEqVrbSsSUsV1abtxqIfk9qd-z1dkj21lQuHS8VeZlf9zwH_e-83l3CrgeaE52BCT0F_MxzoolvzIRhF7Pv-SjMxVtU2"/>
+</div>
+<div>
+<div class="text-2xl font-bold tracking-tight">10 <span class="text-lg text-slate-500">SOL</span></div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-medium text-slate-500">≈ $1,450.20</div>
+</div>
+</div>
+</div>
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="w-10 h-10 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+</div>
+<div class="p-5 bg-white rounded-b-3xl">
+<div class="flex justify-between items-center mb-1">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">You Receive</span>
+<div class="bg-green-50 px-2 py-0.5 rounded text-[10px] font-bold text-green-600 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> BEST PRICE
+                        </div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-500 overflow-hidden flex-shrink-0 border border-slate-200">
+<img alt="USDC" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIuu-sanAcaNHtDXkgRj1S_5iTZOoZdiiCFQqhx9I8eG1P9pyev2XhjyhKOow2Rwc8wk96b5A4oP7G0SwjZzrQt3r53rGWz7FQ8B0NL-nlSR-AXV2O9thsIPLvWpfOvLlidre6p1b3Y4t7s78MMEjz6nfnJ3nMAILS0M2KgDGJ0sow8_aBDqHDRzlVZXUbozBeacOo4BL77CppLoqXrs1Mj0cyK_S103UAplM_DqaLDvWPF6i_2wN70mcnj6kZOPOL3H9b48QtfIGS"/>
+</div>
+<div>
+<div class="text-2xl font-bold tracking-tight text-green-600">1,450.23 <span class="text-lg text-green-600/70">USDC</span></div>
+</div>
+</div>
+</div>
+<div class="mt-2 text-right">
+<div class="text-sm font-medium text-slate-400">≈ $1,450.23</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-50/50 rounded-2xl p-4 space-y-3 border border-slate-100">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Rate</span>
+<span class="font-medium text-slate-800">1 SOL ≈ 145.02 USDC</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-1 text-slate-500">
+<span>Network Fee</span>
+<span class="material-symbols-outlined text-[14px] cursor-help">info</span>
+</div>
+<div class="text-right">
+<div class="font-medium text-slate-800">~0.00005 SOL</div>
+<div class="text-[10px] text-slate-400">($0.001)</div>
+</div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Price Impact</span>
+<span class="font-medium text-green-600">&lt; 0.1%</span>
+</div>
+<div class="w-full h-px bg-slate-200/50 my-1"></div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Route</span>
+<div class="flex items-center gap-1 text-slate-700 font-medium">
+<span>Raydium</span>
+<span class="material-symbols-outlined text-[12px] text-slate-400">arrow_forward</span>
+<span>Orca</span>
+</div>
+</div>
+</div>
+<div class="mt-4 p-3 rounded-lg bg-blue-50 border border-blue-100/50 flex gap-3 items-start">
+<span class="material-symbols-outlined text-blue-500 text-[18px] mt-0.5">info</span>
+<p class="text-xs text-blue-600 leading-relaxed">
+                    Output is estimated. You will receive at least <strong>1,448.00 USDC</strong> or the transaction will revert automatically.
+                </p>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-white border-t border-slate-50 z-30">
+<div class="relative h-14 bg-primary rounded-full overflow-hidden shadow-glow cursor-pointer group select-none">
+<div class="shimmer-effect"></div>
+<div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+<span class="text-white font-semibold text-base tracking-wide">Slide to confirm</span>
+</div>
+<div class="absolute left-1.5 top-1.5 bottom-1.5 w-11 bg-white rounded-full flex items-center justify-center z-20 shadow-sm group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary text-2xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

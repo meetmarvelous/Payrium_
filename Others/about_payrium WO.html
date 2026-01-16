@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Payrium</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden selection:bg-primary/30">
+<div class="flex h-screen w-full">
+<!-- Side Navigation (Desktop) -->
+<aside class="hidden md:flex flex-col w-64 bg-white dark:bg-[#151c2a] border-r border-slate-200 dark:border-slate-800 h-full justify-between">
+<div class="flex flex-col gap-6 p-4">
+<!-- App Brand in Nav -->
+<div class="flex items-center gap-3 px-2">
+<div class="bg-gradient-to-br from-primary to-blue-600 aspect-square rounded-lg size-10 flex items-center justify-center text-white font-bold text-xl">
+                        P
+                    </div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-normal">Payrium</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Personal Wallet</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">account_balance_wallet</span>
+<p class="text-sm font-medium leading-normal">Wallet</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">swap_horiz</span>
+<p class="text-sm font-medium leading-normal">Swap</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">history</span>
+<p class="text-sm font-medium leading-normal">Activity</p>
+</a>
+<div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:text-primary font-medium" href="#">
+<span class="material-symbols-outlined fill-1">settings</span>
+<p class="text-sm leading-normal">Settings</p>
+</a>
+</div>
+</nav>
+</div>
+<!-- User Profile Snippet -->
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-8 bg-slate-200" data-alt="User profile picture thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCM-bBs0g0iAcCIcfCSlbprcNZYI1WrKJs5hlc52VuEmXPXXmQoBK-7S-zFcxbi5cTS83vS4ao_PhWDM-0wWA-t6HTTqzorqEVP11ukYwWTfZl2C4LTqSSx_gjDYo4hcH-ZOtVeMKW8iDIElx1d3TKwU8LGkUuj_PtfgIHlNIiTyr5Fqfl5iM5zfunLBAdEZPUmbQ3gKKXzyYg_E9t8CC3Vji2wNXU41FDcCjSPaffVEuRbZHb60ZhnKYB-61yA-KNWc8JCLwkVFOCA");'></div>
+<div class="flex flex-col overflow-hidden">
+<p class="text-slate-900 dark:text-white text-sm font-medium truncate">Alex Morgan</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs truncate">alex@payrium.com</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Mobile Header (Visible only on mobile) -->
+<header class="md:hidden flex items-center justify-between p-4 bg-white dark:bg-[#151c2a] border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<div class="bg-gradient-to-br from-primary to-blue-600 aspect-square rounded-md size-8 flex items-center justify-center text-white font-bold text-lg">P</div>
+<span class="font-bold text-slate-900 dark:text-white">Payrium</span>
+</div>
+<button class="text-slate-500"><span class="material-symbols-outlined">menu</span></button>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto w-full">
+<div class="w-full max-w-[960px] mx-auto p-4 md:p-8 flex flex-col h-full">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-6 md:mb-10 text-sm">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Settings</a>
+<span class="material-symbols-outlined text-[16px] text-slate-400">chevron_right</span>
+<span class="text-slate-900 dark:text-white font-medium">About Payrium</span>
+</div>
+<!-- Centered About Card -->
+<div class="flex-1 flex flex-col items-center max-w-[520px] mx-auto w-full pb-10">
+<!-- App Hero / Header -->
+<div class="flex flex-col items-center gap-5 mb-8 w-full text-center">
+<div class="relative group cursor-default">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative bg-white dark:bg-[#1A2230] p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="bg-gradient-to-br from-primary to-blue-700 w-20 h-20 rounded-xl flex items-center justify-center text-white shadow-inner" data-alt="Payrium App Logo Icon">
+<svg class="size-10" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.177 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9.971 9.971 0 0 0 2 12.248a9.971 9.971 0 0 0 5.496 5.717.75.75 0 0 0 1.152-.082c.453-.77.94-1.34 1.705-1.715a9.742 9.742 0 0 0 3.539 6.177.75.75 0 0 0 1.071-.136 9.97 9.97 0 0 0 .624-9.395 9.97 9.97 0 0 0-.624-10.528ZM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Payrium</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base max-w-xs mx-auto">The secure, simple crypto wallet designed for humans.</p>
+</div>
+<!-- Version Chip -->
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<span class="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+<span class="text-xs font-mono font-medium text-slate-600 dark:text-slate-400">v2.4.0 (Build 8832)</span>
+</div>
+</div>
+<!-- Menu/Links Section -->
+<div class="w-full bg-white dark:bg-[#151c2a] rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden mb-8">
+<!-- Item 1 -->
+<a class="flex items-center gap-4 px-5 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group border-b border-slate-100 dark:border-slate-800 last:border-0" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-medium text-sm">Terms of Service</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+</a>
+<!-- Item 2 -->
+<a class="flex items-center gap-4 px-5 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group border-b border-slate-100 dark:border-slate-800 last:border-0" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-medium text-sm">Privacy Policy</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+</a>
+<!-- Item 3 -->
+<a class="flex items-center gap-4 px-5 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group border-b border-slate-100 dark:border-slate-800 last:border-0" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-medium text-sm">Open Source Licenses</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+</a>
+<!-- Item 4 -->
+<a class="flex items-center gap-4 px-5 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">language</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-medium text-sm">Visit Website</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs mt-0.5">payrium.com</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[20px] -rotate-45">arrow_forward</span>
+</a>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex gap-3 mb-10 w-full">
+<button class="flex-1 py-2.5 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary dark:text-blue-400 font-medium text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">star</span>
+                                Rate Payrium
+                            </button>
+<button class="flex-1 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">help</span>
+                                Get Help
+                            </button>
+</div>
+<!-- Footer / Socials -->
+<div class="flex flex-col items-center gap-6">
+<div class="flex items-center gap-6">
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<!-- Simple Twitter/X Icon representation using SVG path -->
+<svg aria-hidden="true" class="h-5 w-5 fill-current" data-alt="Twitter X icon" viewbox="0 0 24 24">
+<path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"></path>
+</svg>
+</a>
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<!-- GitHub Icon -->
+<svg aria-hidden="true" class="h-5 w-5 fill-current" data-alt="GitHub icon" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<!-- Discord Icon Style -->
+<span class="material-symbols-outlined">forum</span>
+</a>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-500 font-normal">© 2024 Payrium Inc. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
