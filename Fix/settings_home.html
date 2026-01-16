@@ -6,13 +6,10 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Payrium - Settings</title>
-    <!-- Material Symbols Link -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Tailwind Configuration -->
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -22,6 +19,8 @@
                         "primary": "#0d59f2",
                         "background-light": "#f5f6f8",
                         "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2233",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
@@ -31,13 +30,9 @@
             },
         }
     </script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <style>
         body {
@@ -45,47 +40,115 @@
         }
 
         .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
         }
     </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-        <!-- Main Layout Container -->
-        <div class="layout-container flex h-full grow flex-col">
-            <div class="flex flex-1 justify-center py-5 px-4 md:px-0">
-                <!-- Content Card (Centered for Desktop) -->
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen overflow-hidden">
+
+    <div class="flex h-screen w-full">
+
+        <!-- Side Navigation (Desktop - hidden on mobile) -->
+        <aside
+            class="hidden md:flex flex-col w-64 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-slate-800 h-full justify-between shrink-0">
+            <div class="flex flex-col gap-6 p-4">
+                <!-- App Brand -->
+                <div class="flex items-center gap-3 px-2">
+                    <div
+                        class="bg-gradient-to-br from-primary to-blue-600 rounded-xl size-10 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 22px; font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold">Payrium</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs">Simple Payments on Solana</p>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">dashboard</span>
+                        <p class="text-sm font-medium leading-normal">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">receipt_long</span>
+                        <p class="text-sm font-medium leading-normal">Activity</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">how_to_vote</span>
+                        <p class="text-sm font-medium leading-normal">DAO</p>
+                    </a>
+                    <div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium"
+                            href="#">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">settings</span>
+                            <p class="text-sm leading-normal">Settings</p>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <!-- User Profile Section -->
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
                 <div
-                    class="layout-content-container flex flex-col w-full max-w-[640px] flex-1 bg-white dark:bg-[#1A202C] rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
-                    <!-- Header -->
-                    <header
-                        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f1f5] dark:border-b-slate-700 px-6 py-4">
-                        <div class="flex items-center gap-4 text-[#111318] dark:text-white">
-                            <h2 class="text-xl font-bold leading-tight tracking-tight">Settings</h2>
-                        </div>
-                        <button
-                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary/10 hover:bg-primary/20 text-primary transition-colors text-sm font-bold leading-normal tracking-[0.015em]">
-                            <span class="truncate">Close</span>
-                        </button>
-                    </header>
+                    class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+                    <div
+                        class="size-9 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-white dark:border-slate-700 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-400">
+                        U
+                    </div>
+                    <div class="flex flex-col overflow-hidden">
+                        <p class="text-slate-900 dark:text-white text-sm font-medium truncate">User Wallet</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs truncate">5xK7...mP9w</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-[18px] ml-auto">expand_more</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between px-4 py-3 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-surface-dark">
+                <h2 class="text-xl font-bold leading-tight tracking-tight">Settings</h2>
+                <button
+                    class="flex items-center justify-center px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-bold transition-colors">
+                    Close
+                </button>
+            </header>
+
+            <!-- Desktop Breadcrumb Header -->
+            <header
+                class="hidden md:flex items-center gap-2 px-8 py-6 text-sm border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-surface-dark">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Dashboard</a>
+                <span class="material-symbols-outlined text-[16px] text-slate-400">chevron_right</span>
+                <span class="text-slate-900 dark:text-white font-medium">Settings</span>
+            </header>
+
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto pb-24 md:pb-8">
+                <div class="max-w-2xl mx-auto p-4 md:p-8">
+
                     <!-- Profile Section -->
-                    <div class="p-6">
+                    <div class="mb-8">
                         <div
-                            class="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between bg-background-light dark:bg-slate-800/50 p-4 rounded-xl border border-transparent dark:border-slate-700">
+                            class="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-200 dark:border-slate-700">
                             <div class="flex gap-4 items-center">
                                 <div class="bg-center bg-no-repeat bg-cover rounded-full h-16 w-16 shrink-0 shadow-inner"
-                                    data-alt="Abstract colorful gradient avatar circle"
                                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzfMTgRxB6qeVHVkWLnCEbEmWgPcERaB9hesFrq1KKA2yOZ-lIPraJcH7x4HLPSlpNURt8Gg9LGAyvZT-yVZwdH6X0lETdK17noSoX8a76mF47ZsI1XyBWqDhpsd2Dz7_18mL4eCe2loSf4596e2075Q-vztHHCuNC5mra0ovS_kSxQ-djUge95j4_rtY2xh73LPClC418oXiQ6gOITg5wei9jrMQUccW2wKrDwaxZfDWiR40GYNYU4EqnDhbTio_5s5iCe7-3fcdb");'>
                                 </div>
                                 <div class="flex flex-col justify-center">
-                                    <p
-                                        class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
-                                        Account 0x12...45F2</p>
+                                    <p class="text-lg font-bold leading-tight tracking-[-0.015em]">Account 0x12...45F2
+                                    </p>
                                     <div class="flex items-center gap-2 mt-1">
                                         <span class="relative flex h-2 w-2">
                                             <span
@@ -93,7 +156,7 @@
                                             <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                                         </span>
                                         <p
-                                            class="text-[#606e8a] dark:text-slate-400 text-sm font-medium leading-normal">
+                                            class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">
                                             Ethereum Mainnet</p>
                                     </div>
                                 </div>
@@ -104,160 +167,158 @@
                             </button>
                         </div>
                     </div>
-                    <!-- Scrollable Content -->
-                    <div class="flex-1 overflow-y-auto px-6 pb-6">
-                        <!-- Section: General -->
-                        <div class="mb-6">
-                            <h3
-                                class="text-[#111318] dark:text-slate-200 text-sm font-bold uppercase tracking-wider opacity-70 px-2 pb-2">
-                                General</h3>
+
+                    <!-- Section: General -->
+                    <div class="mb-6">
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-70 px-2 pb-2">General</h3>
+                        <div
+                            class="flex flex-col rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark overflow-hidden">
+                            <!-- Security -->
                             <div
-                                class="flex flex-col rounded-lg border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
-                                <!-- List Item: Security -->
-                                <div
-                                    class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="text-[#111318] dark:text-slate-200 flex items-center justify-center rounded-lg bg-[#f0f1f5] dark:bg-slate-700 shrink-0 size-10">
-                                            <span class="material-symbols-outlined">security</span>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <p
-                                                class="text-[#111318] dark:text-white text-base font-medium leading-normal flex-1 truncate">
-                                                Security &amp; Privacy</p>
-                                        </div>
+                                class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-10">
+                                        <span class="material-symbols-outlined">security</span>
                                     </div>
-                                    <div class="shrink-0 text-slate-400 dark:text-slate-500">
-                                        <span class="material-symbols-outlined">chevron_right</span>
-                                    </div>
+                                    <p class="text-base font-medium leading-normal">Security &amp; Privacy</p>
                                 </div>
-                                <!-- List Item: Wallet Preferences -->
-                                <div
-                                    class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="text-[#111318] dark:text-slate-200 flex items-center justify-center rounded-lg bg-[#f0f1f5] dark:bg-slate-700 shrink-0 size-10">
-                                            <span class="material-symbols-outlined">tune</span>
-                                        </div>
-                                        <p
-                                            class="text-[#111318] dark:text-white text-base font-medium leading-normal flex-1 truncate">
-                                            Wallet Preferences</p>
-                                    </div>
-                                    <div class="shrink-0 text-slate-400 dark:text-slate-500">
-                                        <span class="material-symbols-outlined">chevron_right</span>
-                                    </div>
-                                </div>
+                                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
                             </div>
-                        </div>
-                        <!-- Section: Ecosystem -->
-                        <div class="mb-6">
-                            <h3
-                                class="text-[#111318] dark:text-slate-200 text-sm font-bold uppercase tracking-wider opacity-70 px-2 pb-2">
-                                Payrium Ecosystem</h3>
+                            <!-- Wallet Preferences -->
                             <div
-                                class="flex flex-col rounded-lg border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
-                                <!-- List Item: PUM Token -->
-                                <div
-                                    class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
-                                            <span class="material-symbols-outlined">token</span>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <p
-                                                class="text-[#111318] dark:text-white text-base font-medium leading-normal flex-1 truncate">
-                                                PUM Token Info</p>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">View balance and
-                                                rewards</p>
-                                        </div>
+                                class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-10">
+                                        <span class="material-symbols-outlined">tune</span>
                                     </div>
-                                    <div class="shrink-0 text-slate-400 dark:text-slate-500">
-                                        <span class="material-symbols-outlined">chevron_right</span>
-                                    </div>
+                                    <p class="text-base font-medium leading-normal">Wallet Preferences</p>
                                 </div>
-                                <!-- List Item: DAO Governance -->
-                                <div
-                                    class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="text-[#111318] dark:text-slate-200 flex items-center justify-center rounded-lg bg-[#f0f1f5] dark:bg-slate-700 shrink-0 size-10">
-                                            <span class="material-symbols-outlined">how_to_vote</span>
-                                        </div>
-                                        <p
-                                            class="text-[#111318] dark:text-white text-base font-medium leading-normal flex-1 truncate">
-                                            DAO Governance</p>
-                                    </div>
-                                    <div class="shrink-0 text-slate-400 dark:text-slate-500">
-                                        <span class="material-symbols-outlined">chevron_right</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Section: Support -->
-                        <div class="mb-8">
-                            <h3
-                                class="text-[#111318] dark:text-slate-200 text-sm font-bold uppercase tracking-wider opacity-70 px-2 pb-2">
-                                Support</h3>
-                            <div
-                                class="flex flex-col rounded-lg border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
-                                <!-- List Item: Help Center -->
-                                <div
-                                    class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="text-[#111318] dark:text-slate-200 flex items-center justify-center rounded-lg bg-[#f0f1f5] dark:bg-slate-700 shrink-0 size-10">
-                                            <span class="material-symbols-outlined">help_center</span>
-                                        </div>
-                                        <p
-                                            class="text-[#111318] dark:text-white text-base font-medium leading-normal flex-1 truncate">
-                                            Help Center</p>
-                                    </div>
-                                    <div class="shrink-0 text-slate-400 dark:text-slate-500">
-                                        <span class="material-symbols-outlined">launch</span>
-                                    </div>
-                                </div>
-                                <!-- List Item: About -->
-                                <div
-                                    class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="text-[#111318] dark:text-slate-200 flex items-center justify-center rounded-lg bg-[#f0f1f5] dark:bg-slate-700 shrink-0 size-10">
-                                            <span class="material-symbols-outlined">info</span>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <p
-                                                class="text-[#111318] dark:text-white text-base font-medium leading-normal flex-1 truncate">
-                                                About Payrium</p>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">v1.2.4</p>
-                                        </div>
-                                    </div>
-                                    <div class="shrink-0 text-slate-400 dark:text-slate-500">
-                                        <span class="material-symbols-outlined">chevron_right</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Footer Actions -->
-                        <div class="flex flex-col gap-4 px-2">
-                            <button
-                                class="flex w-full items-center justify-center rounded-lg h-12 px-4 bg-white dark:bg-slate-800 border border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 text-base font-bold leading-normal tracking-[0.015em] transition-colors gap-2">
-                                <span class="material-symbols-outlined text-lg">logout</span>
-                                <span class="truncate">Disconnect Wallet</span>
-                            </button>
-                            <div class="flex justify-center mt-4 pb-4">
-                                <p class="text-xs text-slate-400 dark:text-slate-600 text-center">
-                                    Payrium Wallet © 2024<br />
-                                    <a class="hover:underline" href="#">Terms of Service</a> • <a
-                                        class="hover:underline" href="#">Privacy Policy</a>
-                                </p>
+                                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Section: Ecosystem -->
+                    <div class="mb-6">
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-70 px-2 pb-2">Payrium Ecosystem
+                        </h3>
+                        <div
+                            class="flex flex-col rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark overflow-hidden">
+                            <!-- PUM Token -->
+                            <div
+                                class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+                                        <span class="material-symbols-outlined">token</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-base font-medium leading-normal">PUM Token Info</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">View balance and rewards
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                            </div>
+                            <!-- DAO Governance -->
+                            <div
+                                class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-10">
+                                        <span class="material-symbols-outlined">how_to_vote</span>
+                                    </div>
+                                    <p class="text-base font-medium leading-normal">DAO Governance</p>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Support -->
+                    <div class="mb-8">
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-70 px-2 pb-2">Support</h3>
+                        <div
+                            class="flex flex-col rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark overflow-hidden">
+                            <!-- Help Center -->
+                            <div
+                                class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-700 last:border-0">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-10">
+                                        <span class="material-symbols-outlined">help_center</span>
+                                    </div>
+                                    <p class="text-base font-medium leading-normal">Help Center</p>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400">launch</span>
+                            </div>
+                            <!-- About -->
+                            <div
+                                class="group flex items-center gap-4 px-4 py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-10">
+                                        <span class="material-symbols-outlined">info</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-base font-medium leading-normal">About Payrium</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">v1.2.4</p>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Actions -->
+                    <div class="flex flex-col gap-4 px-2">
+                        <button
+                            class="flex w-full items-center justify-center rounded-xl h-12 px-4 bg-white dark:bg-surface-dark border border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 text-base font-bold transition-colors gap-2">
+                            <span class="material-symbols-outlined text-lg">logout</span>
+                            <span>Disconnect Wallet</span>
+                        </button>
+                        <div class="flex justify-center mt-4 pb-4">
+                            <p class="text-xs text-slate-400 dark:text-slate-600 text-center">
+                                Payrium Wallet © 2024<br />
+                                <a class="hover:underline" href="#">Terms of Service</a> • <a class="hover:underline"
+                                    href="#">Privacy Policy</a>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
+
+            <!-- Bottom Navigation (Mobile only) -->
+            <nav
+                class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">dashboard</span>
+                    <span class="text-[10px] font-medium">Dashboard</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">receipt_long</span>
+                    <span class="text-[10px] font-medium">Activity</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">how_to_vote</span>
+                    <span class="text-[10px] font-medium">DAO</span>
+                </button>
+                <button class="flex flex-col items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 24px; font-variation-settings: 'FILL' 1;">settings</span>
+                    <span class="text-[10px] font-bold">Settings</span>
+                </button>
+            </nav>
+
+        </main>
     </div>
+
 </body>
 
 </html>

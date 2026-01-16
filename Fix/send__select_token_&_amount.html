@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Send Assets</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<div class="w-full bg-white dark:bg-[#111318] border-b border-solid border-b-[#f0f1f5] dark:border-gray-800">
+<header class="layout-content-container flex max-w-[1200px] mx-auto items-center justify-between whitespace-nowrap px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-[#111318] dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">token</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Payrium</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#111318] dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Wallet</a>
+<a class="text-[#111318] dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Activity</a>
+<a class="text-[#111318] dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Settings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-slate-100 dark:ring-slate-700" data-alt="User profile avatar showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkgk-sWd_tkNWx2a-qYzn7rXPffDshD8rH__7VgUMlftZE2atUZPawPhuzpDNV6-vvIZV2ahicRhn0ZWscPqKcppuu9p4cqhFrJI_9prv_GXPKyjdZQXXa6OJOmugeOYPXtFN2ub-WF_DD3xJWwAh9H4mSRmBXRtd8N8PrLlXmDCH3P6hIZajqokVq5P5s-tsRkRjPshvE_WL4GRP2nLx-bs09NpCZqe1T8fiYvQb1rQNucVzKQd9rxmV-tghsshwDq8xqF7EI8ZBA");'>
+</div>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden flex items-center text-[#111318] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+<!-- Main Content Layout -->
+<div class="layout-container flex h-full grow flex-col py-10 px-4">
+<div class="flex flex-1 justify-center items-start sm:items-center">
+<!-- Central Transaction Card -->
+<div class="flex flex-col w-full max-w-[480px] bg-white dark:bg-[#1a2230] rounded-2xl shadow-xl dark:shadow-none border border-slate-100 dark:border-slate-800 overflow-hidden">
+<!-- Card Header -->
+<div class="flex items-center justify-between p-6 pb-2">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-2 -ml-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Send Assets</h1>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-2 -mr-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Token Selector Section -->
+<div class="px-6 py-4 flex flex-col items-center gap-4">
+<label class="sr-only">Select Token</label>
+<div class="relative group cursor-pointer">
+<div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-full pl-2 pr-4 py-2 transition-all duration-200">
+<div class="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center overflow-hidden">
+<!-- Token Icon -->
+<div class="w-full h-full bg-cover bg-center" data-alt="Ethereum ETH cryptocurrency logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBv29AyDLX7ETXEMHfKsFWd8tNoEas9bPS9bNzD5l2zlSrrwRKFRP36RoJJa8MJmLnPwDLhCdTENBCaiWM6N-saImm7IHdCn82f2ikc2v7-6D92yyBoNghv7NwsJW97hc5UzJG7CJSDfjJvhhELTnOju3_kkPCVROzGCihxma2U4yfP5jMqM3UEXv2B1n_Obh_9jK46xY7slUajdBXlrK10vqDI75N3YluEKM05LWZ3P3XTZCw-gCZy9v6ETc065yhIdMiGPed7nnMQ');"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-bold text-slate-900 dark:text-white leading-none">ETH</span>
+<span class="text-[10px] text-slate-500 font-medium uppercase tracking-wider leading-none">Ethereum</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Jumbo Amount Input -->
+<div class="px-6 py-2 flex flex-col items-center justify-center gap-1">
+<div class="relative w-full flex justify-center items-center">
+<input class="w-full text-center bg-transparent border-none text-[64px] font-semibold text-slate-900 dark:text-white placeholder-slate-200 dark:placeholder-slate-700 focus:ring-0 p-0 tracking-tight leading-tight selection:bg-primary/20" placeholder="0.00" type="text" value=""/>
+</div>
+<p class="text-slate-400 dark:text-slate-500 font-medium text-lg">≈ $0.00 USD</p>
+</div>
+<!-- Balance & Percentage Pills -->
+<div class="px-8 py-6 w-full">
+<!-- Percentage Shortcuts -->
+<div class="flex justify-center gap-3 mb-6">
+<button class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-100 dark:border-slate-700 transition-colors">25%</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-100 dark:border-slate-700 transition-colors">50%</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-100 dark:border-slate-700 transition-colors">75%</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-primary/10 text-primary dark:text-blue-400 hover:bg-primary/20 border border-transparent transition-colors">Max</button>
+</div>
+<!-- Available Balance -->
+<div class="flex items-center justify-between bg-background-light dark:bg-black/20 rounded-xl p-4 border border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-3">
+<div class="bg-white dark:bg-slate-700 p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-xl">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 font-medium">Available Balance</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">4.2045 ETH</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs text-slate-400 font-medium block">Network Fee</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">~$1.20</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="p-6 pt-2 mt-auto">
+<button class="group relative w-full flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white font-semibold text-base py-4 rounded-xl shadow-lg shadow-primary/30 transition-all active:scale-[0.98]">
+<span>Review Send</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

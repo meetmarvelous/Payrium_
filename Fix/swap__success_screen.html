@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Payrium - Swap Success</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2233",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen overflow-hidden">
+
+    <div class="flex h-screen w-full">
+
+        <!-- Side Navigation (Desktop - hidden on mobile) -->
+        <aside
+            class="hidden md:flex flex-col w-64 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-slate-800 h-full justify-between shrink-0">
+            <div class="flex flex-col gap-6 p-4">
+                <!-- App Brand -->
+                <div class="flex items-center gap-3 px-2">
+                    <div
+                        class="bg-gradient-to-br from-primary to-blue-600 rounded-xl size-10 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 22px; font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold">Payrium</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs">Simple Payments on Solana</p>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium"
+                        href="#">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                        <p class="text-sm leading-normal">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">receipt_long</span>
+                        <p class="text-sm font-medium leading-normal">Activity</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">how_to_vote</span>
+                        <p class="text-sm font-medium leading-normal">DAO</p>
+                    </a>
+                    <div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">settings</span>
+                            <p class="text-sm font-medium leading-normal">Settings</p>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <!-- User Profile Section -->
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <div
+                    class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+                    <div
+                        class="size-9 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-white dark:border-slate-700 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-400">
+                        U
+                    </div>
+                    <div class="flex flex-col overflow-hidden">
+                        <p class="text-slate-900 dark:text-white text-sm font-medium truncate">User Wallet</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs truncate">5xK7...mP9w</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-[18px] ml-auto">expand_more</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+            <!-- Mobile Header (Minimal for success screen) -->
+            <header
+                class="md:hidden flex items-center justify-end px-4 py-3 bg-transparent absolute top-0 left-0 right-0 z-10">
+                <button
+                    class="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-white/5">
+                    <span class="material-symbols-outlined text-[24px]">close</span>
+                </button>
+            </header>
+
+            <!-- Desktop Breadcrumb Header -->
+            <header
+                class="hidden md:flex items-center gap-2 px-8 py-6 text-sm border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-surface-dark">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Dashboard</a>
+                <span class="material-symbols-outlined text-[16px] text-slate-400">chevron_right</span>
+                <span class="text-slate-900 dark:text-white font-medium">Swap Complete</span>
+            </header>
+
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto pb-24 md:pb-8">
+                <div class="flex flex-col items-center justify-center min-h-full px-4 py-8">
+
+                    <!-- Success Content Card -->
+                    <div
+                        class="w-full max-w-md bg-white dark:bg-surface-dark rounded-3xl shadow-lg border border-slate-100 dark:border-gray-800 overflow-hidden">
+
+                        <!-- Success Content -->
+                        <div class="flex flex-col items-center px-6 pt-12 pb-8 text-center">
+                            <!-- Success Icon -->
+                            <div class="mb-6 relative">
+                                <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-25"></div>
+                                <div
+                                    class="relative flex items-center justify-center size-20 bg-primary rounded-full shadow-lg shadow-primary/30 text-white">
+                                    <span class="material-symbols-outlined text-[40px] font-bold">check</span>
+                                </div>
+                            </div>
+                            <!-- Headline -->
+                            <h1 class="tracking-tight text-[28px] font-bold leading-tight mb-2">Swap Successful</h1>
+                            <!-- Subtext -->
+                            <p
+                                class="text-gray-500 dark:text-gray-400 text-base font-normal leading-relaxed max-w-[280px]">
+                                The funds have been successfully exchanged and added to your wallet.
+                            </p>
+                        </div>
+
+                        <!-- Transaction Summary Card -->
+                        <div class="px-6 pb-2">
+                            <div
+                                class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 border border-slate-100 dark:border-transparent">
+                                <!-- From Item -->
+                                <div class="flex items-center justify-between py-2">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-white dark:bg-gray-800 p-1.5 rounded-full shadow-sm">
+                                            <img class="size-6 rounded-full object-cover" alt="Ethereum Logo"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj7yoTD3UxMNZR1S96V9Z9PPP0seFPeUtWqcbvICQY2csPxAt6VSlWnligaURoUqA-wFfpaKTwqtA5sViUatdRZRNa0gqIV5gUOMyXHl17tqWZpFXk7Wk97s32MiKwRwLi58I4i9q4xltIaRQ_m9AR3aneZUEppu67cVUIPpEFvsDleBski9-xxp47T8zXvAd2_QXVpaH6xnLKtVtG4nzi9uFvWLxfSZfhdPJL9N_J1cLFeeXsMWaA8fjBtCf5DHaPMhKKS3ekdTXK" />
+                                        </div>
+                                        <div class="flex flex-col items-start">
+                                            <span
+                                                class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Sold</span>
+                                            <span class="text-lg font-semibold">0.5 ETH</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Divider / Arrow -->
+                                <div class="relative flex items-center justify-center my-2">
+                                    <div class="absolute inset-0 flex items-center">
+                                        <div class="w-full border-t border-dashed border-gray-300 dark:border-gray-700">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="relative bg-slate-50 dark:bg-slate-800/50 px-2 text-gray-400 dark:text-gray-500">
+                                        <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+                                    </div>
+                                </div>
+                                <!-- To Item -->
+                                <div class="flex items-center justify-between py-2">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-white dark:bg-gray-800 p-1.5 rounded-full shadow-sm">
+                                            <img class="size-6 rounded-full object-cover" alt="USDC Logo"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMGPc_rGBXKivGuUElifPSvvOwAXliHwPugXsiJ5Kq7N8W2kWha0GmDNKK8seL5xOzUuW1uClxHCsfayWH28N5zgur0kGbhU7Q_dwlTbCh58D9zQc3Q12sxTqBx_Z7MMdg5-UyZ9zL0g80ESkfz25fWmbkmI6hhCvHBwZv_phl-djmRpPRqdcZ7SZVZjdSMBIaY57Ze3P1g2dT0pksyi25bOVyZMuWCbp1nfktoreP4FdOVMtdLpuqt_iBRWEM3_79KlKppRK3rNdD" />
+                                        </div>
+                                        <div class="flex flex-col items-start">
+                                            <span
+                                                class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Received</span>
+                                            <span class="text-lg font-semibold">1,200 USDC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- View on Explorer Link -->
+                        <div class="px-6 py-4 flex justify-center">
+                            <a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                                href="#">
+                                <span>View transaction details</span>
+                                <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                            </a>
+                        </div>
+
+                        <!-- Footer Actions -->
+                        <div class="p-6 mt-auto">
+                            <button
+                                class="w-full bg-primary hover:bg-blue-700 text-white font-semibold text-base py-3.5 px-6 rounded-xl shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98]">
+                                Done
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Navigation (Mobile only) -->
+            <nav
+                class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+                <button class="flex flex-col items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>
+                    <span class="text-[10px] font-bold">Dashboard</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">receipt_long</span>
+                    <span class="text-[10px] font-medium">Activity</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">how_to_vote</span>
+                    <span class="text-[10px] font-medium">DAO</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">settings</span>
+                    <span class="text-[10px] font-medium">Settings</span>
+                </button>
+            </nav>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

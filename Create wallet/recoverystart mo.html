@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Payrium - Create Wallet</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#3B82F6",
+            "primary-dark": "#2563EB",
+            "background-light": "#FAFAFA",
+            "background-dark": "#111827",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1F2937",
+            "text-main": "#1F2937",
+            "text-sub": "#6B7280",
+          },
+          fontFamily: {
+            "sans": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem" },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            'card': '0 2px 8px -1px rgba(0, 0, 0, 0.04)',
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gray-100 dark:bg-gray-900 text-text-main dark:text-white flex items-center justify-center min-h-screen p-4 transition-colors duration-200">
+  <div
+    class="relative flex flex-col w-full max-w-[390px] h-[884px] bg-surface-light dark:bg-background-dark rounded-[40px] shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-800">
+    <header class="flex items-center justify-between px-6 py-5 shrink-0 z-20">
+      <button
+        class="flex items-center justify-center text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors w-10 h-10 rounded-full active:scale-95">
+        <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+      </button>
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <span class="material-symbols-outlined text-white text-[22px]">account_balance_wallet</span>
+        </div>
+        <h2 class="text-lg font-bold tracking-tight text-text-main dark:text-white">Payrium</h2>
+      </div>
+      <button
+        class="flex items-center justify-center text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors w-10 h-10 rounded-full active:scale-95">
+        <span class="material-symbols-outlined text-[24px]">help</span>
+      </button>
+    </header>
+    <div class="px-8 pb-2 shrink-0">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-sm font-medium text-text-sub dark:text-gray-400">Step 1 of 4</span>
+        <span class="text-xs font-bold text-primary bg-blue-50 dark:bg-blue-900/30 px-2.5 py-1 rounded-md">25%</span>
+      </div>
+      <div class="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+        <div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 25%;"></div>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col px-6 overflow-hidden justify-start pt-2">
+      <div class="w-full flex justify-center mb-4 shrink-0">
+        <div
+          class="relative w-20 h-20 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center ring-4 ring-blue-50/50 dark:ring-blue-900/10 transition-all">
+          <div class="w-full h-full bg-center bg-no-repeat bg-cover opacity-90 scale-75"
+            data-alt="Abstract 3D blue shield and lock security illustration"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2TzA5Ws3y6vQXTswmg_gr9mjWxHklWDmtjAgnyFr5LtcRzzoPlyXHeqLvGYacBDg2R_6vJYuYnwDdo6jFrGAzgtiq58SIK5zQCq3SbVMOGmc0VsoVGx197ZwkiiXAHGBuvLGUYeLc4zgTcG6ZXTa6_4sRCQKKGLCgrABgYQwr_m4BwFQYExvwcw7e02KoCJbjDuKvkYf5H1n4PDPFh_lnsv9CLu4SkhpLHpsfv8L8Vl05E0U17r41OTUFh8aQORd-h60lO4Sr7wmZ");'>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-6 shrink-0">
+        <h1 class="text-xl font-bold tracking-tight text-text-main dark:text-white mb-2">
+          Secure your Wallet
+        </h1>
+        <p class="text-text-sub dark:text-gray-400 text-sm leading-relaxed max-w-[300px] mx-auto">
+          Your Secret Recovery Phrase is the <span class="font-semibold text-primary">only way</span> to recover your
+          Solana and USDC assets.
+        </p>
+      </div>
+      <div class="flex flex-col gap-2.5">
+        <div
+          class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-card transition-colors">
+          <div class="flex-shrink-0 text-primary bg-white dark:bg-gray-800 p-1.5 rounded-xl shadow-sm mt-0.5">
+            <span class="material-symbols-outlined filled text-[20px]">verified_user</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-semibold text-text-main dark:text-white mb-0.5">Payrium never asks for it</h3>
+            <p class="text-xs text-text-sub dark:text-gray-400 leading-relaxed">
+              Never share your phrase with anyone, even our support team.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-card transition-colors">
+          <div class="flex-shrink-0 text-primary bg-white dark:bg-gray-800 p-1.5 rounded-xl shadow-sm mt-0.5">
+            <span class="material-symbols-outlined text-[20px]">lock</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-semibold text-text-main dark:text-white mb-0.5">Lost phrase = Lost funds</h3>
+            <p class="text-xs text-text-sub dark:text-gray-400 leading-relaxed">
+              We cannot recover your phrase for you if you lose it.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-card transition-colors">
+          <div class="flex-shrink-0 text-primary bg-white dark:bg-gray-800 p-1.5 rounded-xl shadow-sm mt-0.5">
+            <span class="material-symbols-outlined text-[20px]">edit_note</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-semibold text-text-main dark:text-white mb-0.5">Write it down offline</h3>
+            <p class="text-xs text-text-sub dark:text-gray-400 leading-relaxed">
+              Write on paper &amp; store securely. Do not take a screenshot.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-grow"></div>
+    </div>
+    <div class="px-6 pb-6 pt-2 bg-surface-light dark:bg-background-dark z-10 shrink-0">
+      <div
+        class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent mb-4 opacity-50">
+      </div>
+      <button
+        class="w-full flex cursor-pointer items-center justify-center rounded-2xl h-12 px-6 bg-primary hover:bg-primary-dark transition-all active:scale-[0.98] shadow-lg shadow-blue-500/30 text-white text-base font-bold tracking-wide mb-2.5">
+        <span class="truncate">I'm ready to view my phrase</span>
+      </button>
+      <button
+        class="w-full flex cursor-pointer items-center justify-center text-text-sub dark:text-gray-400 hover:text-text-main dark:hover:text-white text-sm font-medium transition-colors py-2 rounded-lg active:bg-gray-50 dark:active:bg-gray-800">
+        Remind me later
+      </button>
+    </div>
+  </div>
+
+</body>
+
+</html>

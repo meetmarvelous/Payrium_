@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Send SOL</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-hover": "#0b4ecf",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a2235",
+                        "text-main-light": "#111318",
+                        "text-main-dark": "#ffffff",
+                        "text-sub-light": "#606e8a",
+                        "text-sub-dark": "#9ca3af",
+                        "border-light": "#dbdfe6",
+                        "border-dark": "#2a3447",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hide scrollbar for clean mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Device Container -->
+<div class="relative w-full max-w-[420px] h-[850px] max-h-[90vh] flex flex-col bg-card-light dark:bg-card-dark rounded-[2.5rem] shadow-2xl overflow-hidden border-8 border-white dark:border-[#1a2235] ring-1 ring-black/5">
+<!-- Status Bar Area (Decorative) -->
+<div class="h-6 w-full bg-card-light dark:bg-card-dark flex items-center justify-between px-6 pt-2 shrink-0 z-20">
+<span class="text-[10px] font-bold text-text-main-light dark:text-text-main-dark">9:41</span>
+<div class="flex gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-text-main-light dark:text-text-main-dark">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[14px] text-text-main-light dark:text-text-main-dark">wifi</span>
+<span class="material-symbols-outlined text-[14px] text-text-main-light dark:text-text-main-dark">battery_full</span>
+</div>
+</div>
+<!-- Top Navigation -->
+<header class="flex items-center justify-between px-4 py-4 shrink-0 bg-card-light dark:bg-card-dark z-10">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-background-light dark:hover:bg-background-dark/50 text-text-main-light dark:text-text-main-dark transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-text-main-light dark:text-text-main-dark text-lg font-bold">Send SOL</h2>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-background-light dark:hover:bg-background-dark/50 text-text-main-light dark:text-text-main-dark transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</header>
+<!-- Main Scrollable Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Recipient Input Section -->
+<div class="px-5 pt-2 pb-6">
+<label class="block text-text-sub-light dark:text-text-sub-dark text-sm font-medium mb-3 pl-1">To</label>
+<div class="relative group">
+<div class="flex items-center w-full bg-background-light dark:bg-background-dark rounded-2xl border-2 border-transparent focus-within:border-primary transition-all duration-200 overflow-hidden">
+<span class="material-symbols-outlined text-text-sub-light dark:text-text-sub-dark ml-4 text-[20px]">search</span>
+<input class="w-full bg-transparent border-none text-text-main-light dark:text-text-main-dark placeholder:text-text-sub-light/60 dark:placeholder:text-text-sub-dark/60 text-base font-normal py-4 pl-3 pr-12 focus:ring-0" placeholder="Name, @username, or address" type="text" value=""/>
+<button aria-label="Scan QR Code" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-xl text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[22px]">qr_code_scanner</span>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-center mt-2 px-1">
+<p class="text-xs text-text-sub-light dark:text-text-sub-dark">Solana Network (SPL)</p>
+<button class="text-xs font-semibold text-primary hover:text-primary-hover">Paste</button>
+</div>
+</div>
+<!-- Quick Actions (Radio List Style) -->
+<div class="px-5 pb-6">
+<div class="flex gap-3">
+<button class="flex-1 flex flex-col items-center gap-2 p-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">content_paste</span>
+</div>
+<span class="text-sm font-medium text-text-main-light dark:text-text-main-dark">Paste Address</span>
+</button>
+<button class="flex-1 flex flex-col items-center gap-2 p-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<span class="text-sm font-medium text-text-main-light dark:text-text-main-dark">Domain Name</span>
+</button>
+</div>
+</div>
+<!-- Recent Contacts -->
+<div class="px-5">
+<h3 class="text-text-main-light dark:text-text-main-dark text-lg font-bold mb-4">Recent Contacts</h3>
+<div class="flex flex-col gap-1">
+<!-- Contact Item 1 -->
+<button class="flex items-center gap-4 p-3 -mx-3 rounded-2xl hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors group text-left w-[calc(100%+1.5rem)]">
+<div class="relative">
+<img alt="Alice Avatar" class="w-12 h-12 rounded-full border border-border-light dark:border-border-dark object-cover" data-alt="User avatar for Alice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7-cilukNl8WrxcBfaUg4pGqljQM8dVxmNQDWQs6QUAYWpLvEHYqnaBV9UAoQ7thHe2zpU--0zV33D9EuYeilsoxt0rJTkFlE_Hw871Y6eMHoU2MZD6iTBLf7rdC6eUFTEiLgtCL9nnpf4jLBIw3A1Ks5lQ1V9_vZyFaNz3s3bRk2zNBKKitRo8lUb2xZMD7OX609u3OSN6RMhzXSmUpqKxyQ4JGcu3IErQfCBUbfpSsDWSR7AeA-56m4vnFWfaWyZjFta6Dk_ZuEN"/>
+<div class="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-card-light dark:bg-card-dark rounded-full flex items-center justify-center border border-border-light dark:border-border-dark">
+<span class="material-symbols-outlined text-[12px] text-green-500">bolt</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-text-main-light dark:text-text-main-dark font-medium text-base truncate">Alice Wonderland</h4>
+<p class="text-text-sub-light dark:text-text-sub-dark text-xs truncate">alice.sol • Last sent yesterday</p>
+</div>
+<span class="material-symbols-outlined text-text-sub-light/50 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Contact Item 2 -->
+<button class="flex items-center gap-4 p-3 -mx-3 rounded-2xl hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors group text-left w-[calc(100%+1.5rem)]">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-500 flex items-center justify-center text-white font-bold text-sm">
+                                DT
+                             </div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-text-main-light dark:text-text-main-dark font-medium text-base truncate">DAO Treasury</h4>
+<p class="text-text-sub-light dark:text-text-sub-dark text-xs truncate">8x3P...9jK2 • Governance</p>
+</div>
+<span class="material-symbols-outlined text-text-sub-light/50 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Contact Item 3 -->
+<button class="flex items-center gap-4 p-3 -mx-3 rounded-2xl hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors group text-left w-[calc(100%+1.5rem)]">
+<div class="relative">
+<img alt="Bob Avatar" class="w-12 h-12 rounded-full border border-border-light dark:border-border-dark object-cover" data-alt="User avatar for Bob" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0F5uUQWlUs00glXOIspH929wrNswEblMdLVTVJZ88bvR_rS7LsCIvcMYZTHkVQvM7MDvBgTGaraf19LuZSRCTlvdL8jBWDm8vzcMrHxuCQuO5Qik2VCP-LnPitkDdgjQJDaycFyYCyNrrJuRTbzCVfyupgnx26Li8GEWOkqhcGd6fWUxfz3Bx0ZDr70wVsESGRsxhLUHUVzftGLgOhlvoo8yKoMosYdBZ9KuBZ5imw7aU7mQZgXLdRPS2do9QD0g8qi5xRaRWkxem"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-text-main-light dark:text-text-main-dark font-medium text-base truncate">Bob Builder</h4>
+<p class="text-text-sub-light dark:text-text-sub-dark text-xs truncate">bob.sol • Last sent 3 days ago</p>
+</div>
+<span class="material-symbols-outlined text-text-sub-light/50 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Suggested / My Accounts -->
+<div class="px-5 pt-6">
+<h3 class="text-text-main-light dark:text-text-main-dark text-lg font-bold mb-4">Your Accounts</h3>
+<button class="flex items-center gap-4 p-3 -mx-3 rounded-2xl hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors group text-left w-[calc(100%+1.5rem)]">
+<div class="relative w-12 h-12 rounded-full bg-background-light dark:bg-background-dark flex items-center justify-center border border-border-light dark:border-border-dark">
+<span class="material-symbols-outlined text-text-sub-light dark:text-text-sub-dark">account_balance_wallet</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-text-main-light dark:text-text-main-dark font-medium text-base truncate">Wallet 2 (Savings)</h4>
+<p class="text-text-sub-light dark:text-text-sub-dark text-xs truncate">5 Sol • 4kL9...mP21</p>
+</div>
+<span class="material-symbols-outlined text-text-sub-light/50 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Sticky Footer Button -->
+<div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-card-light via-card-light to-transparent dark:from-card-dark dark:via-card-dark pt-10">
+<button class="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all active:scale-[0.98] disabled:opacity-50 disabled:shadow-none flex items-center justify-center gap-2">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Background Decorative Elements for Desktop presentation -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 bg-background-light dark:bg-background-dark flex items-center justify-center overflow-hidden">
+<div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl"></div>
+</div>
+</body></html>

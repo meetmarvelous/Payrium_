@@ -79,32 +79,35 @@
         </div>
       </div>
       <!-- Navigation Links -->
-      <nav class="flex flex-col gap-2">
-        <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
-          href="#">
-          <span class="material-symbols-outlined text-text-sub group-hover:text-primary"
-            style="font-size: 24px;">home</span>
-          <span
-            class="text-sm font-medium text-text-sub group-hover:text-text-main dark:group-hover:text-white">Home</span>
-        </a>
+      <nav class="flex flex-col gap-1">
         <a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary" href="#">
-          <span class="material-symbols-outlined fill-1" style="font-size: 24px;">pie_chart</span>
-          <span class="text-sm font-medium">Assets</span>
+          <span class="material-symbols-outlined"
+            style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>
+          <span class="text-sm font-medium">Dashboard</span>
         </a>
         <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
           href="#">
           <span class="material-symbols-outlined text-text-sub group-hover:text-primary"
-            style="font-size: 24px;">history</span>
+            style="font-size: 24px;">receipt_long</span>
           <span
             class="text-sm font-medium text-text-sub group-hover:text-text-main dark:group-hover:text-white">Activity</span>
         </a>
         <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
           href="#">
           <span class="material-symbols-outlined text-text-sub group-hover:text-primary"
-            style="font-size: 24px;">settings</span>
+            style="font-size: 24px;">how_to_vote</span>
           <span
-            class="text-sm font-medium text-text-sub group-hover:text-text-main dark:group-hover:text-white">Settings</span>
+            class="text-sm font-medium text-text-sub group-hover:text-text-main dark:group-hover:text-white">DAO</span>
         </a>
+        <div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800">
+          <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+            href="#">
+            <span class="material-symbols-outlined text-text-sub group-hover:text-primary"
+              style="font-size: 24px;">settings</span>
+            <span
+              class="text-sm font-medium text-text-sub group-hover:text-text-main dark:group-hover:text-white">Settings</span>
+          </a>
+        </div>
       </nav>
       <div class="h-px bg-slate-200 dark:bg-slate-800 my-2"></div>
       <!-- Quick Assets -->
@@ -148,7 +151,7 @@
       <span class="font-bold">Payrium</span>
       <span class="material-symbols-outlined text-text-main dark:text-white">account_circle</span>
     </div>
-    <div class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-12">
+    <div class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-12 pb-24 md:pb-12">
       <div class="max-w-3xl mx-auto flex flex-col gap-8 pb-20">
         <!-- Breadcrumbs -->
         <nav class="flex items-center gap-2 text-sm">
@@ -333,6 +336,31 @@
       </div>
     </div>
   </main>
+
+  <!-- Bottom Navigation (Mobile only) -->
+  <nav
+    class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+    <button class="flex flex-col items-center gap-1 text-primary">
+      <span class="material-symbols-outlined"
+        style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>
+      <span class="text-[10px] font-bold">Dashboard</span>
+    </button>
+    <button
+      class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+      <span class="material-symbols-outlined" style="font-size: 24px;">receipt_long</span>
+      <span class="text-[10px] font-medium">Activity</span>
+    </button>
+    <button
+      class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+      <span class="material-symbols-outlined" style="font-size: 24px;">how_to_vote</span>
+      <span class="text-[10px] font-medium">DAO</span>
+    </button>
+    <button
+      class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+      <span class="material-symbols-outlined" style="font-size: 24px;">settings</span>
+      <span class="text-[10px] font-medium">Settings</span>
+    </button>
+  </nav>
 </body>
 
 </html>

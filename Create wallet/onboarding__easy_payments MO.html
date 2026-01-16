@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Easy Payments - Payrium</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-hidden font-display transition-colors duration-200">
+<!-- Header / Nav -->
+<header class="flex items-center justify-between px-6 py-4 md:px-10 lg:px-20 pt-6">
+<div class="flex items-center gap-2 text-gray-900 dark:text-white">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Payrium</h2>
+</div>
+<button class="rounded-full px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white">
+                Skip
+            </button>
+</header>
+<!-- Main Content Area -->
+<div class="layout-container flex h-full grow flex-col items-center justify-center px-4 pb-12">
+<div class="flex w-full max-w-[420px] flex-col items-center">
+<!-- Illustration Container -->
+<div class="mb-8 w-full px-4 py-6">
+<div class="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700">
+<!-- Abstract illustration representing transfer -->
+<div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 opacity-50"></div>
+<div class="relative z-10 flex flex-col items-center gap-6 p-8" data-alt="Minimalist illustration of a crypto coin floating between two wallet shapes">
+<!-- Floating Coin/Transfer Graphic using CSS/HTML -->
+<div class="flex items-center gap-4">
+<div class="h-16 w-16 rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-3xl text-gray-400 dark:text-gray-500">wallet</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-1 w-1 rounded-full bg-primary/30"></div>
+<div class="h-1 w-1 rounded-full bg-primary/60"></div>
+<div class="h-1 w-1 rounded-full bg-primary"></div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-blue-500/30">
+<span class="material-symbols-outlined text-xl">currency_bitcoin</span>
+</div>
+<div class="h-1 w-1 rounded-full bg-primary"></div>
+<div class="h-1 w-1 rounded-full bg-primary/60"></div>
+<div class="h-1 w-1 rounded-full bg-primary/30"></div>
+</div>
+<div class="h-16 w-16 rounded-2xl bg-white dark:bg-gray-600 flex items-center justify-center border border-gray-200 dark:border-gray-500 shadow-lg">
+<span class="material-symbols-outlined text-3xl text-primary">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="mb-8 flex flex-col items-center px-4 text-center">
+<h1 class="mb-3 text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+                        Easy crypto payments across chains
+                    </h1>
+<p class="text-base font-normal leading-relaxed text-gray-500 dark:text-gray-400">
+                        Send and receive assets instantly without worrying about complex networks. We handle the bridge for you.
+                    </p>
+</div>
+<!-- Navigation & Pagination -->
+<div class="flex w-full flex-col items-center gap-6 px-4">
+<!-- Pagination Indicators -->
+<div class="flex items-center justify-center gap-2">
+<div class="h-2 w-8 rounded-full bg-primary transition-all"></div>
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-700"></div>
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-700"></div>
+</div>
+<!-- Action Button -->
+<div class="flex w-full items-center justify-between">
+<!-- Hidden placeholder for layout balance if needed, or back button for later slides -->
+<div class="w-10"></div>
+<button class="flex h-12 min-w-[140px] items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105 active:scale-95">
+<span>Next</span>
+<span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

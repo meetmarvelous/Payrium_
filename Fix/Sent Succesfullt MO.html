@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payrium - Transaction Sent</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-200">
+<!-- Main Desktop Wrapper (Centering the Mobile Card) -->
+<div class="relative min-h-screen w-full flex items-center justify-center p-4">
+<!-- Mobile Card Container -->
+<div class="relative w-full max-w-[420px] bg-white dark:bg-[#1A2333] rounded-2xl shadow-xl overflow-hidden flex flex-col min-h-[800px] border border-[#f0f1f5] dark:border-white/5">
+<!-- Header (Adapted from TopNavBar) -->
+<header class="flex items-center justify-between whitespace-nowrap px-6 py-5">
+<div class="flex items-center gap-3 text-[#111318] dark:text-white">
+<div class="size-6 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Payrium</h2>
+</div>
+<button class="flex items-center justify-center rounded-full size-8 bg-[#f0f1f5] dark:bg-white/10 text-[#111318] dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-[20px] font-bold">close</span>
+</button>
+</header>
+<!-- Scrollable Content Area -->
+<div class="flex-1 flex flex-col px-6 overflow-y-auto pb-8">
+<!-- Hero Section: Success Indicator -->
+<div class="flex flex-col items-center justify-center pt-8 pb-6">
+<div class="relative flex items-center justify-center mb-6">
+<!-- Ripple Effect decorative circles -->
+<div class="absolute w-32 h-32 bg-primary/5 rounded-full animate-pulse"></div>
+<div class="absolute w-24 h-24 bg-primary/10 rounded-full"></div>
+<div class="relative w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-[36px] font-bold">check</span>
+</div>
+</div>
+<h1 class="text-[#111318] dark:text-white tracking-tight text-[28px] font-bold leading-tight text-center">Transaction Sent!</h1>
+<p class="text-[#606e8a] dark:text-gray-400 text-sm font-normal leading-normal mt-2 text-center">You successfully sent</p>
+</div>
+<!-- Amount Display -->
+<div class="flex flex-col items-center pb-8">
+<h2 class="text-[#111318] dark:text-white tracking-tight text-[40px] font-bold leading-tight text-center">- 12.5 SOL</h2>
+<p class="text-[#606e8a] dark:text-gray-400 text-base font-medium leading-normal mt-1 text-center">≈ $150.00 USD</p>
+</div>
+<!-- Transaction Details Card -->
+<div class="bg-[#f5f6f8] dark:bg-white/5 rounded-xl p-5 w-full flex flex-col gap-4 border border-transparent dark:border-white/5">
+<!-- Recipient Row -->
+<div class="flex justify-between items-center">
+<span class="text-[#606e8a] dark:text-gray-400 text-sm font-medium">To</span>
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 shadow-sm" data-alt="Abstract gradient avatar representing the recipient"></div>
+<div class="flex flex-col items-end">
+<span class="text-[#111318] dark:text-white text-sm font-semibold">Alice.sol</span>
+<span class="text-[#606e8a] dark:text-gray-500 text-xs">4k3...9xL</span>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px bg-gray-200 dark:bg-white/10 w-full"></div>
+<!-- Date Row -->
+<div class="flex justify-between items-center">
+<span class="text-[#606e8a] dark:text-gray-400 text-sm font-medium">Date</span>
+<span class="text-[#111318] dark:text-white text-sm font-medium">Oct 24, 2023, 10:42 AM</span>
+</div>
+<!-- Network Fee Row -->
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1">
+<span class="text-[#606e8a] dark:text-gray-400 text-sm font-medium">Network Fee</span>
+<span class="material-symbols-outlined text-[14px] text-gray-400 cursor-help" title="Gas fees on Solana are minimal">info</span>
+</div>
+<span class="text-[#111318] dark:text-white text-sm font-medium">&lt; $0.01</span>
+</div>
+<!-- Transaction ID Row -->
+<div class="flex justify-between items-center">
+<span class="text-[#606e8a] dark:text-gray-400 text-sm font-medium">Ref ID</span>
+<div class="flex items-center gap-1.5 cursor-pointer group">
+<span class="text-[#111318] dark:text-white text-sm font-medium font-mono">#829...21a</span>
+<span class="material-symbols-outlined text-[14px] text-primary group-hover:text-primary/80">content_copy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer / Action Buttons -->
+<div class="p-6 bg-white dark:bg-[#1A2333] border-t border-[#f0f1f5] dark:border-white/5 flex flex-col gap-3">
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-12 bg-white dark:bg-transparent border border-[#e5e7eb] dark:border-white/20 text-primary hover:bg-gray-50 dark:hover:bg-white/5 transition-all gap-2 px-4 group">
+<span class="text-sm font-bold leading-normal tracking-[0.015em]">View on Explorer</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-12 bg-primary text-white hover:bg-primary/90 transition-colors gap-2 px-4 shadow-lg shadow-primary/20">
+<span class="text-sm font-bold leading-normal tracking-[0.015em]">Done</span>
+</button>
+</div>
+</div>
+<!-- Desktop Background Elements (Optional Visual Flourish) -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30 dark:opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+<div class="absolute top-0 -left-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+<div class="absolute -bottom-32 left-20 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+</div>
+</div>
+<style>
+        /* Custom animation for background blobs to make the static page feel alive */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body></html>
