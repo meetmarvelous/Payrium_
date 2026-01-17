@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Payrium - Swap Preview</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-hover": "#0b4ecf",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2234",
+                        "text-main": "#111318",
+                        "text-sub": "#606e8a",
+                        "border-light": "#f0f1f5",
+                        "border-dark": "#2d3748",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-white min-h-screen overflow-hidden">
+
+    <div class="flex h-screen w-full">
+
+        <!-- Side Navigation (Desktop - hidden on mobile) -->
+        <aside
+            class="hidden md:flex flex-col w-64 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-slate-800 h-full justify-between shrink-0">
+            <div class="flex flex-col gap-6 p-4">
+                <div class="flex items-center gap-3 px-2">
+                    <div
+                        class="bg-gradient-to-br from-primary to-blue-600 rounded-xl size-10 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 22px; font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold">Payrium</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs">Simple Payments on Solana</p>
+                    </div>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium"
+                        href="#">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                        <p class="text-sm leading-normal">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">receipt_long</span>
+                        <p class="text-sm font-medium leading-normal">Activity</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">how_to_vote</span>
+                        <p class="text-sm font-medium leading-normal">DAO</p>
+                    </a>
+                    <div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">settings</span>
+                            <p class="text-sm font-medium leading-normal">Settings</p>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <div
+                    class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+                    <div
+                        class="size-9 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-white dark:border-slate-700 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-400">
+                        U</div>
+                    <div class="flex flex-col overflow-hidden">
+                        <p class="text-slate-900 dark:text-white text-sm font-medium truncate">User Wallet</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs truncate">5xK7...mP9w</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-[18px] ml-auto">expand_more</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between px-4 py-4 bg-white dark:bg-surface-dark border-b border-border-light dark:border-border-dark">
+                <button
+                    class="flex size-10 items-center justify-center rounded-full text-slate-900 dark:text-white transition-colors hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <h2 class="text-lg font-bold">Review Swap</h2>
+                <div class="size-10"></div>
+            </header>
+
+            <!-- Desktop Breadcrumb Header -->
+            <header
+                class="hidden md:flex items-center gap-2 px-8 py-6 text-sm border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-surface-dark">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Dashboard</a>
+                <span class="material-symbols-outlined text-[16px] text-slate-400">chevron_right</span>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Swap</a>
+                <span class="material-symbols-outlined text-[16px] text-slate-400">chevron_right</span>
+                <span class="text-slate-900 dark:text-white font-medium">Review</span>
+            </header>
+
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto pb-24 md:pb-8">
+                <div class="flex justify-center py-6 px-4">
+                    <div class="w-full max-w-[480px] flex flex-col gap-6">
+
+                        <!-- Card -->
+                        <div
+                            class="bg-white dark:bg-surface-dark rounded-2xl shadow-soft border border-border-light dark:border-border-dark overflow-hidden">
+
+                            <!-- Card Header -->
+                            <div class="p-6 pb-2">
+                                <h1 class="text-2xl font-bold">Review Swap</h1>
+                                <p class="text-text-sub dark:text-slate-400 text-sm mt-1">Please review your transaction
+                                    details below.</p>
+                            </div>
+
+                            <!-- Swap Visual Block -->
+                            <div class="px-6 py-4 flex flex-col gap-1 relative">
+                                <!-- From Asset -->
+                                <div
+                                    class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark rounded-xl border border-border-light dark:border-border-dark">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 p-1 shadow-sm flex items-center justify-center overflow-hidden border border-gray-100 dark:border-gray-700">
+                                            <img alt="Ethereum logo" class="w-full h-full object-contain"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdVcIuzvevdFQL4VXGNbqO1YkvRdoWVNlF-UMLCcXd6H9TDzsfIrqJdrA6epgk3q9eILTuciIJqVvaB7U7gAcaAbaxGDSXHyCesw8Uclwq3KN2RcV0NcfKXqEUNylL1T1C5KJC-4SXIwTd91v0MNoT1NlAd8AkBWekLs_7GtUFPN3IXUb6TENVy3XJ6ktQrjgi3mkg2mTW48vFteK1IasgkufTQCt5Cu2Tqe-d31xTTRRCKCymNbNLid9FI_O6FWc4SQP7qcXL4l5o" />
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-text-sub dark:text-slate-400 font-medium">Selling</p>
+                                            <p class="text-lg font-bold">1.5 ETH</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm text-text-sub dark:text-slate-400">~$3,600.00</p>
+                                    </div>
+                                </div>
+                                <!-- Swap Arrow Icon -->
+                                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                                    <div
+                                        class="bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-full p-2 shadow-sm text-primary">
+                                        <span class="material-symbols-outlined block">arrow_downward</span>
+                                    </div>
+                                </div>
+                                <!-- To Asset -->
+                                <div
+                                    class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark rounded-xl border border-primary/20 ring-1 ring-primary/10">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 p-1 shadow-sm flex items-center justify-center overflow-hidden border border-gray-100 dark:border-gray-700">
+                                            <img alt="USDC logo" class="w-full h-full object-contain"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMhXq-W1gdq_ZkGzQ0kFnz4o7V36gnRM5KIIYkpreIwcB1Tgeu0S6fXVljiylig_wWcWOskQZoEd74Zy7lDvhYSEgL0LGathKne0QB_CFdbqWVq8vjpCbIjY6hWyvwoamWh7QGahEwqxZA8uig3PuqJpySkOp_YMSCBPntcx3D-MLaVxhKhcSK6XJaPmPwrXZhAPdryTO_jm8_mVtM8F0D927j-s44ZXx-VJvolsYEmgaqcMLn2Hvffx5xMFYRi0lRhPh-fcsoKrHb" />
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-primary font-medium">Buying</p>
+                                            <p class="text-lg font-bold">3,600 USDC</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm text-text-sub dark:text-slate-400">~$3,600.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Info List -->
+                            <div class="px-6 py-2">
+                                <div
+                                    class="bg-background-light dark:bg-background-dark rounded-xl p-4 flex flex-col gap-3 border border-border-light dark:border-border-dark">
+                                    <!-- Provider -->
+                                    <div class="flex justify-between items-center text-sm">
+                                        <div class="flex items-center gap-1 text-text-sub dark:text-slate-400">
+                                            <span>Provider</span>
+                                            <span
+                                                class="material-symbols-outlined text-[16px] cursor-help opacity-70">info</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 font-medium">
+                                            <img alt="Uniswap Logo" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5yvY7xBktv3oh3Bd76d9yKlUcV1n6NzKcF_D6hmpx9tDnbV59C2OrLZ-ojdNEjSoUs-fhU3kXpX19ve20IpntRM-RP-g8EKAVkRSahTghmt2Wu3tI2LAF8y6w2aktPqnmpzXY4wEkx5m4mQVtnkFIScuC0gIy-XazYf973fMhzEesE_EtvfNbaY7hxe_We1L8wzr1ngR8UXGNWulACg_PytngHJuY34-EHLog8zrbfk9BUfKlcA4Zz2-tXFIKGjVyhvp_pqypkGHA" />
+                                            <span>Uniswap V3</span>
+                                        </div>
+                                    </div>
+                                    <!-- Rate -->
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-text-sub dark:text-slate-400">Rate</span>
+                                        <span class="font-medium">1 ETH ≈ 2,400 USDC</span>
+                                    </div>
+                                    <div class="h-px w-full bg-border-light dark:bg-border-dark my-1"></div>
+                                    <!-- Network Cost -->
+                                    <div class="flex justify-between items-center text-sm">
+                                        <div class="flex items-center gap-1 text-text-sub dark:text-slate-400">
+                                            <span>Network Cost</span>
+                                            <span
+                                                class="material-symbols-outlined text-[16px] cursor-help opacity-70">local_gas_station</span>
+                                        </div>
+                                        <span class="font-medium">~$4.50 <span
+                                                class="text-text-sub dark:text-slate-400 font-normal">(0.002
+                                                ETH)</span></span>
+                                    </div>
+                                    <!-- Slippage -->
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-text-sub dark:text-slate-400">Slippage Tolerance</span>
+                                        <span class="font-medium text-green-600 dark:text-green-400">0.5%</span>
+                                    </div>
+                                    <!-- Minimum Received -->
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-text-sub dark:text-slate-400">Minimum Received</span>
+                                        <span class="font-medium">3,582 USDC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quote Timer -->
+                            <div class="px-6 pt-2 pb-0 flex justify-center">
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-xs font-medium">
+                                    <span class="material-symbols-outlined text-[14px] animate-pulse">timer</span>
+                                    <span>Quote updates in 15s</span>
+                                </div>
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="p-6">
+                                <button
+                                    class="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-4 px-6 rounded-xl shadow-lg shadow-primary/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group">
+                                    <span>Confirm Swap</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-lg">arrow_forward</span>
+                                </button>
+                                <p class="text-center text-xs text-text-sub dark:text-slate-400 mt-4">
+                                    By confirming, you agree to Payrium's <a class="text-primary hover:underline"
+                                        href="#">Terms of Service</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation (Mobile only) -->
+            <nav
+                class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+                <button class="flex flex-col items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>
+                    <span class="text-[10px] font-bold">Dashboard</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">receipt_long</span>
+                    <span class="text-[10px] font-medium">Activity</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">how_to_vote</span>
+                    <span class="text-[10px] font-medium">DAO</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">settings</span>
+                    <span class="text-[10px] font-medium">Settings</span>
+                </button>
+            </nav>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

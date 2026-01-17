@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Send SOL - Payrium</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2233",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen overflow-hidden">
+
+    <div class="flex h-screen w-full">
+
+        <!-- Side Navigation (Desktop - hidden on mobile) -->
+        <aside
+            class="hidden md:flex flex-col w-64 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-slate-800 h-full justify-between shrink-0">
+            <div class="flex flex-col gap-6 p-4">
+                <div class="flex items-center gap-3 px-2">
+                    <div
+                        class="bg-gradient-to-br from-primary to-blue-600 rounded-xl size-10 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 22px; font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold">Payrium</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs">Simple Payments on Solana</p>
+                    </div>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium"
+                        href="#">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                        <p class="text-sm leading-normal">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">receipt_long</span>
+                        <p class="text-sm font-medium leading-normal">Activity</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">how_to_vote</span>
+                        <p class="text-sm font-medium leading-normal">DAO</p>
+                    </a>
+                    <div class="pt-4 mt-2 border-t border-slate-100 dark:border-slate-800">
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">settings</span>
+                            <p class="text-sm font-medium leading-normal">Settings</p>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <div
+                    class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+                    <div
+                        class="size-9 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-white dark:border-slate-700 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-400">
+                        U</div>
+                    <div class="flex flex-col overflow-hidden">
+                        <p class="text-slate-900 dark:text-white text-sm font-medium truncate">User Wallet</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs truncate">5xK7...mP9w</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-[18px] ml-auto">expand_more</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between px-4 py-3 bg-white dark:bg-surface-dark border-b border-slate-100 dark:border-slate-800">
+                <button
+                    class="p-2 -ml-2 rounded-full text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+                </button>
+                <h2 class="text-lg font-bold leading-tight">Send SOL</h2>
+                <button
+                    class="p-2 -mr-2 rounded-full text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">more_vert</span>
+                </button>
+            </header>
+
+            <!-- Desktop Breadcrumb Header -->
+            <header
+                class="hidden md:flex items-center gap-2 px-8 py-6 text-sm border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-surface-dark">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="#">Dashboard</a>
+                <span class="material-symbols-outlined text-[16px] text-slate-400">chevron_right</span>
+                <span class="text-slate-900 dark:text-white font-medium">Send SOL</span>
+            </header>
+
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto no-scrollbar pb-24 md:pb-8">
+                <div class="max-w-lg mx-auto px-6 py-6">
+
+                    <!-- Balance Display -->
+                    <div class="flex flex-col items-center justify-center py-6 gap-1">
+                        <div class="size-12 rounded-full bg-black dark:bg-white flex items-center justify-center mb-2">
+                            <svg class="w-6 h-6 text-white dark:text-black fill-current" viewBox="0 0 398 333"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7zm269.6-144.1c-2.4 2.4-5.7 3.8-9.2 3.8H7.6c-5.8 0-8.7-7-4.6-11.1l62.7-62.7c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7zm-269.6 73.3c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Current Balance</p>
+                        <h1 class="text-3xl font-bold">124.5 SOL</h1>
+                    </div>
+
+                    <!-- Input Section -->
+                    <div class="flex flex-col gap-2 pt-2">
+                        <label class="text-base font-semibold leading-normal">To</label>
+                        <div class="relative group">
+                            <input
+                                class="form-input w-full rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-4 pr-12 text-base font-normal leading-normal transition-all placeholder:text-slate-400"
+                                placeholder="Solana address or .sol domain" type="text" value="" />
+                            <button
+                                class="absolute right-0 top-0 bottom-0 px-3 flex items-center justify-center text-gray-500 hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-[24px]">qr_code_scanner</span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <p class="text-slate-500 text-xs font-normal">Only send to Solana (SPL) addresses.</p>
+                            <button
+                                class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary text-xs font-medium hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+                                <span class="material-symbols-outlined text-[16px]">content_paste</span>
+                                Paste
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Contacts -->
+                    <div class="flex flex-col mt-8">
+                        <h2 class="text-base font-bold leading-tight mb-4">Recent Contacts</h2>
+                        <div class="flex flex-col gap-2">
+                            <button
+                                class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left group">
+                                <div
+                                    class="size-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-300 font-bold text-sm shrink-0">
+                                    AL</div>
+                                <div class="flex flex-col flex-1 overflow-hidden">
+                                    <span
+                                        class="text-sm font-semibold truncate group-hover:text-primary transition-colors">Alice.sol</span>
+                                    <span
+                                        class="text-gray-500 dark:text-gray-400 text-xs font-normal truncate">8x3v...9k2a</span>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-gray-400 text-[20px] -rotate-45">arrow_forward</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left group">
+                                <div
+                                    class="size-10 rounded-full overflow-hidden shrink-0 border border-gray-100 dark:border-gray-700">
+                                    <img alt="User avatar" class="w-full h-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB06bZRIHN4uu4IT9wjZy72P5C0dIGW8ZR0AylfdCmuCpFM_UE6cFpU8ZQr1kbJD3Zngg6FipUeqAwIYOwl0CHd_coKeXWuWUpGa67z_c7D1J0iGNryKXDunL4RhF2LHcwS9A-vg3iEVambcAFd_OD24tVFdN6HJY2OnDBCFpFG0_nCQgM3X9DDwXblHC26-looFFwZdIUsfCiqfgmcT2w6xlP8pY1LgiI_8bVavp9prQXvOBhIxqfc3seBaxMcw0Mxat7emlVreDEq" />
+                                </div>
+                                <div class="flex flex-col flex-1 overflow-hidden">
+                                    <span
+                                        class="text-sm font-semibold truncate group-hover:text-primary transition-colors">Design
+                                        Agency Wallet</span>
+                                    <span
+                                        class="text-gray-500 dark:text-gray-400 text-xs font-normal truncate">F9a2...m4X1</span>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-gray-400 text-[20px] -rotate-45">arrow_forward</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left group">
+                                <div
+                                    class="size-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-300 font-bold text-sm shrink-0">
+                                    EX</div>
+                                <div class="flex flex-col flex-1 overflow-hidden">
+                                    <span
+                                        class="text-sm font-semibold truncate group-hover:text-primary transition-colors">Exchange
+                                        Deposit</span>
+                                    <span class="text-gray-500 dark:text-gray-400 text-xs font-normal truncate">Binance
+                                        Main Wallet</span>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-gray-400 text-[20px] -rotate-45">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Continue Button -->
+                    <div class="mt-8">
+                        <button
+                            class="w-full h-12 bg-primary hover:bg-blue-600 text-white rounded-xl font-bold text-base shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            Continue
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Navigation (Mobile only) -->
+            <nav
+                class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+                <button class="flex flex-col items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>
+                    <span class="text-[10px] font-bold">Dashboard</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">receipt_long</span>
+                    <span class="text-[10px] font-medium">Activity</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">how_to_vote</span>
+                    <span class="text-[10px] font-medium">DAO</span>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">settings</span>
+                    <span class="text-[10px] font-medium">Settings</span>
+                </button>
+            </nav>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
