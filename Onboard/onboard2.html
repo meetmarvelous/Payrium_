@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="en">
 
@@ -39,10 +39,23 @@
       },
     }
   </script>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  </style>
 </head>
 
 <body
-  class="font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-white overflow-hidden selection:bg-primary/20">
+  class="font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-white overflow-hidden selection:bg-primary/20 h-screen-safe">
   <div class="relative flex h-screen w-full flex-col items-center justify-center group/design-root">
     <!-- Background Decor: Abstract Gradients -->
     <div

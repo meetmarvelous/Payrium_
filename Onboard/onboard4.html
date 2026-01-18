@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="en">
 
 <head>
@@ -38,10 +38,23 @@
             },
         }
     </script>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  </style>
 </head>
 
 <body
-    class="bg-white md:bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-200 h-screen flex flex-col overflow-hidden">
+    class="bg-white md:bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-200 h-screen flex flex-col overflow-hidden h-screen-safe">
     <header
         class="flex-none w-full flex items-center justify-between border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-[#101622] px-6 py-4 z-50">
         <div class="flex items-center gap-3">

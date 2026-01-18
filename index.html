@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -61,6 +61,19 @@
     a:hover {
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
+    }
+  </style>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
     }
   </style>
 </head>

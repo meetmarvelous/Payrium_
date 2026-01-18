@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="en">
 
 <head>
@@ -37,9 +37,22 @@
       },
     }
   </script>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-sans min-h-screen">
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-sans min-h-screen h-screen-safe">
 
   <div class="min-h-screen flex flex-col">
 

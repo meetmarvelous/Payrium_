@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="en">
 
@@ -59,10 +59,23 @@
       background: #94a3b8;
     }
   </style>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  </style>
 </head>
 
 <body
-  class="bg-background-light dark:bg-background-dark text-text-main dark:text-white h-screen overflow-hidden flex selection:bg-primary/20">
+  class="bg-background-light dark:bg-background-dark text-text-main dark:text-white h-screen overflow-hidden flex selection:bg-primary/20 h-screen-safe">
   <!-- Sidebar Navigation -->
   <aside
     class="w-72 hidden md:flex flex-col border-r border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-background-dark h-full">
@@ -339,7 +352,7 @@
 
   <!-- Bottom Navigation (Mobile only) -->
   <nav
-    class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+    class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-safe flex justify-between items-center z-50">
     <button class="flex flex-col items-center gap-1 text-primary">
       <span class="material-symbols-outlined"
         style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>

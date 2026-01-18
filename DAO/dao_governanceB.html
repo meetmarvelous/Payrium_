@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,9 +61,22 @@
       scrollbar-width: none;
     }
   </style>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 dark:bg-background-dark font-display text-text-main dark:text-white overflow-hidden">
+<body class="bg-gray-100 dark:bg-background-dark font-display text-text-main dark:text-white overflow-hidden h-screen-safe">
 
   <div class="flex h-screen w-full">
 

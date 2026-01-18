@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="en">
 
@@ -32,10 +32,23 @@
             },
         }
     </script>
+  <style>
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  </style>
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen overflow-hidden">
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen overflow-hidden h-screen-safe">
 
     <div class="flex h-screen w-full">
 
@@ -273,7 +286,7 @@
 
             <!-- Bottom Navigation (Mobile only) -->
             <nav
-                class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-6 flex justify-between items-center z-50">
+                class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-safe flex justify-between items-center z-50">
                 <a href="Dashboard MO.html" class="flex flex-col items-center gap-1 text-primary">
                     <span class="material-symbols-outlined"
                         style="font-size: 24px; font-variation-settings: 'FILL' 1;">dashboard</span>
