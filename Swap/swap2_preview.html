@@ -237,11 +237,20 @@
                     </div>
 
                     <!-- CTA -->
-                    <a href="swap3_success_screen.html"
+                    <a href="javascript:void(0)" onclick="confirmSwap(this)"
                         class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl text-lg shadow-lg shadow-blue-500/20 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2">
                         <span class="material-symbols-outlined">swap_horiz</span>
-                        Confirm Swap
+                        <span class="btn-text">Confirm Swap</span>
                     </a>
+                    <script>
+                      function confirmSwap(btn) {
+                        btn.classList.add('opacity-75', 'cursor-wait');
+                        btn.querySelector('.btn-text').innerText = 'Swapping...';
+                        setTimeout(() => {
+                          window.location.href = 'swap3_success_screen.html';
+                        }, 1500);
+                      }
+                    </script>
 
                 </div>
             </div>
