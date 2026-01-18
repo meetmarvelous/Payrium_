@@ -44,11 +44,23 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    /* Dynamic viewport height for mobile browsers */
+    @supports (height: 100dvh) {
+      .h-screen-safe {
+        height: 100dvh !important;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
   </style>
 </head>
 
 <body
-  class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white h-screen w-full overflow-hidden">
+  class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white h-screen h-screen-safe w-full overflow-hidden">
 
   <div class="flex h-screen w-full">
 
@@ -310,7 +322,7 @@
 
       <!-- Bottom Navigation (Mobile only) -->
       <nav
-        class="md:hidden shrink-0 border-t border-[#f0f1f5] dark:border-slate-800 bg-white dark:bg-surface-dark z-30">
+        class="md:hidden fixed bottom-0 left-0 right-0 border-t border-[#f0f1f5] dark:border-slate-800 bg-white dark:bg-surface-dark z-50 pb-safe">
         <div class="max-w-2xl mx-auto px-6 py-3 flex justify-between items-center w-full h-[80px]">
           <a href="Dashboard MO.html" class="flex flex-col items-center gap-1 group flex-1">
             <div class="text-[#9ca3af] group-hover:text-primary transition-colors">
