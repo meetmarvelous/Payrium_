@@ -155,81 +155,81 @@
 
       <!-- Scrollable Content -->
       <div class="flex-1 overflow-y-auto no-scrollbar pb-24 md:pb-8">
-        <div class="max-w-md mx-auto flex flex-col items-center pt-8 md:pt-16 px-4">
+        <div class="max-w-md mx-auto flex flex-col items-center pt-4 sm:pt-8 md:pt-16 px-4">
 
           <!-- Token Selector -->
-          <div class="flex justify-center mb-8 w-full">
+          <div class="flex justify-center mb-4 sm:mb-8 w-full">
             <button
-              class="group flex items-center gap-3 pl-3 pr-4 py-2 bg-white dark:bg-slate-800/50 rounded-full shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700/50 transition-all duration-200">
+              class="group flex items-center gap-2 sm:gap-3 pl-2 sm:pl-3 pr-3 sm:pr-4 py-1.5 sm:py-2 bg-white dark:bg-slate-800/50 rounded-full shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700/50 transition-all duration-200">
               <div
-                class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#9945FF] to-[#14F195] flex items-center justify-center shrink-0">
-                <svg fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-[#9945FF] to-[#14F195] flex items-center justify-center shrink-0">
+                <svg fill="none" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 6L20 6" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
                   <path d="M4 18L20 18" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
                   <path d="M8 12L20 12" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
                 </svg>
               </div>
-              <span class="text-slate-900 dark:text-white font-bold text-sm tracking-wide">SOL</span>
+              <span class="text-slate-900 dark:text-white font-bold text-xs sm:text-sm tracking-wide">SOL</span>
               <span
-                class="material-symbols-outlined text-slate-400 text-[20px] group-hover:text-primary transition-colors">expand_more</span>
+                class="material-symbols-outlined text-slate-400 text-[18px] sm:text-[20px] group-hover:text-primary transition-colors">expand_more</span>
             </button>
           </div>
 
           <!-- Amount Display -->
-          <div class="flex flex-col items-center justify-center w-full px-8 mb-4">
+          <div class="flex flex-col items-center justify-center w-full px-4 sm:px-8 mb-2 sm:mb-4">
             <div class="relative flex items-center justify-center">
-              <span class="text-6xl font-extrabold tracking-tight animate-pulse"
+              <span class="text-5xl sm:text-6xl font-extrabold tracking-tight animate-pulse"
                 style="animation-duration: 2s;">0</span>
-              <span class="text-6xl font-extrabold text-slate-300 dark:text-slate-700">.00</span>
+              <span class="text-5xl sm:text-6xl font-extrabold text-slate-300 dark:text-slate-700">.00</span>
             </div>
-            <p class="mt-2 text-slate-500 dark:text-slate-400 font-medium text-sm">≈ $0.00 USD</p>
+            <p class="mt-1 sm:mt-2 text-slate-500 dark:text-slate-400 font-medium text-xs sm:text-sm">≈ $0.00 USD</p>
           </div>
 
           <!-- Balance Pills -->
-          <div class="flex items-center gap-2 mt-4 mb-8">
-            <div class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/50 flex items-center gap-2">
-              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Available: 12.45 SOL</span>
+          <div class="flex items-center gap-2 mt-2 sm:mt-4 mb-4 sm:mb-8">
+            <div class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/50 flex items-center gap-2">
+              <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium">Available: 12.45 SOL</span>
             </div>
             <button
-              class="px-3 py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold transition-colors">
+              class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-[10px] sm:text-xs font-bold transition-colors">
               Max
             </button>
           </div>
 
           <!-- Numeric Keypad -->
-          <div class="w-full grid grid-cols-3 gap-y-4 gap-x-6 mb-6">
+          <div class="w-full grid grid-cols-3 gap-y-2 sm:gap-y-4 gap-x-4 sm:gap-x-6 mb-4 sm:mb-6">
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">1</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">1</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">2</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">2</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">3</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">3</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">4</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">4</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">5</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">5</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">6</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">6</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">7</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">7</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">8</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">8</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">9</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">9</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">.</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">.</button>
             <button
-              class="h-16 rounded-full text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">0</button>
+              class="h-12 sm:h-16 rounded-full text-xl sm:text-2xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">0</button>
             <button
-              class="h-16 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
-              <span class="material-symbols-outlined text-[24px]">backspace</span>
+              class="h-12 sm:h-16 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px] sm:text-[24px]">backspace</span>
             </button>
           </div>
 
           <!-- Action Button -->
           <div class="w-full pb-2">
             <a href="send3_review.html"
-              class="w-full h-14 bg-primary hover:bg-blue-600 active:scale-[0.98] text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition-all duration-200 flex items-center justify-center gap-2">
+              class="w-full h-12 sm:h-14 bg-primary hover:bg-blue-600 active:scale-[0.98] text-white rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-blue-500/20 transition-all duration-200 flex items-center justify-center gap-2">
               Review
             </a>
           </div>

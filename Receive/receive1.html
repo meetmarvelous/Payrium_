@@ -137,68 +137,68 @@
 
       <!-- Scrollable Content -->
       <div class="flex-1 overflow-y-auto pb-24 md:pb-8">
-        <div class="flex flex-col items-center max-w-md mx-auto px-6 py-6">
+        <div class="flex flex-col items-center max-w-md mx-auto px-4 sm:px-6 py-4 sm:py-6">
 
           <!-- Network Selector -->
-          <div class="mt-2 mb-8">
+          <div class="mt-1 sm:mt-2 mb-4 sm:mb-8">
             <button
-              class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-slate-100 dark:bg-slate-800 px-4 py-1 transition-colors hover:bg-slate-200 dark:hover:bg-slate-700">
+              class="flex h-9 sm:h-10 items-center justify-center gap-x-2 rounded-full bg-slate-100 dark:bg-slate-800 px-3 sm:px-4 py-1 transition-colors hover:bg-slate-200 dark:hover:bg-slate-700">
               <div
-                class="flex size-6 items-center justify-center rounded-full bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                <span class="material-symbols-outlined text-[14px] text-white">token</span>
+                class="flex size-5 sm:size-6 items-center justify-center rounded-full bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+                <span class="material-symbols-outlined text-[12px] sm:text-[14px] text-white">token</span>
               </div>
-              <span class="text-sm font-semibold">Solana (SOL)</span>
-              <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">expand_more</span>
+              <span class="text-xs sm:text-sm font-semibold">Solana (SOL)</span>
+              <span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[18px] sm:text-[24px]">expand_more</span>
             </button>
           </div>
 
           <!-- QR Code Section -->
-          <div class="relative mb-8 flex w-full flex-col items-center justify-center">
+          <div class="relative mb-4 sm:mb-8 flex w-full flex-col items-center justify-center">
             <div
-              class="relative flex aspect-square w-64 items-center justify-center rounded-3xl bg-white p-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-slate-100 dark:bg-white dark:ring-0">
+              class="relative flex aspect-square w-48 sm:w-64 items-center justify-center rounded-2xl sm:rounded-3xl bg-white p-3 sm:p-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-slate-100 dark:bg-white dark:ring-0">
               <div
                 class="h-full w-full bg-[url('https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=SolanaWalletAddressExample&color=101622')] bg-cover bg-center">
               </div>
               <div
-                class="absolute flex size-12 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm">
+                class="absolute flex size-10 sm:size-12 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm">
                 <div
                   class="flex size-full items-center justify-center rounded-full bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                  <span class="material-symbols-outlined text-[20px] text-white">token</span>
+                  <span class="material-symbols-outlined text-[16px] sm:text-[20px] text-white">token</span>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Address Info -->
-          <div class="mb-8 w-full text-center">
-            <p class="mb-2 text-sm font-medium text-slate-500 dark:text-slate-400">Your Solana Address</p>
+          <div class="mb-4 sm:mb-8 w-full text-center">
+            <p class="mb-1 sm:mb-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">Your Solana Address</p>
             <div
-              class="group flex cursor-pointer flex-col items-center justify-center gap-1 rounded-xl py-2 active:bg-slate-50 dark:active:bg-white/5">
-              <h1 class="font-mono text-2xl font-bold tracking-tight">8xF4...3kL9</h1>
-              <span class="text-xs text-primary opacity-0 transition-opacity group-hover:opacity-100">Click to copy full
+              class="group flex cursor-pointer flex-col items-center justify-center gap-1 rounded-xl py-1 sm:py-2 active:bg-slate-50 dark:active:bg-white/5">
+              <h1 class="font-mono text-xl sm:text-2xl font-bold tracking-tight">8xF4...3kL9</h1>
+              <span class="text-[10px] sm:text-xs text-primary opacity-0 transition-opacity group-hover:opacity-100">Click to copy full
                 address</span>
             </div>
           </div>
 
           <!-- Actions -->
-          <div class="flex w-full flex-col gap-4">
+          <div class="flex w-full flex-col gap-3 sm:gap-4">
             <button
-              class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-primary/25 transition-transform active:scale-[0.98]">
-              <span class="material-symbols-outlined">content_copy</span>
+              class="flex h-12 sm:h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary text-sm sm:text-base font-bold text-white shadow-lg shadow-primary/25 transition-transform active:scale-[0.98]">
+              <span class="material-symbols-outlined text-[20px] sm:text-[24px]">content_copy</span>
               Copy Address
             </button>
             <button
-              class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-transparent text-base font-bold transition-colors hover:bg-slate-50 dark:hover:bg-slate-800/50">
-              <span class="material-symbols-outlined">ios_share</span>
+              class="flex h-12 sm:h-14 w-full items-center justify-center gap-2 rounded-xl bg-transparent text-sm sm:text-base font-bold transition-colors hover:bg-slate-50 dark:hover:bg-slate-800/50">
+              <span class="material-symbols-outlined text-[20px] sm:text-[24px]">ios_share</span>
               Share Contact Card
             </button>
           </div>
 
           <!-- Warning/Disclaimer -->
-          <div class="mt-8">
+          <div class="mt-4 sm:mt-8">
             <div
-              class="flex gap-3 rounded-xl bg-blue-50 p-4 text-sm leading-snug text-slate-600 dark:bg-blue-900/20 dark:text-slate-300">
-              <span class="material-symbols-outlined shrink-0 text-primary">info</span>
+              class="flex gap-2 sm:gap-3 rounded-xl bg-blue-50 p-3 sm:p-4 text-xs sm:text-sm leading-snug text-slate-600 dark:bg-blue-900/20 dark:text-slate-300">
+              <span class="material-symbols-outlined shrink-0 text-primary text-[18px] sm:text-[24px]">info</span>
               <p>Only send <strong>Solana (SOL)</strong> or SPL tokens to this address. Sending other assets may result
                 in permanent loss.</p>
             </div>

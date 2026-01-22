@@ -58,16 +58,16 @@
 
     <!-- Header -->
     <header
-      class="flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 bg-white dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800">
+      class="flex items-center justify-between px-4 sm:px-6 lg:px-8 py-2 sm:py-4 bg-white dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800">
       <button
         class="flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors w-10 h-10 rounded-full active:scale-95">
         <span class="material-symbols-outlined text-[24px]">arrow_back</span>
       </button>
       <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-          <span class="material-symbols-outlined text-white text-[22px]">account_balance_wallet</span>
+        <div class="w-8 h-8 sm:w-9 sm:h-9 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <span class="material-symbols-outlined text-white text-[20px] sm:text-[22px]">account_balance_wallet</span>
         </div>
-        <h2 class="text-lg font-bold tracking-tight">Payrium</h2>
+        <h2 class="text-base sm:text-lg font-bold tracking-tight">Payrium</h2>
       </div>
       <button
         class="flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors w-10 h-10 rounded-full active:scale-95">
@@ -77,15 +77,15 @@
 
     <!-- Main Content -->
     <main class="flex-1 flex flex-col">
-      <div class="flex-1 flex items-center justify-center px-4 sm:px-6 py-8">
+      <div class="flex-1 flex items-center justify-center px-4 sm:px-6 py-4 sm:py-8">
         <div class="w-full max-w-md">
 
           <!-- Progress Bar -->
-          <div class="mb-8">
+          <div class="mb-6 sm:mb-8">
             <div class="flex justify-between items-center mb-2">
-              <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Step 1 of 4</span>
+              <span class="text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400">Step 1 of 4</span>
               <span
-                class="text-xs font-bold text-primary bg-blue-50 dark:bg-blue-900/30 px-2.5 py-1 rounded-md">25%</span>
+                class="text-[10px] sm:text-xs font-bold text-primary bg-blue-50 dark:bg-blue-900/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">25%</span>
             </div>
             <div class="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
               <div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 25%;">
@@ -95,12 +95,12 @@
 
           <!-- Content Card -->
           <div
-            class="bg-white dark:bg-surface-dark rounded-2xl p-6 sm:p-8 shadow-soft border border-gray-100 dark:border-gray-800">
+            class="bg-white dark:bg-surface-dark rounded-2xl p-4 sm:p-8 shadow-soft border border-gray-100 dark:border-gray-800">
 
             <!-- Icon -->
-            <div class="w-full flex justify-center mb-6">
+            <div class="w-full flex justify-center mb-4 sm:mb-6">
               <div
-                class="relative w-20 h-20 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center ring-4 ring-blue-50/50 dark:ring-blue-900/10">
+                class="relative w-16 h-16 sm:w-20 sm:h-20 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center ring-4 ring-blue-50/50 dark:ring-blue-900/10">
                 <div class="w-full h-full bg-center bg-no-repeat bg-cover opacity-90 scale-75"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2TzA5Ws3y6vQXTswmg_gr9mjWxHklWDmtjAgnyFr5LtcRzzoPlyXHeqLvGYacBDg2R_6vJYuYnwDdo6jFrGAzgtiq58SIK5zQCq3SbVMOGmc0VsoVGx197ZwkiiXAHGBuvLGUYeLc4zgTcG6ZXTa6_4sRCQKKGLCgrABgYQwr_m4BwFQYExvwcw7e02KoCJbjDuKvkYf5H1n4PDPFh_lnsv9CLu4SkhpLHpsfv8L8Vl05E0U17r41OTUFh8aQORd-h60lO4Sr7wmZ");'>
                 </div>
@@ -108,11 +108,11 @@
             </div>
 
             <!-- Title & Description -->
-            <div class="text-center mb-6">
-              <h1 class="text-xl sm:text-2xl font-bold tracking-tight mb-2">
+            <div class="text-center mb-4 sm:mb-6">
+              <h1 class="text-lg sm:text-2xl font-bold tracking-tight mb-2">
                 Secure your Wallet
               </h1>
-              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-[300px] mx-auto">
+              <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm leading-relaxed max-w-[300px] mx-auto">
                 Your Secret Recovery Phrase is the <span class="font-semibold text-primary">only way</span> to recover
                 your
                 Solana and USDC assets.
@@ -120,39 +120,39 @@
             </div>
 
             <!-- Feature Cards -->
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-2 sm:gap-3">
               <div
-                class="flex items-start gap-3.5 p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 shadow-card">
+                class="flex items-start gap-2.5 sm:gap-3.5 p-2 sm:p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 shadow-card">
                 <div class="flex-shrink-0 text-primary bg-white dark:bg-gray-800 p-1.5 rounded-xl shadow-sm mt-0.5">
-                  <span class="material-symbols-outlined text-[20px]">verified_user</span>
+                  <span class="material-symbols-outlined text-[18px] sm:text-[20px]">verified_user</span>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-sm font-semibold mb-0.5">Payrium never asks for it</h3>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  <h3 class="text-xs sm:text-sm font-semibold mb-0.5">Payrium never asks for it</h3>
+                  <p class="text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
                     Never share your phrase with anyone, even our support team.
                   </p>
                 </div>
               </div>
               <div
-                class="flex items-start gap-3.5 p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 shadow-card">
+                class="flex items-start gap-2.5 sm:gap-3.5 p-2 sm:p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 shadow-card">
                 <div class="flex-shrink-0 text-primary bg-white dark:bg-gray-800 p-1.5 rounded-xl shadow-sm mt-0.5">
-                  <span class="material-symbols-outlined text-[20px]">lock</span>
+                  <span class="material-symbols-outlined text-[18px] sm:text-[20px]">lock</span>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-sm font-semibold mb-0.5">Lost phrase = Lost funds</h3>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  <h3 class="text-xs sm:text-sm font-semibold mb-0.5">Lost phrase = Lost funds</h3>
+                  <p class="text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
                     We cannot recover your phrase for you if you lose it.
                   </p>
                 </div>
               </div>
               <div
-                class="flex items-start gap-3.5 p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 shadow-card">
+                class="flex items-start gap-2.5 sm:gap-3.5 p-2 sm:p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 shadow-card">
                 <div class="flex-shrink-0 text-primary bg-white dark:bg-gray-800 p-1.5 rounded-xl shadow-sm mt-0.5">
-                  <span class="material-symbols-outlined text-[20px]">edit_note</span>
+                  <span class="material-symbols-outlined text-[18px] sm:text-[20px]">edit_note</span>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-sm font-semibold mb-0.5">Write it down offline</h3>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  <h3 class="text-xs sm:text-sm font-semibold mb-0.5">Write it down offline</h3>
+                  <p class="text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
                     Write on paper &amp; store securely. Do not take a screenshot.
                   </p>
                 </div>
@@ -161,13 +161,13 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="mt-6">
+          <div class="mt-4 sm:mt-6">
             <a href="create2_backup.html"
-              class="w-full flex cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary hover:bg-primary-dark transition-all active:scale-[0.98] shadow-lg shadow-blue-500/30 text-white text-base font-bold tracking-wide mb-3">
+              class="w-full flex cursor-pointer items-center justify-center rounded-xl h-10 sm:h-12 px-6 bg-primary hover:bg-primary-dark transition-all active:scale-[0.98] shadow-lg shadow-blue-500/30 text-white text-sm sm:text-base font-bold tracking-wide mb-2 sm:mb-3">
               <span class="truncate">I'm ready to view my phrase</span>
             </a>
             <a href="../Dashboard/Dashboard MO.html"
-              class="w-full flex cursor-pointer items-center justify-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm font-medium transition-colors py-2 rounded-lg active:bg-gray-50 dark:active:bg-gray-800">
+              class="w-full flex cursor-pointer items-center justify-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs sm:text-sm font-medium transition-colors py-2 rounded-lg active:bg-gray-50 dark:active:bg-gray-800">
               Remind me later
             </a>
           </div>

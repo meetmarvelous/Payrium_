@@ -83,14 +83,14 @@
         </button>
     </header>
     <!-- Main Content Area -->
-    <main class="flex-1 flex items-center justify-center p-4 pt-24 md:pt-28 pb-8 z-10">
+    <main class="flex-1 flex items-center justify-center p-3 sm:p-4 pt-20 sm:pt-24 md:pt-28 pb-4 sm:pb-8 z-10">
         <!-- Central Card Container -->
         <div
             class="w-full max-w-[440px] bg-white dark:bg-[#1a202c] rounded-xl shadow-xl shadow-slate-200/50 dark:shadow-black/40 border border-slate-100 dark:border-slate-800 overflow-hidden flex flex-col transform transition-all">
             <!-- Hero Image Section -->
-            <div class="px-8 pt-12 pb-6 flex justify-center flex-col items-center relative">
+            <div class="px-4 sm:px-8 pt-6 sm:pt-12 pb-4 sm:pb-6 flex justify-center flex-col items-center relative">
                 <!-- Image Container -->
-                <div class="w-full h-48 rounded-lg overflow-hidden relative mb-6 group">
+                <div class="w-full h-32 sm:h-48 rounded-lg overflow-hidden relative mb-4 sm:mb-6 group">
                     <!-- Subtle Gradient Overlay -->
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent dark:from-[#1a202c]/50 z-10">
@@ -103,50 +103,50 @@
                 <!-- Text Content -->
                 <div class="text-center">
                     <h2
-                        class="text-[#111318] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em] mb-3">
+                        class="text-[#111318] dark:text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] mb-2 sm:mb-3">
                         Your Gateway to Web3</h2>
                     <p
-                        class="text-[#606e8a] dark:text-slate-400 text-base font-normal leading-relaxed max-w-[320px] mx-auto">
+                        class="text-[#606e8a] dark:text-slate-400 text-sm sm:text-base font-normal leading-relaxed max-w-[320px] mx-auto">
                         Secure, simple, and built for everyone. Start your journey today.
                     </p>
                 </div>
             </div>
             <!-- Actions Section -->
-            <div class="px-6 pb-8 flex flex-col gap-5">
+            <div class="px-4 sm:px-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-5">
                 <!-- Primary Action: Create Wallet -->
                 <div class="flex flex-col gap-2">
                     <a href="../Wallet/create1.html"
-                        class="group relative w-full h-14 bg-primary hover:bg-blue-600 text-white rounded-lg flex items-center justify-center gap-3 transition-all duration-200 shadow-md shadow-blue-500/20 active:scale-[0.98] overflow-hidden">
+                        class="group relative w-full h-12 sm:h-14 bg-primary hover:bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 sm:gap-3 transition-all duration-200 shadow-md shadow-blue-500/20 active:scale-[0.98] overflow-hidden">
                         <!-- Ripple effect container could go here, keeping it simple with CSS -->
-                        <span class="material-symbols-outlined text-[22px]">add_circle</span>
-                        <span class="text-base font-bold tracking-[0.015em]">Create a New Wallet</span>
+                        <span class="material-symbols-outlined text-[20px] sm:text-[22px]">add_circle</span>
+                        <span class="text-sm sm:text-base font-bold tracking-[0.015em]">Create a New Wallet</span>
                     </a>
                     <!-- MetaText Helper -->
-                    <p class="text-[#606e8a] dark:text-slate-500 text-xs font-medium text-center">I'm new to Payrium</p>
+                    <p class="text-[#606e8a] dark:text-slate-500 text-[10px] sm:text-xs font-medium text-center">I'm new to Payrium</p>
                 </div>
                 <!-- Divider -->
                 <div class="relative flex py-1 items-center">
                     <div class="flex-grow border-t border-slate-100 dark:border-slate-700"></div>
                     <span
-                        class="flex-shrink-0 mx-4 text-slate-300 dark:text-slate-600 text-xs font-semibold uppercase tracking-widest">or</span>
+                        class="flex-shrink-0 mx-4 text-slate-300 dark:text-slate-600 text-[10px] sm:text-xs font-semibold uppercase tracking-widest">or</span>
                     <div class="flex-grow border-t border-slate-100 dark:border-slate-700"></div>
                 </div>
                 <!-- Secondary Action: Import Wallet -->
                 <div class="flex flex-col gap-2">
                     <a href="../Wallet/import1.html"
-                        class="group w-full h-14 bg-white dark:bg-transparent border border-[#e2e4e9] dark:border-slate-700 hover:border-primary/50 dark:hover:border-primary hover:bg-slate-50 dark:hover:bg-slate-800 text-[#111318] dark:text-white rounded-lg flex items-center justify-center gap-3 transition-all duration-200 active:scale-[0.98]">
+                        class="group w-full h-12 sm:h-14 bg-white dark:bg-transparent border border-[#e2e4e9] dark:border-slate-700 hover:border-primary/50 dark:hover:border-primary hover:bg-slate-50 dark:hover:bg-slate-800 text-[#111318] dark:text-white rounded-lg flex items-center justify-center gap-2 sm:gap-3 transition-all duration-200 active:scale-[0.98]">
                         <span
-                            class="material-symbols-outlined text-[22px] text-slate-400 group-hover:text-primary transition-colors">download</span>
-                        <span class="text-base font-semibold tracking-[0.015em]">Import Existing Wallet</span>
+                            class="material-symbols-outlined text-[20px] sm:text-[22px] text-slate-400 group-hover:text-primary transition-colors">download</span>
+                        <span class="text-sm sm:text-base font-semibold tracking-[0.015em]">Import Existing Wallet</span>
                     </a>
                     <!-- MetaText Helper -->
-                    <p class="text-[#606e8a] dark:text-slate-500 text-xs font-medium text-center">I already have a
+                    <p class="text-[#606e8a] dark:text-slate-500 text-[10px] sm:text-xs font-medium text-center">I already have a
                         Secret Recovery Phrase</p>
                 </div>
             </div>
             <!-- Footer Links (Inside Card for contained feel) -->
-            <div class="bg-[#fcfcfd] dark:bg-[#151a25] py-4 px-8 border-t border-slate-100 dark:border-slate-800">
-                <p class="text-center text-xs text-[#9aa2b1] dark:text-slate-500 leading-normal">
+            <div class="bg-[#fcfcfd] dark:bg-[#151a25] py-3 sm:py-4 px-4 sm:px-8 border-t border-slate-100 dark:border-slate-800">
+                <p class="text-center text-[10px] sm:text-xs text-[#9aa2b1] dark:text-slate-500 leading-normal">
                     By continuing, you agree to our
                     <a class="text-primary font-medium hover:underline decoration-primary/30 underline-offset-2"
                         href="#">Terms of Service</a> and
